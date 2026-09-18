@@ -1,0 +1,18 @@
+{
+  "timed_samples": 300,
+  "all_valid": true,
+  "maxima": {
+    "residual": 4.803032916993356e-15,
+    "orthogonality": 2.9930020694189375e-14,
+    "hermiticity_error": 8.482144758561933e-17,
+    "reconstruction_error": 5.5289058446340586e-15,
+    "reference_block_error": 7.745889817818492e-16,
+    "reference_eigenvalue_error": 8.830540505058797e-15,
+    "pauli_roundtrip_error": 2.0444129263884176e-15,
+    "dense_spectrum_error": 2.91581810474037e-15,
+    "dense_eigenvector_residual": 3.8460542469462716e-15,
+    "lowest_energy_error": 2.7045409506000957e-15,
+    "lowest_residual": 1.1040814280329745e-15
+  },
+  "note": "Small systems use explicit full matrices and lifted representative eigenvectors. Larger checks combine two conversion routes, a Hahn round trip, and original-block residuals; they are not full-space validation."
+}

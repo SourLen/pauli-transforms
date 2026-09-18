@@ -1,0 +1,16 @@
+{
+  "schema": "retained-measurement-validation-v1",
+  "selection_only": true,
+  "original_source_unchanged": null,
+  "records": 1344,
+  "valid_timed_samples": 1344,
+  "statuses": {
+    "ok": 1344
+  },
+  "all_selected_numerical_checks_passed": true,
+  "all_passed": true,
+  "maximum_diagnostics": {
+    "max_abs_error": 5.273559366969494e-16,
+    "relative_error": 2.509728327479706e-15
+  }
+}

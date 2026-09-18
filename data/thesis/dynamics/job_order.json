@@ -1,0 +1,590 @@
+[
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 12,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 1,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 32,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 2,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 8,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 128,
+    "instance": 2,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 4,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 1,
+    "method": "thesis"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 20,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 8,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 512,
+    "instance": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 3,
+    "points": 241,
+    "instance": 0,
+    "method": "thesis"
+  },
+  {
+    "kind": "times",
+    "n": 12,
+    "points": 2048,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 5,
+    "points": 241,
+    "instance": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "kind": "size",
+    "n": 16,
+    "points": 241,
+    "instance": 1,
+    "method": "anschuetz_optimized"
+  }
+]

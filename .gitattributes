@@ -1,0 +1,2 @@
+# Preserve the archived bytes used by the data manifest, including CSV newlines.
+data/thesis/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

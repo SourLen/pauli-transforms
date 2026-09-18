@@ -1,0 +1,46 @@
+{
+  "n": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    12,
+    16,
+    20
+  ],
+  "methods": [
+    "thesis",
+    "anschuetz_optimized"
+  ],
+  "points": 241,
+  "tmax": 12.0,
+  "instances": 3,
+  "repeats": 5,
+  "warmup": 1,
+  "seed": 20260918,
+  "dense_max_n": 5,
+  "sweep_n": 12,
+  "sweep_points": [
+    1,
+    8,
+    32,
+    128,
+    512,
+    2048
+  ],
+  "timeout": 360.0,
+  "public_max_n": 5,
+  "schur_backend": "hahn",
+  "schur_dtype": "float64",
+  "threads": 1,
+  "acceptance_tolerance": 1e-08,
+  "input_family": "Independent general Gaussian Pauli orbit H,M with variance 1/(number of orbits * orbit size); independent complex Wishart state blocks of dimensions d by 2d, rho_k=(d/2^n) GGdagger/Tr(GGdagger)",
+  "input_contract": "Saved common Pauli coordinates for H,rho,M; state inverse conversion and all input generation excluded from timing",
+  "timing_contract": "Fresh shared tables + three conversions + common numpy eigh block solver + complete expectation curve; imports, inputs, validation and I/O excluded",
+  "curve_stage": "Includes one-time energy-basis contractions and evaluation of all requested times",
+  "output_contract": "Complex expectation values at all requested times; no density trajectories",
+  "acceptance_contract": "max_t |f-f_ref|/max(1,||M||_op)<=1e-8, plus trace, block-relative positivity/Hermiticity, conversion and solver checks",
+  "eigensolver_roundoff": "Shared existing solver checks Hermiticity before averaging H with Hdagger; no state repair or output normalization",
+  "reference_contract": "Independent Appendix-E H,M and original generated state; inverse state conversion checked by Appendix E and full matrices through dense_max_n; full expm curves through dense_max_n"
+}

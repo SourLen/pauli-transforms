@@ -1,0 +1,14 @@
+{
+  "g": 1.0,
+  "h": 0.5,
+  "p": 0.6,
+  "spectrum_n": 12,
+  "n": [
+    8,
+    20,
+    40
+  ],
+  "points": 241,
+  "tmax": 12.0,
+  "description": "Spectrum and retained expectation curves; no timing campaign."
+}

@@ -1,0 +1,38 @@
+{
+  "n": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    12,
+    16,
+    20
+  ],
+  "methods": [
+    "thesis",
+    "anschuetz_optimized",
+    "anschuetz_public_original"
+  ],
+  "public_max_n": 5,
+  "instances": 3,
+  "repeats": 5,
+  "warmup": 1,
+  "seed": 20260917,
+  "dense_max_n": 5,
+  "schur_backend": "hahn",
+  "schur_dtype": "float64",
+  "threads": 1,
+  "input_family": "general real Gaussian common coefficients; variance 1/(number of orbits * orbit size)",
+  "output_contract": "Every eigenvalue and orthonormal eigenbasis in every representative Schur block; multiplicities encoded, no full-state expansion",
+  "timing_contract": "Fresh tables + conversion + full scipy.linalg.eigh(evr); imports, input generation, reference, diagnostics and I/O excluded",
+  "lowest_contract": "Separate selected evr solve on the same prepared blocks; paired setup+conversion+selected solve sum, no claimed avoided construction",
+  "acceptance_tolerance": 1e-08,
+  "anschuetz_public_source": {
+    "repository": "https://github.com/bkiani/symmetric_hamiltonians.git",
+    "commit": "24ce1a5fe4f3234f5f9a2f1ad65c2909423d7dc8",
+    "expected_sha256": "ea99d1dda523facaea60ba2cf46b6c636ecc2465dd660b581d90e59dfc7995cd",
+    "sha256": "ea99d1dda523facaea60ba2cf46b6c636ecc2465dd660b581d90e59dfc7995cd"
+  },
+  "anschuetz_public_contract": "Pinned construct_matrix_blocks called independently for each input, with all spin sectors and no prepared get_matrices bank. Loading and hash verification excluded; input mapping, complete block construction and output wrapping included in prepare_seconds. The downstream block solver is unchanged."
+}
