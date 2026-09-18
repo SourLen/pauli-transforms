@@ -91,16 +91,3 @@ Released under the [MIT license](LICENSE). NumPy, SciPy and the plotting
 dependencies are installed separately under their own licenses. No external
 Anschuetz source is distributed here.
 
-## Publish to GitHub
-
-With GitHub CLI installed, run from this directory:
-
-```bash
-gh auth login
-gh repo create pauli-transforms --public --source=. --remote=origin --push
-```
-
-Alternatively, create an empty GitHub repository, then run
-`git remote add origin https://github.com/YOUR-USERNAME/pauli-transforms.git`
-and `git push -u origin main`. Use the resulting URL for the three GitHub
-reference reminders in thesis Chapters 3–5.
