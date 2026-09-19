@@ -1,12 +1,15 @@
-"""Recreate the eight thesis figures from archived or newly measured data.
+"""Recreate the seven current thesis benchmark figures from saved data.
 
 Run ``python -m pauli_transforms.plot --data data/thesis --output figures``.
 The input root can contain any of direct/, fixed_locality/, spectral/,
-dynamics/ and ising/. No calculations or benchmark timings run here.
+dynamics/, ising/ and matrix_units/. No benchmark timings run here.
+Use --supplementary to also export the former main-text general-conversion
+plot and the conversion-accuracy plot, which are no longer in the manuscript.
 """
 
 import argparse
 import csv
+import hashlib
 from itertools import cycle
 import json
 from math import comb
@@ -21,6 +24,9 @@ STYLES = {
     "anschuetz_optimized": ("Anschuetz (optimized)", "#228833", "^", "-."),
     "anschuetz_public_original": ("Anschuetz (public)", "#EE6677", "s", "--"),
     "chang": ("Chang et al.", "#EE6677", "s", "--"),
+    "factorial_float64": ("Shared factors", "#4477AA", "o", "-"),
+    "hahn_float64": ("Hahn recurrence", "#228833", "^", "-."),
+    "permqit": ("permqit", "#EE6677", "s", "--"),
 }
 PUBLIC = "anschuetz_public_original"
 ERROR_FLOOR = 1e-17
@@ -96,7 +102,7 @@ def shared_legend(fig):
                ncols=2, frameon=False, handlelength=2.2)
 
 
-def direct_figures(path, *, fixed=False):
+def direct_figures(path, *, fixed=False, supplementary=False):
     import matplotlib.pyplot as plt
     cfg, rows = read_campaign(path)
     sizes = cfg.get("n_values") or cfg["n"]
@@ -107,8 +113,11 @@ def direct_figures(path, *, fixed=False):
         # The public API has no cached operation.
         public_methods = methods + ([PUBLIC] if PUBLIC in cfg["methods"] else [])
         if PUBLIC in cfg["methods"]:
+            if not supplementary:
+                variants.clear()
             variants.append(("general_conversion_public", public_methods, False))
-        variants.append(("conversion_accuracy", public_methods, True))
+        if supplementary:
+            variants.append(("conversion_accuracy", public_methods, True))
     for name, selected, accuracy in variants:
         fig, axes = plt.subplots(len(localities), 2, squeeze=False,
                                  figsize=(6.25, 5.65 if fixed else 3.55), layout="constrained")
@@ -141,6 +150,83 @@ def direct_figures(path, *, fixed=False):
                             fontsize=7, color=".35")
         shared_legend(fig)
         yield name, fig, stats
+
+
+def read_matrix_unit_campaign(path):
+    """Validate the distinct fresh-process / repeated-application protocol."""
+    cfg = json.loads((path / "manifest.json").read_text())
+    rows = [json.loads(line) for line in (path / "measurements.jsonl").read_text().splitlines()
+            if line.strip()]
+    if (cfg["trials"] < 1 or cfg["app_repeats"] < 1 or not cfg["sizes"] or not cfg["methods"]
+            or len(set(cfg["sizes"])) != len(cfg["sizes"])
+            or len(set(cfg["methods"])) != len(cfg["methods"])
+            or set(cfg["methods"]) - {"factorial_float64", "hahn_float64", "permqit"}):
+        raise ValueError("Invalid matrix-unit campaign configuration")
+    expected = {(method, n, trial) for method in cfg["methods"]
+                for n in cfg["sizes"] for trial in range(cfg["trials"])}
+    identities = [(r["method"], r["n"], r["trial"]) for r in rows]
+    if len(identities) != len(expected) or set(identities) != expected:
+        raise ValueError("Incomplete/duplicate matrix-unit trials")
+    input_records = {}
+    for n in cfg["sizes"]:
+        for trial in range(cfg["trials"]):
+            raw = (path / "inputs" / f"n{n}_trial{trial}.json").read_bytes()
+            payload = json.loads(raw)
+            if payload["n"] != n or payload["trial"] != trial:
+                raise ValueError("Matrix-unit input identity disagrees with its filename")
+            input_records[n, trial] = hashlib.sha256(raw).hexdigest(), payload["seed"]
+    for row in rows:
+        if row["status"] != "ok":
+            raise ValueError("Failed matrix-unit trial")
+        for key in ("errors", "repeated_errors"):
+            errors = row[key]
+            values = np.asarray([errors["weighted_hs_relative"], errors["max_abs"]])
+            if (errors["passed"] is not True or not np.isfinite(values).all()
+                    or np.any(values < 0)
+                    or errors["weighted_hs_relative"] > cfg["gate"]["weighted_hs_relative"]):
+                raise ValueError("Failed matrix-unit accuracy check")
+        warm = row["warm_application_s"]
+        times = np.asarray([row[key] for key in (
+            "preparation_s", "first_application_s", "fresh_total_s", "warm_median_s")] + warm)
+        if (len(warm) != cfg["app_repeats"] or not np.isfinite(times).all() or np.any(times < 0)
+                or row["warm_median_s"] != float(np.median(warm))
+                or row["fresh_total_s"] != row["preparation_s"] + row["first_application_s"]):
+            raise ValueError("Inconsistent matrix-unit timing record")
+        if (row["input_sha256"], row["seed"]) != input_records[row["n"], row["trial"]]:
+            raise ValueError("Matrix-unit trial does not match its saved input")
+    return cfg, rows
+
+
+def matrix_unit_figure(path):
+    import matplotlib.pyplot as plt
+    cfg, rows = read_matrix_unit_campaign(path)
+    fig, axes = plt.subplots(1, 2, figsize=(6.25, 3.0), layout="constrained")
+    stats = {}
+    for method in ("factorial_float64", "hahn_float64", "permqit"):
+        if method not in cfg["methods"]:
+            continue
+        stats[method] = {}
+        for field in ("preparation_s", "fresh_total_s", "warm_median_s"):
+            points = []
+            for n in cfg["sizes"]:
+                values = [r[field] for r in rows if r["method"] == method and r["n"] == n]
+                low, median, high = np.percentile(values, [25, 50, 75])
+                points.append(dict(x=n, q25=float(low), median=float(median),
+                                   q75=float(high), samples=len(values)))
+            stats[method][field] = points
+            if field == "preparation_s":
+                continue
+            ax = axes[0 if field == "fresh_total_s" else 1]
+            appearance = style(method)
+            ax.plot(cfg["sizes"], [p["median"] for p in points], **appearance)
+            ax.fill_between(cfg["sizes"], [p["q25"] for p in points],
+                            [p["q75"] for p in points], color=appearance["color"],
+                            alpha=.15, linewidth=0)
+    for ax, title in zip(axes, ("(a) Preprocessing included", "(b) Reusable data cached")):
+        label_runtime(ax, title)
+        ax.set_xlim(0, max(cfg["sizes"]) * 1.04)
+    shared_legend(fig)
+    return "matrix_unit_schur", fig, stats
 
 
 def draw_spectrum(ax, example):
@@ -269,8 +355,8 @@ def ising_figure(path):
     return "ising_example", fig, stats
 
 
-def export(data, output, formats=("pdf", "svg", "png")):
-    """Export every available figure family and its unrounded plotted statistics."""
+def export(data, output, formats=("pdf", "svg", "png"), *, supplementary=False):
+    """Export current manuscript figures and their unrounded plotted statistics."""
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -291,8 +377,11 @@ def export(data, output, formats=("pdf", "svg", "png")):
     with matplotlib.rc_context(rc):
         for name in ("direct", "fixed_locality"):
             if (data / name).is_dir():
-                for result in direct_figures(data / name, fixed=name == "fixed_locality"):
+                for result in direct_figures(data / name, fixed=name == "fixed_locality",
+                                             supplementary=supplementary):
                     save(result)
+        if (data / "matrix_units").is_dir():
+            save(matrix_unit_figure(data / "matrix_units"))
         if (data / "spectral").is_dir():
             save(spectral_figure(data / "spectral"))
         if (data / "dynamics").is_dir():
@@ -301,7 +390,7 @@ def export(data, output, formats=("pdf", "svg", "png")):
         if (data / "ising").is_dir():
             save(ising_figure(data / "ising"))
     if not figures:
-        raise ValueError("Input must contain direct/, fixed_locality/, spectral/, dynamics/ or ising/")
+        raise ValueError("Input must contain direct/, fixed_locality/, matrix_units/, spectral/, dynamics/ or ising/")
     (output / "plotted_statistics.json").write_text(json.dumps(figures, indent=2, allow_nan=False) + "\n")
     return figures
 
@@ -310,8 +399,10 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, default=Path("data/thesis"))
     parser.add_argument("--output", type=Path, default=Path("figures"))
+    parser.add_argument("--supplementary", action="store_true",
+                        help="also export the former general-conversion and accuracy figures")
     args = parser.parse_args(argv)
-    figures = export(args.data, args.output)
+    figures = export(args.data, args.output, supplementary=args.supplementary)
     print(f"Exported {len(figures)} figures to {args.output}")
 
 

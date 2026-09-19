@@ -8,15 +8,32 @@ Run these commands from the repository root after installing `.[benchmarks]`.
 python -m pauli_transforms.plot --data data/thesis --output figures
 ```
 
-This exports the eight figures currently included in the thesis as PDF, SVG and
-PNG. The input data and their provenance are described in
+This exports the seven benchmark figures currently included in the thesis as
+PDF, SVG and PNG. The input data and their provenance are described in
 [`data/thesis/README.md`](data/thesis/README.md). Plotting does not run benchmarks.
+The default selection matches the manuscript on 19 September 2026:
+
+| Export | Manuscript location |
+| --- | --- |
+| `general_conversion_public` | Appendix C.2, general Pauli-to-Schur conversion |
+| `matrix_unit_schur` | Appendix C.2, shared factors, Hahn recurrence and native permqit |
+| `fixed_locality` | Appendix C.2, fixed-locality comparison |
+| `spectral_comparison` | Section 6.3.1, complete eigensystems |
+| `random_dynamics_comparison` | Section 6.3.2, invariant dynamics |
+| `ising_example` | Section 6.3.3, fully connected Ising model |
+| `random_dynamics_diagnostics` | Appendix C.3, stages and expectation errors |
+
+Add `--supplementary` to also export `general_conversion` (without the public
+Anschuetz curve) and `conversion_accuracy`. These two plots are no longer
+displayed in the manuscript. Their observations are retained. The experimental
+general-eigensystem PIQS comparison is excluded, as in the current thesis.
 
 ## Run new measurements
 
 ```bash
 python -m pauli_transforms.benchmark --comparison anschuetz --output results/new/direct
 python -m pauli_transforms.benchmark --comparison chang --output results/new/fixed_locality
+python -m pauli_transforms.run_permqit_comparison --methods factorial_float64 hahn_float64 --output results/new/matrix_units
 python -m pauli_transforms.run_spectral_comparison --output results/new/spectral
 python -m pauli_transforms.run_random_dynamics_comparison --output results/new/dynamics
 python -m pauli_transforms.ising_example --output results/new/ising
@@ -25,7 +42,7 @@ python -m pauli_transforms.plot --data results/new --output figures/new
 
 Run the commands sequentially, on an otherwise idle machine. Each runner fixes
 numerical libraries to one thread. Output directories must be empty, so new
-measurements cannot overwrite previous ones. Add `--smoke` to each of the five
+measurements cannot overwrite previous ones. Add `--smoke` to each of the six
 experiment commands for a small functional check. Smoke timings are not thesis
 measurements.
 
@@ -54,6 +71,50 @@ SymPy helper is replaced by an error stub. It calls the original
 `construct_matrix_blocks` afresh. Public measurements stop at five qubits and
 have no cached mode. External code is not included in this repository.
 
+### Native permqit comparison
+
+To include native permqit in the matrix-unit comparison, use Python >=3.12:
+
+```bash
+python -m pip install '.[benchmarks,permqit]'
+git clone https://github.com/bbbergh/permqit.git _external/permqit
+git -C _external/permqit checkout 22af3cd245bd0e950df49f6ce16ccd422b6eb2c5
+python -m pauli_transforms.run_permqit_comparison --output results/new/matrix_units
+```
+
+This replaces the local-only matrix-unit command above. The runner verifies
+that the installed Python sources match the clean pinned checkout; use
+`--permqit-source` to supply another checkout location. It selects the CPU
+backend and one numerical-library thread before importing permqit.
+`--smoke` runs a small functional check. Optional native correctness tests run
+with the ordinary unittest command when permqit is installed.
+
+Each method, size and input runs in a fresh process, because permqit caches
+prepared objects. First use includes preparation of the normalized native map
+(or our shared factors/Hahn kernels), input packing and complete block output.
+Seven further applications reuse this preparation; their within-trial median
+is the cached observation. The plot reports quartiles across five independent
+inputs. Imports, input generation, validation and file writes are excluded.
+Preparation is recorded separately; its median and the first-application median
+need not add to the median total. No eigensolver enters this comparison.
+
+Inputs are dense, generally non-Hermitian literal entries `a[r,s,t]`, sampled
+as standard complex Gaussians divided by `sqrt(orbit_size(n,r,s,t))`, then jointly
+normalized to Hilbert--Schmidt norm one. The seed is `20260919 + 1000*n + trial`.
+The native map uses `EndSnBlockDiagonalizationGijswijt` and
+`EndSnAlgebraIsomorphism`, including Gram/Cholesky normalization and reordering
+into increasing row/column weight. No Pauli conversion is included.
+
+Validation uses exact-integer binomial kernel sums with extended-precision
+normalization and accumulation, plus independent computational-basis tests
+through `n=8`. All 120 saved trials passed relative multiplicity-weighted
+Hilbert--Schmidt error `1e-8` and entrywise `atol=1e-9`, `rtol=1e-8` gates.
+The three largest relative errors are `3.38e-13` (shared factors), `1.12e-15`
+(Hahn) and `1.54e-16` (permqit). The recorded environment and exact inputs are
+in [`data/thesis/matrix_units/`](data/thesis/matrix_units/).
+
+### Reuse saved inputs
+
 To reuse exact saved random inputs, add `--input-directory` to a runner:
 
 ```bash
@@ -63,6 +124,8 @@ python -m pauli_transforms.run_spectral_comparison \
   --input-directory data/thesis/spectral/inputs --output results/replayed/spectral
 python -m pauli_transforms.run_random_dynamics_comparison \
   --input-directory data/thesis/dynamics/inputs --output results/replayed/dynamics
+python -m pauli_transforms.run_permqit_comparison \
+  --input-directory data/thesis/matrix_units/inputs --output results/replayed/matrix_units
 ```
 
 The fixed-locality runner accepts the same option with
@@ -76,10 +139,12 @@ on the machine and software versions.
 | --- | --- | --- | --- |
 | General conversion | 2, 3, 4, 5, 6, 8, 10, 12, 16, 20 | 3 × 7 | 20260917 |
 | Fixed locality, weight 2 or 4 | 4, 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
+| Matrix-unit conversion | 2, 4, 6, 8, 10, 12, 16, 20 | 5 fresh-process trials; 7 cached applications each | 20260919 |
 | Complete eigensystems | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260917 |
 | Random dynamics | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260918 |
 
-Each method/input has one warmup. Plots show medians and interquartile ranges.
+Except for the matrix-unit protocol above, each method/input has one warmup.
+Plots show medians and interquartile ranges.
 General coefficients are independent real Gaussians with variance
 `1 / (binom(n+3,3) * orbit_size)`. Fixed-weight inputs are random real linear
 combinations of all orbit averages of that weight. Conversion input seeds are

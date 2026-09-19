@@ -38,8 +38,8 @@ class PlotTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 plot.point_statistics(variant, cfg, "total_seconds", "n", [20], method="thesis")
 
-    def test_eight_figures_and_recorded_medians(self):
-        expected_names = {"general_conversion", "general_conversion_public", "conversion_accuracy",
+    def test_seven_current_figures_and_recorded_medians(self):
+        expected_names = {"general_conversion_public", "matrix_unit_schur",
                           "fixed_locality", "spectral_comparison", "random_dynamics_comparison",
                           "random_dynamics_diagnostics", "ising_example"}
         with tempfile.TemporaryDirectory() as directory:
@@ -51,9 +51,14 @@ class PlotTests(unittest.TestCase):
                                    0.017852479999419302, places=15)
             self.assertAlmostEqual(summaries["random_dynamics_comparison"]["size/thesis"][-1]["median"],
                                    0.049764150000555674, places=15)
-            self.assertAlmostEqual(summaries["general_conversion"]["separated/ell0/cold"][-1]["median"],
+            self.assertAlmostEqual(summaries["general_conversion_public"]["separated/ell0/cold"][-1]["median"],
                                    0.017120777, places=15)
             self.assertNotIn("anschuetz_public_original/ell0/cached", summaries["general_conversion_public"])
+            matrix = summaries["matrix_unit_schur"]
+            self.assertAlmostEqual(matrix["permqit"]["fresh_total_s"][-1]["median"], 5.552, places=3)
+            self.assertAlmostEqual(matrix["factorial_float64"]["warm_median_s"][-1]["median"], .005240, places=6)
+            for method in matrix.values():
+                self.assertEqual(method["fresh_total_s"][-1]["samples"], 5)
             for stats in summaries["ising_example"].values():
                 self.assertEqual(stats["points"], 241)
                 self.assertAlmostEqual(stats["initial"], .6, places=12)
@@ -71,8 +76,54 @@ class PlotTests(unittest.TestCase):
             (campaign / "config.json").write_text(json.dumps(cfg))
             (campaign / "runs.jsonl").write_text("\n".join(json.dumps(r) for r in rows))
             figures = plot.export(root, root / "plots", formats=())
-            self.assertEqual(set(figures), {"general_conversion", "conversion_accuracy"})
+            self.assertEqual(set(figures), {"general_conversion"})
             self.assertEqual(figures["general_conversion"]["separated/ell0/cold"][0]["x"], 2)
+            extra = plot.export(root, root / "supplementary", formats=(), supplementary=True)
+            self.assertEqual(set(extra), {"general_conversion", "conversion_accuracy"})
+
+    def test_former_figures_remain_available_as_supplementary(self):
+        import matplotlib.pyplot as plt
+        names = set()
+        for name, figure, _ in plot.direct_figures(DATA / "direct", supplementary=True):
+            names.add(name)
+            plt.close(figure)
+        self.assertEqual(names, {"general_conversion", "general_conversion_public", "conversion_accuracy"})
+
+    def test_matrix_unit_archive_integrity_and_bad_trials(self):
+        cfg, rows = plot.read_matrix_unit_campaign(DATA / "matrix_units")
+        self.assertEqual(len(rows), 120)
+        self.assertEqual(cfg["trials"], 5)
+        self.assertEqual(cfg["app_repeats"], 7)
+        for change in ("missing", "duplicate", "failed", "nonfinite", "sum", "median",
+                       "repeat_count", "input_hash", "input_bytes", "accuracy"):
+            with self.subTest(change=change), tempfile.TemporaryDirectory() as directory:
+                path = Path(directory)
+                shutil.copytree(DATA / "matrix_units", path, dirs_exist_ok=True)
+                bad = copy.deepcopy(rows)
+                if change == "missing":
+                    bad.pop()
+                elif change == "duplicate":
+                    bad[-1] = bad[0]
+                elif change == "failed":
+                    bad[0]["status"] = "timeout"
+                elif change == "nonfinite":
+                    bad[0]["preparation_s"] = float("nan")
+                elif change == "sum":
+                    bad[0]["fresh_total_s"] += 1
+                elif change == "median":
+                    bad[0]["warm_median_s"] += 1
+                elif change == "repeat_count":
+                    bad[0]["warm_application_s"].pop()
+                elif change == "input_hash":
+                    bad[0]["input_sha256"] = "changed"
+                elif change == "input_bytes":
+                    input_path = path / "inputs" / f'n{bad[0]["n"]}_trial{bad[0]["trial"]}.json'
+                    input_path.write_bytes(input_path.read_bytes() + b"\n")
+                elif change == "accuracy":
+                    bad[0]["errors"]["weighted_hs_relative"] = 1.0
+                (path / "measurements.jsonl").write_text("\n".join(json.dumps(r) for r in bad))
+                with self.assertRaises(ValueError):
+                    plot.read_matrix_unit_campaign(path)
 
     def test_failed_or_changed_ising_data_rejected(self):
         for change in ("failed", "missing", "spectrum_size", "curve_shift", "nonfinite_reference"):

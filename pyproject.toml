@@ -15,6 +15,7 @@ dependencies = ["numpy>=2", "scipy>=1.12"]
 
 [project.optional-dependencies]
 benchmarks = ["matplotlib>=3.7", "threadpoolctl>=3.1"]
+permqit = ["permqit @ git+https://github.com/bbbergh/permqit.git@22af3cd245bd0e950df49f6ce16ccd422b6eb2c5"]
 
 [tool.setuptools.packages.find]
 include = ["pauli_transforms*"]

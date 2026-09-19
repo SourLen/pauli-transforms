@@ -1,5 +1,5 @@
 {
-  "description": "Selected data underlying the eight included thesis figures; no new timings.",
+  "description": "Selected data underlying the seven current thesis benchmark figures and two supplementary conversion plots; no new timings.",
   "files": {
     "direct/config.json": {
       "origin": "Code/pauli_algorithm_comparison/results/publication_comparisons_20260917/direct/config.json",
@@ -1050,6 +1050,276 @@
       "origin_sha256": "c3d0c86778d304444a40c5398bbd52c8d3a9dc31c9673a84385efae768807b94",
       "sha256": "7536a30fe82cdee6096fe965618b9b1bb0b4f360fc0f831d29e458fe30c815c0",
       "transformation": "Model parameters transcribed from the source README."
+    },
+    "matrix_units/manifest.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/manifest.json",
+      "origin_sha256": "03d69d0c4dd8cfda4325f1bde3dc87d8d8b20e78fec0825ac5a6199ecc64f7aa",
+      "sha256": "6f1d58f5f6b0cea8fa886a2184de6e0cc634a96469559b43fd91d386c3a24285",
+      "transformation": "JSON reformatted; removed the machine-local Python executable path. All remaining values unchanged."
+    },
+    "matrix_units/measurements.jsonl": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/measurements.jsonl",
+      "origin_sha256": "92bbb103658698da2a8ca7e6c2874c3c642d584e5070300c90740d2f48074714",
+      "sha256": "92bbb103658698da2a8ca7e6c2874c3c642d584e5070300c90740d2f48074714",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/summary.csv": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/summary.csv",
+      "origin_sha256": "3a663d22eb03a5a3b601edb42aea23a6e45bd50180496213f70d36e6bc5f4359",
+      "sha256": "3a663d22eb03a5a3b601edb42aea23a6e45bd50180496213f70d36e6bc5f4359",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/integrity_after.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/integrity_after.json",
+      "origin_sha256": "6951bc56b00076e2743459ea7776fd7ffae8271dea7673e8801f16180da69d56",
+      "sha256": "6951bc56b00076e2743459ea7776fd7ffae8271dea7673e8801f16180da69d56",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/requirements.lock": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/requirements.lock",
+      "origin_sha256": "f3998543d092a86ad0cf2a9dbd32cde08856c93eb59cc6cc224b368f40130559",
+      "sha256": "df397e6004a8753015ce018795209b7fecbd8e98205065d3c2941c211329358b",
+      "transformation": "Replaced the machine-local permqit installation URL with the verified upstream Git commit. All package versions unchanged."
+    },
+    "matrix_units/inputs/n10_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n10_trial0.json",
+      "origin_sha256": "48bc388ebfc149776b13df4d67b079607ced50412cd64957fa8a26388333690c",
+      "sha256": "48bc388ebfc149776b13df4d67b079607ced50412cd64957fa8a26388333690c",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n10_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n10_trial1.json",
+      "origin_sha256": "af904baacf5546bf5031f42494f8a56af69d2a733dff23acba87cb7fee1bb948",
+      "sha256": "af904baacf5546bf5031f42494f8a56af69d2a733dff23acba87cb7fee1bb948",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n10_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n10_trial2.json",
+      "origin_sha256": "3a7d79b9af0247e75346ce9f761869a056dc72a9ebf1a2d3417dce881ae7d84f",
+      "sha256": "3a7d79b9af0247e75346ce9f761869a056dc72a9ebf1a2d3417dce881ae7d84f",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n10_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n10_trial3.json",
+      "origin_sha256": "1268cfc7d57b655f0e0509605c6e67fbb3c1b1fd1cf18232eada6bc5fa71de2e",
+      "sha256": "1268cfc7d57b655f0e0509605c6e67fbb3c1b1fd1cf18232eada6bc5fa71de2e",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n10_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n10_trial4.json",
+      "origin_sha256": "447b9b4dea62c8eae7a387f727d4cec406458e2456aa5de9c6a0304b90c20186",
+      "sha256": "447b9b4dea62c8eae7a387f727d4cec406458e2456aa5de9c6a0304b90c20186",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n12_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n12_trial0.json",
+      "origin_sha256": "69c0a11cd7c53692ef48ca4ced5540219f84d04281d30b5a8ec2077834448f12",
+      "sha256": "69c0a11cd7c53692ef48ca4ced5540219f84d04281d30b5a8ec2077834448f12",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n12_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n12_trial1.json",
+      "origin_sha256": "2b9c43385e5b0c37dc4887ba4f6f1fab82a4a1bac69bb58b7aa33a0e08b5ca68",
+      "sha256": "2b9c43385e5b0c37dc4887ba4f6f1fab82a4a1bac69bb58b7aa33a0e08b5ca68",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n12_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n12_trial2.json",
+      "origin_sha256": "4696def0310aae03b18203833e1cae4bef2f5686bf494426355b8aa4104e7c5e",
+      "sha256": "4696def0310aae03b18203833e1cae4bef2f5686bf494426355b8aa4104e7c5e",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n12_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n12_trial3.json",
+      "origin_sha256": "69771243fff7755005c08db727f09505d3b6286f9ca2773c8db06fba7183bf3d",
+      "sha256": "69771243fff7755005c08db727f09505d3b6286f9ca2773c8db06fba7183bf3d",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n12_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n12_trial4.json",
+      "origin_sha256": "503beb69f924a6eebd2b2cd6d25e8f35fd0589f174e203e147edaa41027eec4a",
+      "sha256": "503beb69f924a6eebd2b2cd6d25e8f35fd0589f174e203e147edaa41027eec4a",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n16_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n16_trial0.json",
+      "origin_sha256": "52cadead2f6c511ef3fa699d4a6203f00b7227669e6f61710a26719182410529",
+      "sha256": "52cadead2f6c511ef3fa699d4a6203f00b7227669e6f61710a26719182410529",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n16_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n16_trial1.json",
+      "origin_sha256": "a8971e09914311f6adaa664ec009b87ce803aa07fa9ac3145768e7f93c12cb1e",
+      "sha256": "a8971e09914311f6adaa664ec009b87ce803aa07fa9ac3145768e7f93c12cb1e",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n16_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n16_trial2.json",
+      "origin_sha256": "6948447313c5e8590a5618388a467174749db488731a4ac05a5e2fb268fc3da5",
+      "sha256": "6948447313c5e8590a5618388a467174749db488731a4ac05a5e2fb268fc3da5",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n16_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n16_trial3.json",
+      "origin_sha256": "01d606842cad32ad6af364608f47ae82ee1c190858c7a7404eb3a53f845c4004",
+      "sha256": "01d606842cad32ad6af364608f47ae82ee1c190858c7a7404eb3a53f845c4004",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n16_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n16_trial4.json",
+      "origin_sha256": "f5e177a0a229ac914e58162d3767e791430a1de1a1e036c1cfbae1be94ad6f08",
+      "sha256": "f5e177a0a229ac914e58162d3767e791430a1de1a1e036c1cfbae1be94ad6f08",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n20_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n20_trial0.json",
+      "origin_sha256": "c4701d855a9e6c60e5b687f4ff4c545417cb281a01935ba06fc0750b8141bed0",
+      "sha256": "c4701d855a9e6c60e5b687f4ff4c545417cb281a01935ba06fc0750b8141bed0",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n20_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n20_trial1.json",
+      "origin_sha256": "a48021ef13036005b6e45355563f8b5ca28f5a6bbc6ee9d1251fd1f6a22347f1",
+      "sha256": "a48021ef13036005b6e45355563f8b5ca28f5a6bbc6ee9d1251fd1f6a22347f1",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n20_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n20_trial2.json",
+      "origin_sha256": "051c0f2447cc8eaac6e230ddc4d4bc352c599edca14283ba544c9f9ed83375c9",
+      "sha256": "051c0f2447cc8eaac6e230ddc4d4bc352c599edca14283ba544c9f9ed83375c9",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n20_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n20_trial3.json",
+      "origin_sha256": "dfdc7a4e80be31ef176065955fb0dac876cbb97e4812cfc57882203395b1f6e7",
+      "sha256": "dfdc7a4e80be31ef176065955fb0dac876cbb97e4812cfc57882203395b1f6e7",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n20_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n20_trial4.json",
+      "origin_sha256": "89432214a0832c7241c94e3786e1df016a7ae45eefc695c0cd712bd7f55db380",
+      "sha256": "89432214a0832c7241c94e3786e1df016a7ae45eefc695c0cd712bd7f55db380",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n2_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n2_trial0.json",
+      "origin_sha256": "d73dd432a274e80eb2b6c9fe746953c678bc84d319fdf529cb19df04350a099f",
+      "sha256": "d73dd432a274e80eb2b6c9fe746953c678bc84d319fdf529cb19df04350a099f",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n2_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n2_trial1.json",
+      "origin_sha256": "67114fe4071c2c779e3a259e77ead2f1d00d2971f23325a2a91a9f3f51a00926",
+      "sha256": "67114fe4071c2c779e3a259e77ead2f1d00d2971f23325a2a91a9f3f51a00926",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n2_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n2_trial2.json",
+      "origin_sha256": "2dbeac305a8c85951896ecc66b3448e4d10328258e2f8df47839fcc12ac60a15",
+      "sha256": "2dbeac305a8c85951896ecc66b3448e4d10328258e2f8df47839fcc12ac60a15",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n2_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n2_trial3.json",
+      "origin_sha256": "d36e0a9a71b6c8f8397a75182493d3c4ce4330decc26863efb7a4e2543008bfc",
+      "sha256": "d36e0a9a71b6c8f8397a75182493d3c4ce4330decc26863efb7a4e2543008bfc",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n2_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n2_trial4.json",
+      "origin_sha256": "c8409e8c8d96a9028c63f73802dc223d47404441f1f6e42f35dda319ea19bc11",
+      "sha256": "c8409e8c8d96a9028c63f73802dc223d47404441f1f6e42f35dda319ea19bc11",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n4_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n4_trial0.json",
+      "origin_sha256": "697389ee3a314c0e7f54803a7470cf44c5a1082c4b733869f446d4804d4649c8",
+      "sha256": "697389ee3a314c0e7f54803a7470cf44c5a1082c4b733869f446d4804d4649c8",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n4_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n4_trial1.json",
+      "origin_sha256": "fbe0704e0c200538f68e4650a7125006008a64f84d227edcf732ca67599239a2",
+      "sha256": "fbe0704e0c200538f68e4650a7125006008a64f84d227edcf732ca67599239a2",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n4_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n4_trial2.json",
+      "origin_sha256": "bd546b1aba171966746296bdd60732d0409e6e057437cc69ceed2f8c5e2b4e04",
+      "sha256": "bd546b1aba171966746296bdd60732d0409e6e057437cc69ceed2f8c5e2b4e04",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n4_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n4_trial3.json",
+      "origin_sha256": "848d14b21b5cf94c3b55b3ca54e0a3976686cfed43bcebed0b38f7df59f1fe77",
+      "sha256": "848d14b21b5cf94c3b55b3ca54e0a3976686cfed43bcebed0b38f7df59f1fe77",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n4_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n4_trial4.json",
+      "origin_sha256": "466b4ced7578513bc649fb302f195ecbc264118987b77ca3208157f44e42c41b",
+      "sha256": "466b4ced7578513bc649fb302f195ecbc264118987b77ca3208157f44e42c41b",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n6_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n6_trial0.json",
+      "origin_sha256": "dba10440522b57e24cafe332eb5eb0aee902fb0e83e941e447291a792c9748e4",
+      "sha256": "dba10440522b57e24cafe332eb5eb0aee902fb0e83e941e447291a792c9748e4",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n6_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n6_trial1.json",
+      "origin_sha256": "3b1929eba61a3e3a72cbbd176c50b8e6e469e6baf7345b81b5436f2626990fe0",
+      "sha256": "3b1929eba61a3e3a72cbbd176c50b8e6e469e6baf7345b81b5436f2626990fe0",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n6_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n6_trial2.json",
+      "origin_sha256": "c51cf6c2dab9319c5f64683651751d40aac2876423093a377037e32983cee501",
+      "sha256": "c51cf6c2dab9319c5f64683651751d40aac2876423093a377037e32983cee501",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n6_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n6_trial3.json",
+      "origin_sha256": "26d942998adf12af17f543b92e19a7c28763e6718ed3174a733c85dfa414740e",
+      "sha256": "26d942998adf12af17f543b92e19a7c28763e6718ed3174a733c85dfa414740e",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n6_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n6_trial4.json",
+      "origin_sha256": "16823dbe1eb77cf4eeb9af72eff7dc3d13799c17de883fdb4ffea363a6cfe157",
+      "sha256": "16823dbe1eb77cf4eeb9af72eff7dc3d13799c17de883fdb4ffea363a6cfe157",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n8_trial0.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n8_trial0.json",
+      "origin_sha256": "0e6741e8cccff2d67ef0dc6a1365198726521965bccb0d93cec7c6af64635ae0",
+      "sha256": "0e6741e8cccff2d67ef0dc6a1365198726521965bccb0d93cec7c6af64635ae0",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n8_trial1.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n8_trial1.json",
+      "origin_sha256": "f4e3687eb6c2ec0cf9e98d96348954a2393db0eca90be18c67df33e4ba2d6d54",
+      "sha256": "f4e3687eb6c2ec0cf9e98d96348954a2393db0eca90be18c67df33e4ba2d6d54",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n8_trial2.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n8_trial2.json",
+      "origin_sha256": "15330b80c61c194727b66d2a64d09aa13fa14868bddcad3070ff9e76e239f728",
+      "sha256": "15330b80c61c194727b66d2a64d09aa13fa14868bddcad3070ff9e76e239f728",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n8_trial3.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n8_trial3.json",
+      "origin_sha256": "47c80be9e9163d9ccd67990c2590567d8811ab8c95c688a0bbed911f7e20e356",
+      "sha256": "47c80be9e9163d9ccd67990c2590567d8811ab8c95c688a0bbed911f7e20e356",
+      "transformation": "Unchanged bytes."
+    },
+    "matrix_units/inputs/n8_trial4.json": {
+      "origin": "Code/pauli_algorithm_comparison/results/permqit_matrix_units_20260919/inputs/n8_trial4.json",
+      "origin_sha256": "4d21040f4aa77f1291eb534e7aed2388524d186ff4178cae205cdf69e3b0495c",
+      "sha256": "4d21040f4aa77f1291eb534e7aed2388524d186ff4178cae205cdf69e3b0495c",
+      "transformation": "Unchanged bytes."
     }
   }
 }

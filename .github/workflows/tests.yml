@@ -14,3 +14,24 @@ jobs:
           OPENBLAS_NUM_THREADS: '1'
           OMP_NUM_THREADS: '1'
           MPLBACKEND: Agg
+  permqit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: bbbergh/permqit
+          ref: 22af3cd245bd0e950df49f6ce16ccd422b6eb2c5
+          path: _external/permqit
+          persist-credentials: false
+      - run: python -m pip install '.[benchmarks]' ./_external/permqit
+      - run: python -m unittest discover -s tests -p test_permqit_comparison.py -v
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+          PERMQIT_USE_GPU: 'false'
+          MPLBACKEND: Agg
+      - run: python -m pauli_transforms.run_permqit_comparison --smoke --output results/smoke/matrix_units

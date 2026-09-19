@@ -53,6 +53,7 @@ spectra and expectation values.
 | Composition, Pauli orbits ↔ Schur blocks | `transforms.py` |
 | Comparison with Anschuetz et al. | `anschuetz_optimized.py`, `anschuetz_public.py` |
 | Fixed-locality comparison with Chang et al. | `chang.py` |
+| Appendix C.2, native permqit matrix-unit comparison | `permqit_adapter.py`, `run_permqit_comparison.py` |
 | Spectra, invariant dynamics and the Ising model | `physical_models.py` |
 
 `prepare(n)` builds fresh Krawtchouk/Hahn tables. Pass the returned tables
@@ -60,17 +61,27 @@ to reuse them, omitting tables includes preparation in the call.
 `prepare(n, backend="factorial")` selects the Chapter 5 factorization.
 Both backends are bidirectional. The factorial formula can suffer
 floating-point cancellation, in the thesis we use Hahn for most benchmarks.
-The code uses ordinary NumPy matrix products, we dont implement the fast polynomial transforms hinted
-at in the future work section of the thesis.
+The code uses ordinary NumPy matrix products; we do not implement the fast
+polynomial transforms discussed in the outlook.
+
+The optional `permqit` comparison uses its native Gijswijt map and Gram-matrix
+normalization. It converts matrix-unit orbit coefficients `(r, s, t)` to Schur
+blocks and measures preprocessing, first use and cached conversion separately.
+Rerunning it requires Python 3.12 or newer and the pinned upstream dependency;
+the library and saved-data plots do not require permqit.
 
 ## Figures and benchmarks
 
-See [BENCHMARKS.md](BENCHMARKS.md) for commands to redraw all eight thesis
-figures from the included observations or to measure them again. Saved input
-coefficients, seeds, timing records and environment metadata are under
+See [BENCHMARKS.md](BENCHMARKS.md) for commands to redraw all seven current thesis
+benchmark figures from the included observations or to measure them again. Saved
+input coefficients, seeds, timing records and environment metadata are under
 [`data/thesis/`](data/thesis/). Fresh runs write to a separate output directory.
 Historical runtime values describe the original machine, reruns produce new
 measurements.
+
+The default export follows the manuscript as of 19 September 2026. The earlier
+general-conversion plot without public code and the conversion-accuracy plot
+remain available with `--supplementary`.
 
 ## References and provenance
 
@@ -79,6 +90,8 @@ and [Vallentin](https://doi.org/10.1016/j.laa.2008.07.025), as developed in
 Chapters 4–5 of the thesis. Comparison implementations evaluate the formulas
 of [Anschuetz et al.](https://doi.org/10.22331/q-2023-11-28-1189)
 (Appendix E) and [Chang, Larocca and Cerezo](https://arxiv.org/abs/2603.13072).
+The optional native comparison uses Bergh and Parentin's
+[permqit](https://github.com/bbbergh/permqit/tree/22af3cd245bd0e950df49f6ce16ccd422b6eb2c5).
 
 
 The implementation, tests and documentation were developed with OpenAI Codex
@@ -87,5 +100,4 @@ and selected measurements from the private development repository.
 
 Released under the [MIT license](LICENSE). NumPy, SciPy and the plotting
 dependencies are installed separately under their own licenses. No external
-Anschuetz source is distributed here.
-
+Anschuetz or permqit source is distributed here.
