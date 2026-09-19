@@ -67,7 +67,7 @@ polynomial transforms discussed in the outlook.
 The optional `permqit` comparison uses its native Gijswijt map and Gram-matrix
 normalization. It converts matrix-unit orbit coefficients `(r, s, t)` to Schur
 blocks and measures preprocessing, first use and cached conversion separately.
-Rerunning it requires Python 3.12 or newer and the pinned upstream dependency;
+Rerunning it requires Python 3.13 or newer and the pinned upstream dependency;
 the library and saved-data plots do not require permqit.
 
 ## Figures and benchmarks

@@ -73,7 +73,9 @@ have no cached mode. External code is not included in this repository.
 
 ### Native permqit comparison
 
-To include native permqit in the matrix-unit comparison, use Python >=3.12:
+To include native permqit in the matrix-unit comparison, use Python >=3.13.
+The pinned upstream revision declares Python >=3.12, but its `typing.Generator[T]`
+annotations require the defaults introduced in Python 3.13.
 
 ```bash
 python -m pip install '.[benchmarks,permqit]'
