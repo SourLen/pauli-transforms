@@ -34,14 +34,13 @@ A Pauli key `(w, g0, g1)` means the counts
 Its value is the coefficient of **each individual Pauli word** in that orbit.
 Equivalently it multiplies the sum of distinct words, not the orbit average.
 
-Entry keys `(w, h0, h1)` describe literal matrix entries: `w` is the number
+Entry keys `(w, h0, h1)` are used to describe matrix entries, `w` is the number
 of differing row/column bits, `h0` counts their common ones, and `h1` counts
 column ones among the differing bits. The Chapter 5 matrix-unit indices are
 `(r, s, t) = (w+h0-h1, h0+h1, h0)`.
 
 Blocks are ordered by `k = 0, ..., floor(n/2)`, with side `n-2*k+1` and
-multiplicity `binom(n,k)-binom(n,k-1)`. Multiplicities matter for traces,
-spectra and expectation values. 
+multiplicity `binom(n,k)-binom(n,k-1)`. 
 
 ## Code map
 
@@ -56,7 +55,7 @@ spectra and expectation values.
 | Appendix C.2, native permqit matrix-unit comparison | `permqit_adapter.py`, `run_permqit_comparison.py` |
 | Spectra, invariant dynamics and the Ising model | `physical_models.py` |
 
-`prepare(n)` builds fresh Krawtchouk/Hahn tables. Pass the returned tables
+`prepare(n)` builds the Krawtchouk/Hahn tables. Pass the returned tables
 to reuse them, omitting tables includes preparation in the call.
 `prepare(n, backend="factorial")` selects the Chapter 5 factorization.
 Both backends are bidirectional. The factorial formula can suffer
@@ -68,20 +67,9 @@ The optional `permqit` comparison uses its native Gijswijt map and Gram-matrix
 normalization. It converts matrix-unit orbit coefficients `(r, s, t)` to Schur
 blocks and measures preprocessing, first use and cached conversion separately.
 Rerunning it requires Python 3.14 or newer and the pinned upstream dependency;
-the library and saved-data plots do not require permqit.
+the library and saved-data plots do not require permqit. We recommend checking out the features
+of permqit for further comparison and a more sophisticated package.
 
-## Figures and benchmarks
-
-See [BENCHMARKS.md](BENCHMARKS.md) for commands to redraw all seven current thesis
-benchmark figures from the included observations or to measure them again. Saved
-input coefficients, seeds, timing records and environment metadata are under
-[`data/thesis/`](data/thesis/). Fresh runs write to a separate output directory.
-Historical runtime values describe the original machine, reruns produce new
-measurements.
-
-The default export follows the manuscript as of 19 September 2026. The earlier
-general-conversion plot without public code and the conversion-accuracy plot
-remain available with `--supplementary`.
 
 ## References and provenance
 
@@ -99,5 +87,4 @@ assistance. This September 2026 release retains the thesis's numerical kernels
 and selected measurements from the private development repository.
 
 Released under the [MIT license](LICENSE). NumPy, SciPy and the plotting
-dependencies are installed separately under their own licenses. No external
-Anschuetz or permqit source is distributed here.
+dependencies are installed separately under their own licenses.
