@@ -1,6 +1,6 @@
 # Pauli transforms
 
-Python code accompanying Lennart Sauer's bachelor's thesis,
+Python code accompanying the bachelor's thesis,
 *Efficient Coordinate Transformations for Permutation-Invariant Quantum Systems*.
 
 The library converts between matrix-entry orbits, Pauli orbits and Schur blocks.
@@ -33,7 +33,6 @@ A Pauli key `(w, g0, g1)` means the counts
 `(nI, nX, nY, nZ) = (n-w-g0, w-g1, g1, g0)`.
 Its value is the coefficient of **each individual Pauli word** in that orbit.
 Equivalently it multiplies the sum of distinct words, not the orbit average.
-Missing keys mean zero. The example therefore includes all pairs of sites.
 
 Entry keys `(w, h0, h1)` describe literal matrix entries: `w` is the number
 of differing row/column bits, `h0` counts their common ones, and `h1` counts
@@ -42,7 +41,7 @@ column ones among the differing bits. The Chapter 5 matrix-unit indices are
 
 Blocks are ordered by `k = 0, ..., floor(n/2)`, with side `n-2*k+1` and
 multiplicity `binom(n,k)-binom(n,k-1)`. Multiplicities matter for traces,
-spectra and expectation values. Every sector is retained.
+spectra and expectation values. 
 
 ## Code map
 
@@ -57,12 +56,12 @@ spectra and expectation values. Every sector is retained.
 | Spectra, invariant dynamics and the Ising model | `physical_models.py` |
 
 `prepare(n)` builds fresh Krawtchouk/Hahn tables. Pass the returned tables
-to reuse them. Omitting tables includes preparation in the call.
+to reuse them, omitting tables includes preparation in the call.
 `prepare(n, backend="factorial")` selects the Chapter 5 factorization.
-Both backends implement both directions. The factorial formula can suffer
-floating-point cancellation; the retained thesis benchmarks use Hahn.
-The code uses ordinary NumPy matrix products, not Strassen or the experimental
-fast polynomial algorithms discussed in the thesis.
+Both backends are bidirectional. The factorial formula can suffer
+floating-point cancellation, in the thesis we use Hahn for most benchmarks.
+The code uses ordinary NumPy matrix products, we dont implement the fast polynomial transforms hinted
+at in the future work section of the thesis.
 
 ## Figures and benchmarks
 
@@ -70,7 +69,7 @@ See [BENCHMARKS.md](BENCHMARKS.md) for commands to redraw all eight thesis
 figures from the included observations or to measure them again. Saved input
 coefficients, seeds, timing records and environment metadata are under
 [`data/thesis/`](data/thesis/). Fresh runs write to a separate output directory.
-Historical runtime values describe the original machine; reruns produce new
+Historical runtime values describe the original machine, reruns produce new
 measurements.
 
 ## References and provenance
@@ -80,8 +79,7 @@ and [Vallentin](https://doi.org/10.1016/j.laa.2008.07.025), as developed in
 Chapters 4–5 of the thesis. Comparison implementations evaluate the formulas
 of [Anschuetz et al.](https://doi.org/10.22331/q-2023-11-28-1189)
 (Appendix E) and [Chang, Larocca and Cerezo](https://arxiv.org/abs/2603.13072).
-They are local implementations; the optional original Anschuetz routine is
-loaded separately from its pinned public source.
+
 
 The implementation, tests and documentation were developed with OpenAI Codex
 assistance. This September 2026 release retains the thesis's numerical kernels
