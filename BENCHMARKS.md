@@ -33,6 +33,8 @@ general-eigensystem PIQS comparison is excluded, as in the current thesis.
 The [accuracy report](data/accuracy/README.md) documents quick regressions and
 independent wide sweeps, including failed shared-factor cases. Accuracy data
 are separate from historical timing observations.
+The [detailed protocols](data/accuracy/PROTOCOL.md) contain the norm definitions,
+tolerances, diagnostics and tables summarized briefly in the manuscript.
 
 ## Historical measurement sources
 

@@ -6,6 +6,11 @@ and application sweeps were run from a clean checkout of
 and SciPy 1.17.1, with one numerical-library thread. Each file records its
 references, generating rules, seeds, precision, source hashes and tolerances.
 
+The [detailed protocols and results](PROTOCOL.md) give the coordinate norm
+formulas, input and reference constructions, acceptance tolerances, precision
+conventions and blockwise diagnostics. These details and the accuracy tables
+are retained here to accompany the shortened accuracy summaries in Appendix C.
+
 ## Run the checks
 
 Install `.[benchmarks]`, then use a new output path for each campaign:
@@ -57,7 +62,8 @@ scripts and metadata. Global relative error does not bound relative error in
 every sector. Wider arrays are not full higher-precision computations: Hahn
 normalization still uses binary64 logarithms and outputs are complex128.
 
-The generated `.tex` summaries are included in the thesis. No uniform stability
+The generated `.tex` summaries are retained as supplementary tables in this
+directory and linked from the [detailed report](PROTOCOL.md). No uniform stability
 or bit-complexity result is inferred from these finite checks. The repository
 does not implement the quantum-copy measurement protocol discussed in the thesis.
 

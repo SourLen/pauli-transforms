@@ -1,7 +1,7 @@
 {
   "schema": "thesis-figures-20260925",
   "release_version": "0.2.0",
-  "description": "Nine manuscript figures (two native diagrams and seven data figures), plus two accuracy tables. LaTeX labels, not printed numbers, identify them.",
+  "description": "Nine manuscript figures (two native diagrams and seven data figures), plus two supplementary accuracy tables. LaTeX labels, not printed numbers, identify them.",
   "supplementary": [
     "general_conversion",
     "conversion_accuracy",
@@ -174,33 +174,38 @@
     },
     {
       "kind": "accuracy_table",
-      "latex_labels": [
-        "tab:conversion_accuracy"
-      ],
       "generating_command": "python -m pauli_transforms.accuracy --sweep --output results/accuracy/conversions.json",
       "datasets": [
         "data/accuracy/conversions_20260925.json"
       ],
       "output_file": "data/accuracy/conversions_20260925.tex",
       "output_sha256": "553c7fb65c04bd561693a973d44507fb2528dc43836fb1a9056b70f858f22c4f",
-      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503"
+      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503",
+      "manuscript_status": "supplementary: detailed table retained in the repository; concise accuracy summary in the manuscript",
+      "historical_latex_labels": [
+        "tab:conversion_accuracy"
+      ],
+      "documentation": "data/accuracy/PROTOCOL.md"
     },
     {
       "kind": "accuracy_table",
-      "latex_labels": [
-        "tab:application_accuracy"
-      ],
       "generating_command": "python -m pauli_transforms.application_accuracy --output results/accuracy/applications",
       "datasets": [
         "data/accuracy/applications_20260925/results.json"
       ],
       "output_file": "data/accuracy/applications_20260925/summary.tex",
       "output_sha256": "a7c3a9de39445737776e6433c9510e49aac552dc30a69fa12f4dd06fd4f0cca4",
-      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503"
+      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503",
+      "manuscript_status": "supplementary: detailed table retained in the repository; concise accuracy summary in the manuscript",
+      "historical_latex_labels": [
+        "tab:application_accuracy"
+      ],
+      "documentation": "data/accuracy/PROTOCOL.md"
     }
   ],
   "notes": [
     "Historical observations are not measurements of release source.",
-    "PDF metadata may differ on redraw. Unrounded statistics and raw trial groups determine the curves."
+    "PDF metadata may differ on redraw. Unrounded statistics and raw trial groups determine the curves.",
+    "After the v0.2.0 release, detailed accuracy protocols and tables were moved out of the manuscript text. The release artifacts, raw observations and measured-source revisions are unchanged."
   ]
 }
