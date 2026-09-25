@@ -1,0 +1,8 @@
+# Separate optional pilot; Python >=3.12 (upstream uses PEP 695 syntax).
+permqit @ git+https://github.com/bbbergh/permqit.git@22af3cd245bd0e950df49f6ce16ccd422b6eb2c5
+numpy==2.4.6
+scipy==1.17.1
+threadpoolctl
+psutil
+matplotlib
+pytest

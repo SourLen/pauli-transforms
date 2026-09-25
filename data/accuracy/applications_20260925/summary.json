@@ -1,0 +1,108 @@
+[
+  {
+    "family": "ising_collective_reference",
+    "backend": "factorial",
+    "sizes": [
+      8,
+      12,
+      20,
+      40
+    ],
+    "cases": 4,
+    "failures": 0,
+    "max_h_block_error": 5.329146412597633e-15,
+    "max_eigensystem_residual": 1.304784130853488e-14,
+    "max_eigenvalue_error": 1.4210854715202004e-14,
+    "max_expectation_error": 1.8662849043948881e-13,
+    "max_imaginary_residual": 5.606341671286981e-17
+  },
+  {
+    "family": "ising_collective_reference",
+    "backend": "hahn",
+    "sizes": [
+      8,
+      12,
+      20,
+      40
+    ],
+    "cases": 4,
+    "failures": 0,
+    "max_h_block_error": 1.875012658604061e-14,
+    "max_eigensystem_residual": 1.3134988693599679e-14,
+    "max_eigenvalue_error": 2.3092638912203256e-14,
+    "max_expectation_error": 3.8441628702552154e-15,
+    "max_imaginary_residual": 3.4206578541899207e-17
+  },
+  {
+    "family": "ising_product_x",
+    "backend": "factorial",
+    "sizes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cases": 10,
+    "failures": 0,
+    "max_h_block_error": 8.886427941400155e-16,
+    "max_eigensystem_residual": 6.564061070516075e-16,
+    "max_eigenvalue_error": 8.881784197001252e-16,
+    "max_expectation_error": 3.6083051083151995e-15,
+    "max_imaginary_residual": 6.245004513516506e-17
+  },
+  {
+    "family": "ising_product_x",
+    "backend": "hahn",
+    "sizes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cases": 10,
+    "failures": 0,
+    "max_h_block_error": 4.468446960107432e-16,
+    "max_eigensystem_residual": 1.0077329448581062e-15,
+    "max_eigenvalue_error": 8.881784197001252e-16,
+    "max_expectation_error": 3.719333661592304e-15,
+    "max_imaginary_residual": 9.71445146547012e-17
+  },
+  {
+    "family": "random_hermitian_product_state",
+    "backend": "factorial",
+    "sizes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cases": 10,
+    "failures": 0,
+    "max_h_block_error": 1.690795092916264e-16,
+    "max_eigensystem_residual": 3.7488910443329266e-16,
+    "max_eigenvalue_error": 5.551115123125783e-16,
+    "max_expectation_error": 7.222378196600762e-16,
+    "max_imaginary_residual": 8.47688200555525e-17
+  },
+  {
+    "family": "random_hermitian_product_state",
+    "backend": "hahn",
+    "sizes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "cases": 10,
+    "failures": 0,
+    "max_h_block_error": 1.910805059070668e-16,
+    "max_eigensystem_residual": 5.010687116383939e-16,
+    "max_eigenvalue_error": 5.551115123125783e-16,
+    "max_expectation_error": 8.88751514570892e-16,
+    "max_imaginary_residual": 3.191158772362447e-17
+  }
+]

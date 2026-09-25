@@ -13,18 +13,28 @@ duplicate or nonfinite trials cause an error. The public implementation has no
 cached curve and was measured only through n=5. Errors below 1e-17 are clipped
 only for display. Fresh measurements will have different timings.
 
-The current selection follows the manuscript on 19 September 2026: conversion
-plots are in Appendix C.2 and the Anschuetz error plot is no longer displayed.
-Add `--supplementary` for the older general-conversion and accuracy figures.
+The current selection follows the revised manuscript on 25 September 2026.
+The original folders below remain unchanged. `current/` adds the later
+general-conversion extension through n=40, fixed-locality weights 2,4,6,8 and
+the common orbit-image comparison. Its selection manifest records original
+and included hashes. The plotter uses those datasets when present.
+Add `--supplementary` for the older general-conversion, accuracy and dynamics
+diagnostics figures. See the root figure manifest for exact LaTeX labels.
 
-| Folder | Included thesis figures | Accepted trials |
+| Original folder | Retained legacy observations | Accepted trials |
 |---|---|---:|
 | `direct` | `general_conversion_public` | 924 |
 | `fixed_locality` | `fixed_locality` | 1,344 |
 | `matrix_units` | `matrix_unit_schur` | 120 |
 | `spectral` | `spectral_comparison` | 300 |
-| `dynamics` | `random_dynamics_comparison`, `random_dynamics_diagnostics` | 420 |
+| `dynamics` | `random_dynamics_comparison` (diagnostics supplementary) | 420 |
 | `ising` | `ising_example` | No timings |
+
+The current general plot uses 1,176 accepted trials (plus 18 configured public
+size-limit records). The current fixed-locality and common-cache campaigns
+each retain 3,780 accepted trials. The first-use fixed-locality figure selects
+1,890 of them. Original raw timing rows are unchanged. Metadata-only path
+redactions are identified by `current/selection_manifest.json`.
 
 Each campaign has its configuration, raw trials, exact inputs and recorded
 environment/checks. Matrix-unit conversion uses five inputs per size and method,
@@ -50,10 +60,11 @@ bytes, including recorded library paths in the matrix-unit trial metadata.
 Configuration/environment JSON omits machine-local paths and verbose
 NumPy build output and unused generic-runner options; the manifest identifies
 these changes. The small Ising
-configuration transcribes the recorded model parameters. Historical code
-snapshots and generated figures are omitted. Source hashes in the environment
-records identify the implementations used for the measurements; they do not
-refer to this repository's edited source.
+configuration transcribes the recorded model parameters. The recovered historical sources and their hash checks are documented in
+[`HISTORICAL_SOURCES.md`](../../HISTORICAL_SOURCES.md). Source hashes in the
+environment records identify the original implementations, not the edited
+release source. Figure redrawing is independent of source recovery. Generated
+figures are supplied with the release rather than treated as fresh measurements.
 
 For `matrix_units`, `manifest.json` contains the protocol, environment and source
 hashes; `integrity_after.json` records the original source-integrity check.

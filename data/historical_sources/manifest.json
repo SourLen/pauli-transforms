@@ -1,0 +1,237 @@
+{
+  "schema": "selected-historical-source-archive-v1",
+  "description": "Exact selected source bytes, separately identified from current pauli_transforms code. No development history or excluded tensor-network implementation.",
+  "campaigns": {
+    "direct_20260917": {
+      "runner": "benchmark",
+      "record_file": "source_hashes.json",
+      "record_sha256": "dae4534f1ed2ec08a71f8a33047c22885384b8c596cdc63460ab1c4788ebbf08",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "benchmark.py": "dcf91cca8ab8265ac43d9a2eee25c21b0c7ff6ede787e7f53d6cc0d74b378454",
+        "benchmark_cases.py": "2c4f41febfeb9d84393f1422991528c41ab1392d8f1adee378dfd0c32ccd8ad2",
+        "chang.py": "a82145e06b5185b4e2185f331e54965a461ba003c224dff6870018022acfd4ba",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "plot_benchmarks.py": "d1f98cc04a43d9e9f10b93decc7e4dca30b8d070285cb654339d79068bf64e8b",
+        "schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [
+        "The original generic runner imports unselected algorithms eagerly. A new launch adapter supplies rejecting placeholder modules for those imports; selected numerical kernels and measured functions remain byte-identical. Only Anschuetz/Chang comparisons are supported by this archive launcher."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "fixed_locality_20260914": {
+      "runner": "benchmark",
+      "record_file": "source_hashes.json",
+      "record_sha256": "3a4d54d94c663eea8678dba423e143e0c7c6fb0385d1e981eb21b37d83139dfb",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "benchmark.py": "6ae54589816662faf9fbb4a65b44f1a819601470040f62588c4bb8ea810868fe",
+        "benchmark_cases.py": "2c4f41febfeb9d84393f1422991528c41ab1392d8f1adee378dfd0c32ccd8ad2",
+        "chang.py": "a82145e06b5185b4e2185f331e54965a461ba003c224dff6870018022acfd4ba",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "plot_benchmarks.py": "d7f93c0ee55a8517102f4d3b6dfc370f67827b1045aaa1f57435a3843c121f75",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "e1152410c091f38a1489abb14e4b9fa4af28126da356a611b77fbb45c71c0f9e",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [
+        "The original generic runner imports unselected algorithms eagerly. A new launch adapter supplies rejecting placeholder modules for those imports; selected numerical kernels and measured functions remain byte-identical. Only Anschuetz/Chang comparisons are supported by this archive launcher."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "conversion_20260921": {
+      "runner": "benchmark",
+      "record_file": "extension_source_hashes.json",
+      "record_sha256": "4b5b5f859d91ca94776e220186c4129d12149809161e47f9c3a4daea9514b4fc",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "benchmark.py": "672283d908f2ce935cb6af94c6a60bf4f316db13d1f56aa262eb603afcb51797",
+        "benchmark_cases.py": "2c4f41febfeb9d84393f1422991528c41ab1392d8f1adee378dfd0c32ccd8ad2",
+        "chang.py": "a82145e06b5185b4e2185f331e54965a461ba003c224dff6870018022acfd4ba",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "plot_benchmarks.py": "581809e38240407a011f3e8a0f11be02ee6874fa1505999a4b04c3a600ff26e4",
+        "schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [
+        "The original generic runner imports unselected algorithms eagerly. A new launch adapter supplies rejecting placeholder modules for those imports; selected numerical kernels and measured functions remain byte-identical. Only Anschuetz/Chang comparisons are supported by this archive launcher."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "fixed_weight_cache_20260923": {
+      "runner": "benchmark",
+      "record_file": "source_hashes.json",
+      "record_sha256": "91108f3caac1e6863d66c4cde9c1811e2ca19b530288cc534261fc2462b0d6ac",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "benchmark.py": "ba0fd79d077c52b27a3bb556dbe5b55dd53144399d5358c45a089c7d202c8732",
+        "benchmark_cases.py": "98e466949521b2677da15665adbcc3f8ec6f4880decda4af34aaa7137d135ece",
+        "chang.py": "a82145e06b5185b4e2185f331e54965a461ba003c224dff6870018022acfd4ba",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "fixed_weight_cache.py": "41a959e48871362c44c18c3f71093b6517604dad99801f63ca880fcf2a68a8e8",
+        "plot_benchmarks.py": "bc0e3a99c753f147e7c56bd112ad3b877fead9e0d21bdedfa86cc3c4ee4f95c1",
+        "schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [
+        "The original generic runner imports unselected algorithms eagerly. A new launch adapter supplies rejecting placeholder modules for those imports; selected numerical kernels and measured functions remain byte-identical. Only Anschuetz/Chang comparisons are supported by this archive launcher."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "spectral_20260917": {
+      "runner": "run_spectral_comparison",
+      "record_file": "environment.json",
+      "record_sha256": "0d84cc7517c064da8c087e18302532c8186a62c0b1b2106583bbcbc5427bbea1",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "application_conversions.py": "beaef56a3cdde1359a91433188066fe988593592f1e73a808923345166710b5a",
+        "benchmark_cases.py": "2c4f41febfeb9d84393f1422991528c41ab1392d8f1adee378dfd0c32ccd8ad2",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "run_spectral_comparison.py": "2b7bc88db305239dc02b79c8155886c5fc203eef01d7f45dd87b4bc2b7dedb2e",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {
+        "schur_factorial.py": {
+          "sha256": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+          "source_record_campaign": "direct_20260917"
+        }
+      },
+      "limitations": [
+        "The spectral source record omitted schur_factorial.py, which is imported for type detection. Its bytes are supplied from the independently recorded 17 September direct campaign. The spectral timings selected the Hahn backend, not factorial evaluation."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "dynamics_20260918": {
+      "runner": "run_random_dynamics_comparison",
+      "record_file": "environment.json",
+      "record_sha256": "898d2778a175501e68456ba8d68d3ad23a015c3711e87071d8ec4b6c699fbb64",
+      "files": {
+        "anschuetz_optimized.py": "ed2c0dfea1de7dd61c239fb34ac2f419e45799bb93027f393eeca06fc41465a0",
+        "anschuetz_public.py": "97afb91c5278eec5a79b0a2026b028e04dcedbb6268d5caf484fab1027d975e7",
+        "application_conversions.py": "beaef56a3cdde1359a91433188066fe988593592f1e73a808923345166710b5a",
+        "benchmark_cases.py": "2c4f41febfeb9d84393f1422991528c41ab1392d8f1adee378dfd0c32ccd8ad2",
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "physical_models.py": "03219b374e39b293bf90328e69373b5cd9ebacffa3957ca76398084ce725c782",
+        "random_dynamics_inputs.py": "ef4848b69ac12a6485827afb85d1ac7c2a6d5628c6b09720cfd0df8a82512ce9",
+        "run_random_dynamics_comparison.py": "e3e4ad621a0eac030f0103505bd89816ab49e32d8eaf6f7c51fb1d8038381bd0",
+        "schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486",
+        "separated.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "matrix_units_20260919": {
+      "runner": "run_permqit_comparison",
+      "record_file": "manifest.json",
+      "record_sha256": "6f1d58f5f6b0cea8fa886a2184de6e0cc634a96469559b43fd91d386c3a24285",
+      "files": {
+        "common.py": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+        "permqit_adapter.py": "93a19e2f9b854eb2702b10e6330b063ea54182440702e56d8b62d71dec51bef1",
+        "permqit_comparison_reference.py": "c39d35e413f8148d342fd07bd736c4d0c2aa2ba262055e1648243270f1ee2068",
+        "requirements-permqit.txt": "6e9fd5ce4bae97230a1b636f47f725d587054a84cba5b971fc7003ee57998a4e",
+        "run_permqit_comparison.py": "87366b732a0ec7afa34ab6edd44cd0f2729caf9416d045c64bef66fbe7d23c66",
+        "schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+        "schur_full_ed.py": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+        "schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+        "test_permqit_adapter.py": "961b340fe3e0f2b1e79561f919439f9869191d967328c084379d3da53f6c4c5f"
+      },
+      "supplemental_dependencies": {},
+      "limitations": [],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    },
+    "ising_20260918": {
+      "runner": "plot_ising_example",
+      "record_file": "provenance.json",
+      "record_sha256": "f9cfde3b73d2372e16b669175c32901ee4dffaa8ae67349daa3f2c43c6a5d697",
+      "files": {
+        "dynamics_baselines.py": "91f64c0cf0586344be3e27e9fe20171293a371b3cbfa117443c91324f387f37e",
+        "physical_models.py": "03219b374e39b293bf90328e69373b5cd9ebacffa3957ca76398084ce725c782",
+        "plot_benchmarks.py": "581809e38240407a011f3e8a0f11be02ee6874fa1505999a4b04c3a600ff26e4",
+        "plot_ising_example.py": "b0b9f016d5154af6f8e842e1cd96164ff31a29035dbb6f917a5f83828e7614b0",
+        "plot_spectral_comparison.py": "0f44200f5802d1940399db293dd4809d476156868dedac43ed4af544d4878632",
+        "schur_separated.py": "d1602aa9fa8b3696aae334fcac44386933e307341f83294db2bdf4973602c486"
+      },
+      "supplemental_dependencies": {
+        "common.py": {
+          "sha256": "1bc5fa4a551bb0ab984b9cb1037e41800db4cd36b71c5f330256d964590372d7",
+          "source_record_campaign": "direct_20260917"
+        },
+        "separated.py": {
+          "sha256": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d",
+          "source_record_campaign": "direct_20260917"
+        },
+        "schur_full_ed.py": {
+          "sha256": "eb1ce55f8e25a529aee412a542cdfc16d5fda821ff1f3409c513c11a745700a7",
+          "source_record_campaign": "direct_20260917"
+        },
+        "schur_hahn.py": {
+          "sha256": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+          "source_record_campaign": "direct_20260917"
+        },
+        "schur_factorial.py": {
+          "sha256": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+          "source_record_campaign": "direct_20260917"
+        }
+      },
+      "limitations": [
+        "The Ising provenance recorded the plotter and direct model/plot dependencies but not the transitive conversion kernels. Those are supplied from the 17 September direct record. The displayed curves are retained observations from a preceding campaign; running this plotter redraws them and recomputes the spectrum, it does not regenerate the trajectory observations."
+      ],
+      "package_marker_sha256": "825667db761a712538d9b8cc056f198a8e465deec78bca121565ff8904a57d75"
+    }
+  },
+  "dataset_hash_crosschecks": [
+    {
+      "dataset": "current/fixed_locality/low",
+      "bundle": "conversion_20260921",
+      "matched_selected_sources": 12
+    },
+    {
+      "dataset": "current/fixed_locality/high",
+      "bundle": "conversion_20260921",
+      "matched_selected_sources": 12
+    },
+    {
+      "dataset": "current/fixed_weight_cache/low",
+      "bundle": "fixed_weight_cache_20260923",
+      "matched_selected_sources": 13
+    },
+    {
+      "dataset": "current/fixed_weight_cache/high",
+      "bundle": "fixed_weight_cache_20260923",
+      "matched_selected_sources": 13
+    }
+  ],
+  "adapters": {
+    "run.py": "ae6b5d6bf115eaec41ad834157fab596f471724f987eee8925ddd4243ab3a866",
+    "rerun.py": "7c9291828e76e66ede0d7e24bd7dbd55f68e80813f145717ad85376c314a9627",
+    "adapters/sitecustomize.py": "5d6e8b1c41b9fe9b838118ef7a9156bfdcad04328eb38118b1802f5683f45e0c"
+  }
+}

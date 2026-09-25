@@ -1,0 +1,85 @@
+{
+  "kind": "regeneration with archived kernels, not new timing data",
+  "python": "3.14.7",
+  "numpy": "2.4.6",
+  "checker_sha256": "c931eba454adb6ea19757fa768a40269b94caa3db9da616da7a33e9f5526fe56",
+  "archive_manifest_sha256": "2876a2f50635514369314213c81da52c21d19b0c083f67482d33c837695a4756",
+  "dtype": "complex128/float64",
+  "absolute_tolerance": 1e-10,
+  "spectrum_n": 12,
+  "spectrum_max_absolute_error": 0.0,
+  "small_checks": [
+    {
+      "n": 1,
+      "collective_block_max_abs_error": 0.0,
+      "eigenpair_max_abs_residual": 0.0,
+      "full_spectrum_max_abs_error": 0.0,
+      "full_curve_max_abs_error": 1.1102230246251565e-16,
+      "state_trace_error": 0.0,
+      "valid": true
+    },
+    {
+      "n": 2,
+      "collective_block_max_abs_error": 1.1102230246251565e-16,
+      "eigenpair_max_abs_residual": 2.220446049250313e-16,
+      "full_spectrum_max_abs_error": 6.661338147750939e-16,
+      "full_curve_max_abs_error": 2.221139830254355e-15,
+      "state_trace_error": 2.220446049250313e-16,
+      "valid": true
+    },
+    {
+      "n": 3,
+      "collective_block_max_abs_error": 1.6653345369377348e-16,
+      "eigenpair_max_abs_residual": 5.551115123125783e-16,
+      "full_spectrum_max_abs_error": 4.440892098500626e-16,
+      "full_curve_max_abs_error": 2.2783359134159935e-15,
+      "state_trace_error": 2.220446049250313e-16,
+      "valid": true
+    },
+    {
+      "n": 4,
+      "collective_block_max_abs_error": 1.1102230246251565e-16,
+      "eigenpair_max_abs_residual": 2.3318915550236635e-16,
+      "full_spectrum_max_abs_error": 7.771561172376096e-16,
+      "full_curve_max_abs_error": 9.992083454300858e-16,
+      "state_trace_error": 0.0,
+      "valid": true
+    },
+    {
+      "n": 5,
+      "collective_block_max_abs_error": 1.1102230246251565e-16,
+      "eigenpair_max_abs_residual": 4.440892098500626e-16,
+      "full_spectrum_max_abs_error": 8.881784197001252e-16,
+      "full_curve_max_abs_error": 1.7624895094170104e-15,
+      "state_trace_error": 0.0,
+      "valid": true
+    },
+    {
+      "n": 12,
+      "collective_block_max_abs_error": 6.661338147750939e-16,
+      "eigenpair_max_abs_residual": 2.220446049250313e-15,
+      "valid": true
+    }
+  ],
+  "curves": [
+    {
+      "n": 8,
+      "points": 241,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 20,
+      "points": 241,
+      "max_absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 40,
+      "points": 241,
+      "max_absolute_error": 0.0,
+      "passed": true
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,4436 @@
+{
+  "metadata": {
+    "created_utc": "2026-09-25T11:00:31.328827+00:00",
+    "source_publication": "https://doi.org/10.1007/s11128-018-2045-0",
+    "source_equations": [
+      14,
+      17,
+      41,
+      42,
+      43
+    ],
+    "base_commit": "72de9b3fd9c6a7114d16e052273705bf6eb9c583",
+    "measured_source_sha256": {
+      "scripts/check_munoz_dictionary.py": "e833dd6ff034591e34444b89bfea8aafdcf0ce9b07ef1ffb25b8d0bae3d540ca",
+      "tests/test_munoz_dictionary.py": "937e8fa19d54fe9a5a0d97e100fbe16b08f2eecb7a416b618182e09b96fb3903",
+      "pauli_transforms/krawtchouk.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d",
+      "pauli_transforms/common.py": "928e731ef3e466e4fe7c815fe82c20e3228a85f1e3fe9468d8cbfa69be019682"
+    },
+    "python": "3.14.7",
+    "numpy": "2.4.6",
+    "sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "input_family": "every unnormalized Pauli orbit, coefficient one",
+    "direction": "Pauli orbits to literal matrix entries",
+    "reference": "literal tensor products and independent binary sums",
+    "reference_precision": "exact integer binomials and Gaussian integers representable in complex128",
+    "backend": "Krawtchouk, supplied tables and fresh sparse path",
+    "dtype": "complex128",
+    "seed": null,
+    "tolerance": {
+      "absolute": 0,
+      "relative": 0
+    },
+    "orbit_count": 209,
+    "matrix_entries_checked": 411824,
+    "f_representatives_checked": 2057,
+    "status": "passed"
+  },
+  "observations": [
+    {
+      "n": 1,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 4,
+      "f_orbit_representatives": 2,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 2,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 1,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 4,
+      "f_orbit_representatives": 2,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 2,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 1,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 4,
+      "f_orbit_representatives": 2,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 2,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 1,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 4,
+      "f_orbit_representatives": 2,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 2,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 4,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        0,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 4,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        1,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        1,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        2,
+        0,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 4,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        2,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 2,
+      "source_labels": [
+        2,
+        2,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "matrix_entries": 16,
+      "f_orbit_representatives": 3,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 4,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        0,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        0,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 48,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 48,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        0,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        1,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        1,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        0,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        2
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 48,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        2,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        2,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 48,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        2,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        3,
+        0,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        3,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        3,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        2,
+        1
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 24,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 3,
+      "source_labels": [
+        3,
+        3,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "matrix_entries": 64,
+      "f_orbit_representatives": 4,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 8,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 16,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        0,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        0,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        0,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 16,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        0,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        1,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        0,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        2,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        0,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        2,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        0,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        3
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        3,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        3,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        1,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        3
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 192,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        3,
+        4,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        3,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        4,
+        0,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        4
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 16,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        4,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        3
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        4,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 9,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 96,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        4,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        3,
+        1
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 8,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 4,
+      "source_labels": [
+        4,
+        4,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "matrix_entries": 256,
+      "f_orbit_representatives": 5,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 16,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 32,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        2,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        3,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        4,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        0,
+        5,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        5,
+        0,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 32,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        0,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        1,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        0,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        1,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        4,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        0,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        1,
+        5,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        1,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        0,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        0,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        1,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        2,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        2,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        0,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        2,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        0,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        2,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        3,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        0,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        1,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        2,
+        5,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        2,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        0,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        0,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        1,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        3,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        3,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        1,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        0,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        4,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        3,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        2,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        0,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        1,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        2,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        3,
+        5,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        3,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        0,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        4
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        1,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        2,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        3,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        4,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        4,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        1,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        4
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        2,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        3,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 640,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        4,
+        5,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        0,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        5
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 32,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        1,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        4
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        2,
+        3
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        3,
+        2
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 320,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        4,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        4,
+        1
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 10,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 160,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 5,
+      "source_labels": [
+        5,
+        5,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        5,
+        0
+      ],
+      "matrix_entries": 1024,
+      "f_orbit_representatives": 6,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 32,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        0,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        6,
+        0,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        5,
+        1,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        2,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        4,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        5,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        5,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        0,
+        6,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        6,
+        0,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        0,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        5,
+        0,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        1,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        5,
+        0,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        1,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        1,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        4,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        4,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        5,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        4,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        5,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        5,
+        0,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        1,
+        6,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        5,
+        1,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        0,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        0,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        1,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        1,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        2,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        4,
+        0,
+        2,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 7680,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 5760,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 5760,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        3,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 7680,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        5,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        4,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        0,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        5,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        1,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        2,
+        6,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        4,
+        2,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        0,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        0,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        1,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        2,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        3,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        1,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        4,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        2,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        5,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        3,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        0,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        4,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        5,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        3,
+        6,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        3,
+        3,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        0,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        0,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        1,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        2,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 5760,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        3,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        4,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        2,
+        0,
+        4,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        1,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        0,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 7680,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 11520,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 7680,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        5,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        1,
+        4,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        2,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        0,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        3,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        4,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 5760,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        5,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        4,
+        6,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        2,
+        4,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        0,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        0,
+        5
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        1,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        2,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        3,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        4,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        4,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        5,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        1,
+        0,
+        5,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        1,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        0,
+        5
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        2,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        1,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        3,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        4,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 3840,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        5,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        4,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1920,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        5,
+        6,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        1,
+        5,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        0,
+        6
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        1,
+        5
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        1,
+        5
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        2,
+        4
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        2,
+        4
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        3,
+        3
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        3,
+        3
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 16,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 1280,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        4,
+        2
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        4,
+        2
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 15,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 960,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        5,
+        1
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        5,
+        1
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 12,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 384,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    },
+    {
+      "n": 6,
+      "source_labels": [
+        6,
+        6,
+        0
+      ],
+      "pauli_counts_IXYZ": [
+        0,
+        0,
+        6,
+        0
+      ],
+      "matrix_entries": 4096,
+      "f_orbit_representatives": 7,
+      "source_vs_literal_max_abs": 0.0,
+      "kernel_vs_literal_max_abs": 0.0,
+      "orbit_norm_squared": 64,
+      "cached_and_uncached_inverse": "exact agreement",
+      "status": "passed"
+    }
+  ]
+}

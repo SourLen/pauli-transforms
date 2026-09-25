@@ -1,0 +1,62 @@
+{
+  "schema": "retained-campaign-selection-v1",
+  "selection_kind": "direct",
+  "retained_methods": [
+    "separated",
+    "anschuetz_public_original",
+    "anschuetz_optimized"
+  ],
+  "original_file_sha256": {
+    "config.json": "956c83983f8b1336aef4196b3dd7a9bcd98bb028980749562be5647c40f5a7a4",
+    "environment.json": "1dd6cb15c46a7fc25600fc79dd52a1c9ef535026c6be28749f15062b4c3fa699",
+    "runs.csv": "5b1738234573092da461a5b173925e8498ff0559b74ff93d3acd6077aaa7274a",
+    "runs.jsonl": "a71686dbc3dda9cb46f82ce4e7bdc215560da277b588a3f97027dcc3217c7dc6",
+    "source_hashes.json": "dae4534f1ed2ec08a71f8a33047c22885384b8c596cdc63460ab1c4788ebbf08",
+    "summary.csv": "f67546376b25a0e47404c8d95a51574294422bd484f73912403884c749e469cf"
+  },
+  "original_records": 1362,
+  "retained_records": 942,
+  "excluded_records": 420,
+  "valid_timed_samples": 924,
+  "statuses": {
+    "ok": 924,
+    "configured_size_limit": 18
+  },
+  "selected_csv_records": {},
+  "original_jsonl_lines_unchanged": true,
+  "copied_input_sha256": {
+    "inputs/n10_general_l0_i0.json": "e2caf0b54354468c54f831ec5ccc9b971f60022272284d6fe3ed9fde012dfbd0",
+    "inputs/n10_general_l0_i1.json": "a3fd7593ae05298490d2760f84922be56c96173d3b466aa43ab69aee1b29fad4",
+    "inputs/n10_general_l0_i2.json": "0d6151a1a89216e5292c8d304f3387199b95caf705096054360036eb41a881e4",
+    "inputs/n12_general_l0_i0.json": "2f1afeed0cefd4a807138b5808701566b095b9d282964c6937f1e0b0d31df70e",
+    "inputs/n12_general_l0_i1.json": "d306c2097bc81efbbc7405e37bb05abf5ef919f60ad9900aa2891bf3a2e6df42",
+    "inputs/n12_general_l0_i2.json": "17642c5d19dedd823587c63784e2b936710fab9e747d708a1710d74750f60257",
+    "inputs/n16_general_l0_i0.json": "48a16cfd26be27445e492c3fb1e143622c855b63b3a4646c616a18f98d88a151",
+    "inputs/n16_general_l0_i1.json": "d38e0b3c6761663be320d5c7d4ab5ab1a38626cccf86275c8d85b4acc8c89c72",
+    "inputs/n16_general_l0_i2.json": "79d094e945020e5094185bc9eede637dda65b2c1a806888a195004712ed9ab95",
+    "inputs/n20_general_l0_i0.json": "88f9a9dcdda31b29db2505b785c048e8081cc89b57b05f2059509f79703e427b",
+    "inputs/n20_general_l0_i1.json": "56f96ef91a5d0a327b03e6494ca23f41db579a67e4865f4845ef9845dcf168e0",
+    "inputs/n20_general_l0_i2.json": "62622d4a66d3da3692ab50799afdb81b4e73d0d397095e74d34460a822752e5c",
+    "inputs/n2_general_l0_i0.json": "fa496b70b9bdae19b147e512cbe96cb8828df7b1b5e4530dfe9a1308607790f2",
+    "inputs/n2_general_l0_i1.json": "3687e67a9c21772ffc021e32c2fbb70f2c2ebf14b5649dd31d55c756fc284237",
+    "inputs/n2_general_l0_i2.json": "64d7d97596518b793de96b94c6ec7ac950eadcffcc7ec017bf451f4267caa686",
+    "inputs/n3_general_l0_i0.json": "755779fd7b880bd22f63ba88232741615d6ddc90ac8bc0ab90f02f1afcfb5d6b",
+    "inputs/n3_general_l0_i1.json": "e6bdce493199fccf8c2efc62c73ca3c5d1fca689867b980540f5cfb6c428a089",
+    "inputs/n3_general_l0_i2.json": "2c129287a80bd7ba57b062b3d04abdb2eb0f2ba00950420c6565180e0180ef09",
+    "inputs/n4_general_l0_i0.json": "74701576b2476fc0f67d1a5dd25ca9bddef0ffc45c6a32beb2cf310777746456",
+    "inputs/n4_general_l0_i1.json": "f72b9c4318ecfc1d2dc4f71c5f29fd49fb585d01ddb49fa7cf3e2afdf68721c5",
+    "inputs/n4_general_l0_i2.json": "b158af4a9bb4f5b4181a8d5a36bccd0984729ce3d40b2445eeb51d71ff38bdd9",
+    "inputs/n5_general_l0_i0.json": "9e15c8d2e1b7a5056b73924ce0d2192a2ad44449da6c30a7d8c9a359d513ad7c",
+    "inputs/n5_general_l0_i1.json": "cf0d5b6188d09edc7a97526ba2b13fef2ebf614a59827bd099831df512e63386",
+    "inputs/n5_general_l0_i2.json": "e19ea5bc57b857b41c7e912ab78c4123ff2df7284167d7f0d72df20ed2d752c9",
+    "inputs/n6_general_l0_i0.json": "a646e0a191e5b16c73506646a353b9d04b4e9fe76034e6df2ac3c4d00c0217eb",
+    "inputs/n6_general_l0_i1.json": "751da2d05722d245e0c742e72283bdaa446785a5d66fb59802bb3e01d983fe15",
+    "inputs/n6_general_l0_i2.json": "1be104748983a52ccf43237d933f4f798b92e79bbf44cfe0f7b24ed6d5e5e629",
+    "inputs/n8_general_l0_i0.json": "2631b746a561e66d0781c084230578409e2afd0e1b380f4949abd2f7bf25e16b",
+    "inputs/n8_general_l0_i1.json": "d5d50c598d6eb43152c94cfdd3ba47941a02ee76ecb2a0ca15108f38763b4198",
+    "inputs/n8_general_l0_i2.json": "14c30b3f50b0de03879dca4637cf72a5bb409d546900a6d086fa0f77d6cec4af"
+  },
+  "no_retiming": true,
+  "no_pooling": true,
+  "selector_sha256": "c73a2ce6a593e073efbaf83b9f5ce2ddda3e877e1cb435f60b450c6485cb1258"
+}

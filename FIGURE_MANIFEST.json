@@ -1,0 +1,206 @@
+{
+  "schema": "thesis-figures-20260925",
+  "release_version": "0.2.0",
+  "description": "Nine manuscript figures (two native diagrams and seven data figures), plus two accuracy tables. LaTeX labels, not printed numbers, identify them.",
+  "supplementary": [
+    "general_conversion",
+    "conversion_accuracy",
+    "random_dynamics_diagnostics"
+  ],
+  "artifacts": [
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:appendix-general-conversion",
+        "fig:comparison-general-conversion"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/current/direct"
+      ],
+      "configuration": [
+        "data/thesis/current/direct/baseline_config.json",
+        "data/thesis/current/direct/config.json",
+        "data/thesis/current/direct/extension_config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/general_conversion_public.pdf",
+      "manuscript_file": "figures/revision_20260925/general_conversion_public.pdf",
+      "release_artifact_sha256": "19f6783ed7716e04759604b66dabcdd701f7cec5a4bc33d1171c1a1f87c14ee9"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:permqit-matrix-unit-conversion"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/matrix_units"
+      ],
+      "configuration": [
+        "data/thesis/matrix_units/manifest.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/matrix_unit_schur.pdf",
+      "manuscript_file": "figures/revision_20260925/matrix_unit_schur.pdf",
+      "release_artifact_sha256": "69eb1e2dccf6d26561d2817df207088386b9b394c4e11217230f125e6a10f5b9"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:comparison-fixed-locality"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/current/fixed_locality/low",
+        "data/thesis/current/fixed_locality/high"
+      ],
+      "configuration": [
+        "data/thesis/current/fixed_locality/low/config.json",
+        "data/thesis/current/fixed_locality/high/config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/fixed_locality.pdf",
+      "manuscript_file": "figures/revision_20260925/fixed_locality.pdf",
+      "release_artifact_sha256": "aa97d1845587202f5c8cdc002d1b501365b3486ad7128766379f22ba90ebe17c"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:comparison-fixed-weight-cache"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/current/fixed_weight_cache/low",
+        "data/thesis/current/fixed_weight_cache/high"
+      ],
+      "configuration": [
+        "data/thesis/current/fixed_weight_cache/low/config.json",
+        "data/thesis/current/fixed_weight_cache/high/config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/fixed_weight_cache.pdf",
+      "manuscript_file": "figures/revision_20260925/fixed_weight_cache.pdf",
+      "release_artifact_sha256": "bfc2b3d1516f26b2292da562fd4b65a48431f8c62966cc9954c9c59e7f796463"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:spectral_comparison"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/spectral"
+      ],
+      "configuration": [
+        "data/thesis/spectral/config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/spectral_comparison.pdf",
+      "manuscript_file": "figures/revision_20260925/spectral_comparison.pdf",
+      "release_artifact_sha256": "c0d569f0bbd5d20962ff537e9423bc170cd1d49c89e7c0b8709db1ea92d9fe85"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:random_dynamics_comparison"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/dynamics"
+      ],
+      "configuration": [
+        "data/thesis/dynamics/config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/random_dynamics_comparison.pdf",
+      "manuscript_file": "figures/revision_20260925/random_dynamics_comparison.pdf",
+      "release_artifact_sha256": "bb869f699ee18d221546f0fc70d9aa20adbe78f99a36947d222ea7d60113bc3a"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:ising_example"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/ising"
+      ],
+      "configuration": [
+        "data/thesis/ising/config.json"
+      ],
+      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "output_file": "figures/ising_example.pdf",
+      "manuscript_file": "figures/revision_20260925/ising_example.pdf",
+      "release_artifact_sha256": "e2be2c370b75729e870d82d2e5f70c880c7a4bdd592a4594755a906ac8efc0c3"
+    },
+    {
+      "kind": "native_latex_diagram",
+      "latex_labels": [
+        "fig:triangle_of_conversions"
+      ],
+      "datasets": [],
+      "source": "manuscript/diagrams/triangle_of_conversions.tex",
+      "source_sha256": "05d8a46ef75723bc4b012d96b2fdfbc194b254b66c073390dd00889d117e5a84",
+      "generating_command": "cd manuscript/diagrams && latexmk -lualatex triangle_of_conversions_standalone.tex",
+      "output_file": "manuscript/diagrams/triangle_of_conversions_standalone.pdf",
+      "measured_source": null
+    },
+    {
+      "kind": "native_latex_diagram",
+      "latex_labels": [
+        "fig:comparison-coordinate-map"
+      ],
+      "datasets": [],
+      "source": "manuscript/diagrams/comparison_coordinate_map.tex",
+      "source_sha256": "3392f3f141af1f58d443490588bb9e8935ada13882cdb0fca939c792335dc9e2",
+      "generating_command": "cd manuscript/diagrams && latexmk -lualatex comparison_coordinate_map_standalone.tex",
+      "output_file": "manuscript/diagrams/comparison_coordinate_map_standalone.pdf",
+      "measured_source": null
+    },
+    {
+      "kind": "accuracy_table",
+      "latex_labels": [
+        "tab:conversion_accuracy"
+      ],
+      "generating_command": "python -m pauli_transforms.accuracy --sweep --output results/accuracy/conversions.json",
+      "datasets": [
+        "data/accuracy/conversions_20260925.json"
+      ],
+      "output_file": "data/accuracy/conversions_20260925.tex",
+      "output_sha256": "553c7fb65c04bd561693a973d44507fb2528dc43836fb1a9056b70f858f22c4f",
+      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503"
+    },
+    {
+      "kind": "accuracy_table",
+      "latex_labels": [
+        "tab:application_accuracy"
+      ],
+      "generating_command": "python -m pauli_transforms.application_accuracy --output results/accuracy/applications",
+      "datasets": [
+        "data/accuracy/applications_20260925/results.json"
+      ],
+      "output_file": "data/accuracy/applications_20260925/summary.tex",
+      "output_sha256": "a7c3a9de39445737776e6433c9510e49aac552dc30a69fa12f4dd06fd4f0cca4",
+      "measured_source_revision": "3829b72425ab20ae0e3fa3790e0bc77f441dd503"
+    }
+  ],
+  "notes": [
+    "Historical observations are not measurements of release source.",
+    "PDF metadata may differ on redraw. Unrounded statistics and raw trial groups determine the curves."
+  ]
+}

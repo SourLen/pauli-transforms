@@ -38,10 +38,10 @@ class PlotTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 plot.point_statistics(variant, cfg, "total_seconds", "n", [20], method="thesis")
 
-    def test_seven_current_figures_and_recorded_medians(self):
+    def test_current_figures_and_recorded_medians(self):
         expected_names = {"general_conversion_public", "matrix_unit_schur",
-                          "fixed_locality", "spectral_comparison", "random_dynamics_comparison",
-                          "random_dynamics_diagnostics", "ising_example"}
+                          "fixed_locality", "fixed_weight_cache", "spectral_comparison", "random_dynamics_comparison",
+                          "ising_example"}
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
             summaries = plot.export(DATA, output, formats=("pdf",))
@@ -51,8 +51,14 @@ class PlotTests(unittest.TestCase):
                                    0.017852479999419302, places=15)
             self.assertAlmostEqual(summaries["random_dynamics_comparison"]["size/thesis"][-1]["median"],
                                    0.049764150000555674, places=15)
-            self.assertAlmostEqual(summaries["general_conversion_public"]["separated/ell0/cold"][-1]["median"],
+            general = summaries["general_conversion_public"]["separated/ell0/cold"]
+            self.assertEqual(general[-1]["x"], 40)
+            self.assertAlmostEqual(next(p["median"] for p in general if p["x"] == 20),
                                    0.017120777, places=15)
+            for name in ("fixed_locality", "fixed_weight_cache"):
+                for weight in (2, 4, 6, 8):
+                    self.assertIn(f"anschuetz_optimized/ell{weight}/cold", summaries[name])
+                    self.assertEqual(f"chang/ell{weight}/cached" in summaries[name], name == "fixed_weight_cache")
             self.assertNotIn("anschuetz_public_original/ell0/cached", summaries["general_conversion_public"])
             matrix = summaries["matrix_unit_schur"]
             self.assertAlmostEqual(matrix["permqit"]["fresh_total_s"][-1]["median"], 5.552, places=3)
@@ -62,6 +68,12 @@ class PlotTests(unittest.TestCase):
             for stats in summaries["ising_example"].values():
                 self.assertEqual(stats["points"], 241)
                 self.assertAlmostEqual(stats["initial"], .6, places=12)
+
+    def test_current_selection_hashes(self):
+        current = DATA / "current"
+        for row in json.loads((current / "selection_manifest.json").read_text()):
+            self.assertEqual(hashlib.sha256((current / row["destination"]).read_bytes()).hexdigest(),
+                             row["included_sha256"], row["destination"])
 
     def test_small_grid_without_public_measurements(self):
         cfg, rows = plot.read_campaign(DATA / "direct")

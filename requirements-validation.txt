@@ -1,0 +1,6 @@
+# Versions used for the retained 25 September accuracy measurements.
+# Python 3.14.7, one numerical-library thread.
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.10.9
+threadpoolctl==3.7.0

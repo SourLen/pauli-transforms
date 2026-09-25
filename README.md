@@ -4,8 +4,8 @@ Python code accompanying the bachelor's thesis,
 *Efficient Coordinate Transformations for Permutation-Invariant Quantum Systems*.
 
 The library converts between matrix-entry orbits, Pauli orbits and Schur blocks.
-The accompanying experiments reproduce the conversion, complete-spectrum,
-dynamics and Ising figures in the thesis.
+The accompanying experiments redraw the retained conversion, complete-spectrum,
+dynamics and Ising measurements and provide separate commands for new measurements.
 
 ## Install and use
 
@@ -60,6 +60,16 @@ to reuse them, omitting tables includes preparation in the call.
 `prepare(n, backend="factorial")` selects the Chapter 5 factorization.
 Both backends are bidirectional. The factorial formula can suffer
 floating-point cancellation, in the thesis we use Hahn for most benchmarks.
+Independent tests of all six directions pass through `n=6`. Selected inputs
+through `n=40` pass with Hahn, while the float64 shared-factor backend fails the
+declared tolerances for some cancellation-sensitive inputs at `n=30,40`.
+These sizes describe the tested families, not a universal accuracy threshold.
+The [accuracy report](data/accuracy/README.md) includes the failures, independent
+references, weighted Hilbert–Schmidt errors and block spectral errors.
+Hahn kernels use analytical normalization evaluated with binary64 logarithms,
+including when their recurrence uses an extended array dtype. The default
+cached Hahn implementation has `O(n^4)` preparation and storage; the
+fast-matrix-multiplication theorem applies to the shared-factor construction.
 The code uses ordinary NumPy matrix products; we do not implement the fast
 polynomial transforms discussed in the outlook.
 
@@ -85,6 +95,12 @@ The optional native comparison uses Bergh and Parentin's
 The implementation, tests and documentation were developed with OpenAI Codex
 assistance. This September 2026 release retains the thesis's numerical kernels
 and selected measurements from the private development repository.
+The new accuracy campaigns use immutable source revision
+`3829b72425ab20ae0e3fa3790e0bc77f441dd503`. Historical runtime observations keep
+their original identities. See [BENCHMARKS.md](BENCHMARKS.md), the
+[figure manifest](FIGURE_MANIFEST.json) and
+[historical source record](HISTORICAL_SOURCES.md) for the distinction between
+redrawing saved data and collecting new timings.
 
 Released under the [MIT license](LICENSE). NumPy, SciPy and the plotting
 dependencies are installed separately under their own licenses.

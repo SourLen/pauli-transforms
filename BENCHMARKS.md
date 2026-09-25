@@ -11,22 +11,35 @@ python -m pauli_transforms.plot --data data/thesis --output figures
 This exports the seven benchmark figures currently included in the thesis as
 PDF, SVG and PNG. The input data and their provenance are described in
 [`data/thesis/README.md`](data/thesis/README.md). Plotting does not run benchmarks.
-The default selection matches the manuscript on 19 September 2026:
+The default selection matches the revised manuscript on 25 September 2026. Figure labels, datasets and source provenance are recorded in `FIGURE_MANIFEST.json`:
 
 | Export | Manuscript location |
 | --- | --- |
-| `general_conversion_public` | Appendix C.2, general Pauli-to-Schur conversion |
-| `matrix_unit_schur` | Appendix C.2, shared factors, Hahn recurrence and native permqit |
-| `fixed_locality` | Appendix C.2, fixed-locality comparison |
-| `spectral_comparison` | Section 6.3.1, complete eigensystems |
-| `random_dynamics_comparison` | Section 6.3.2, invariant dynamics |
-| `ising_example` | Section 6.3.3, fully connected Ising model |
-| `random_dynamics_diagnostics` | Appendix C.3, stages and expectation errors |
+| `general_conversion_public` | `fig:appendix-general-conversion`, through n=40 |
+| `matrix_unit_schur` | `fig:permqit-matrix-unit-conversion` |
+| `fixed_locality` | `fig:comparison-fixed-locality`, first use, weights 2,4,6,8 |
+| `fixed_weight_cache` | `fig:comparison-fixed-weight-cache`, common orbit-image preparation |
+| `spectral_comparison` | `fig:spectral_comparison`, complete eigensystems |
+| `random_dynamics_comparison` | `fig:random_dynamics_comparison` |
+| `ising_example` | `fig:ising_example` |
 
 Add `--supplementary` to also export `general_conversion` (without the public
-Anschuetz curve) and `conversion_accuracy`. These two plots are no longer
+Anschuetz curve) and `conversion_accuracy`, as well as `random_dynamics_diagnostics`. These plots are no longer
 displayed in the manuscript. Their observations are retained. The experimental
 general-eigensystem PIQS comparison is excluded, as in the current thesis.
+
+## Accuracy checks
+
+The [accuracy report](data/accuracy/README.md) documents quick regressions and
+independent wide sweeps, including failed shared-factor cases. Accuracy data
+are separate from historical timing observations.
+
+## Historical measurement sources
+
+[HISTORICAL_SOURCES.md](HISTORICAL_SOURCES.md) records recovered measured-source
+files and hash verification. Retained timing rows were not rerun or relabelled
+as measurements of this release. The September 21–23 extensions are preserved
+under `data/thesis/current`, with per-file original and included hashes.
 
 ## Run new measurements
 
@@ -140,8 +153,9 @@ on the machine and software versions.
 
 | Experiment | Sizes | Inputs × repetitions | Seed |
 | --- | --- | --- | --- |
-| General conversion | 2, 3, 4, 5, 6, 8, 10, 12, 16, 20 | 3 × 7 | 20260917 |
-| Fixed locality, weight 2 or 4 | 4, 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
+| General conversion | 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260917 |
+| Fixed locality and common cache, weight 2 or 4 | 4, 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
+| Fixed locality and common cache, weight 6 or 8 | 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
 | Matrix-unit conversion | 2, 4, 6, 8, 10, 12, 16, 20 | 5 fresh-process trials; 7 cached applications each | 20260919 |
 | Complete eigensystems | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260917 |
 | Random dynamics | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260918 |

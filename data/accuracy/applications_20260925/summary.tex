@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llcrrr}
+\toprule
+Reference/input & Method & $n$ & Block error & Residual & Dynamics error \\
+\midrule
+Collective Ising & Shared factor & 8,12,20,40 & $5.3\times10^{-15}$ & $1.3\times10^{-14}$ & $1.9\times10^{-13}$ \\
+Collective Ising & Hahn & 8,12,20,40 & $1.9\times10^{-14}$ & $1.3\times10^{-14}$ & $3.8\times10^{-15}$ \\
+Dense Ising & Shared factor & 2--6 & $8.9\times10^{-16}$ & $6.6\times10^{-16}$ & $3.6\times10^{-15}$ \\
+Dense Ising & Hahn & 2--6 & $4.5\times10^{-16}$ & $1.0\times10^{-15}$ & $3.7\times10^{-15}$ \\
+Dense random & Shared factor & 2--6 & $1.7\times10^{-16}$ & $3.7\times10^{-16}$ & $7.2\times10^{-16}$ \\
+Dense random & Hahn & 2--6 & $1.9\times10^{-16}$ & $5.0\times10^{-16}$ & $8.9\times10^{-16}$ \\
+\bottomrule
+\end{tabular}
+\caption{Maximum absolute Hamiltonian block error and eigensystem residual in spectral norm, and expectation error over 241 equally spaced times in $[0,12]$. References and computations use double precision. Dense tests include cached and uncached conversion.}
+\label{tab:application_accuracy}
+\end{table}

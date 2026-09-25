@@ -1,4 +1,4 @@
-"""Recreate the seven current thesis benchmark figures from saved data.
+"""Recreate the current thesis benchmark figures from saved data.
 
 Run ``python -m pauli_transforms.plot --data data/thesis --output figures``.
 The input root can contain any of direct/, fixed_locality/, spectral/,
@@ -150,6 +150,37 @@ def direct_figures(path, *, fixed=False, supplementary=False):
                             fontsize=7, color=".35")
         shared_legend(fig)
         yield name, fig, stats
+
+
+def fixed_weight_figure(path, *, common_cache=False):
+    """Four weights, with their original disjoint size grids and full trials."""
+    import matplotlib.pyplot as plt
+    campaigns = [read_campaign(path / name) for name in ("low", "high")]
+    weights = [(cfg, rows, weight) for cfg, rows in campaigns for weight in cfg["localities"]]
+    if [weight for _, _, weight in weights] != [2, 4, 6, 8]:
+        raise ValueError("Expected exact weights 2, 4, 6, 8")
+    fig, axes = plt.subplots(4 if common_cache else 2, 2,
+                             figsize=(6.25, 8.0 if common_cache else 4.8),
+                             layout="constrained", squeeze=False)
+    stats = {}
+    for index, (cfg, rows, weight) in enumerate(weights):
+        sizes = cfg.get("n_values") or cfg["n"]
+        for col, mode in enumerate(("cold", "cached") if common_cache else ("cold",)):
+            ax = axes[index, col] if common_cache else axes[index // 2, index % 2]
+            for method in ("separated", "chang", "anschuetz_optimized"):
+                selected = [r for r in rows if r["locality"] == weight and r["cache_mode"] == mode]
+                if common_cache and any(r.get("fixed_weight_cache") != "orbit-images" for r in selected):
+                    raise ValueError("Common-cache plot requires orbit-image measurements")
+                stats[f"{method}/ell{weight}/{mode}"] = draw_runtime(
+                    ax, rows, cfg, "elapsed_seconds", "n", sizes, method,
+                    locality=weight, cache_mode=mode)
+            title = rf"$\ell={weight}$"
+            if common_cache and index == 0:
+                title += ": preparation + one use" if mode == "cold" else ": cached use"
+            label_runtime(ax, title)
+            ax.set_xlim(0, max(sizes) * 1.04)
+    shared_legend(fig)
+    return "fixed_weight_cache" if common_cache else "fixed_locality", fig, stats
 
 
 def read_matrix_unit_campaign(path):
@@ -375,7 +406,16 @@ def export(data, output, formats=("pdf", "svg", "png"), *, supplementary=False):
         finally:
             plt.close(fig)
     with matplotlib.rc_context(rc):
+        current = data / "current"
         for name in ("direct", "fixed_locality"):
+            if current.is_dir() and name == "fixed_locality":
+                save(fixed_weight_figure(current / "fixed_locality"))
+                save(fixed_weight_figure(current / "fixed_weight_cache", common_cache=True))
+                continue
+            if current.is_dir() and name == "direct":
+                for result in direct_figures(current / "direct", supplementary=supplementary):
+                    save(result)
+                continue
             if (data / name).is_dir():
                 for result in direct_figures(data / name, fixed=name == "fixed_locality",
                                              supplementary=supplementary):
@@ -386,6 +426,9 @@ def export(data, output, formats=("pdf", "svg", "png"), *, supplementary=False):
             save(spectral_figure(data / "spectral"))
         if (data / "dynamics").is_dir():
             for result in dynamics_figures(data / "dynamics"):
+                if current.is_dir() and result[0] == "random_dynamics_diagnostics" and not supplementary:
+                    plt.close(result[1])
+                    continue
                 save(result)
         if (data / "ising").is_dir():
             save(ising_figure(data / "ising"))

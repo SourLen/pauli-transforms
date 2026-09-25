@@ -1,0 +1,55 @@
+{
+  "utc": "2026-09-25T11:04:20.168185+00:00",
+  "python": "3.14.7 (main, Aug 10 2026, 00:00:00) [GCC 16.1.1 20260515 (Red Hat 16.1.1-2)]",
+  "platform": "Linux-7.2.4-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "cpu": "AMD Ryzen 7 7735U with Radeon Graphics",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "threadpoolctl": "3.7.0"
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas64_-32a4b2a6.so",
+      "version": "0.3.31.188.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "command": [
+    "python",
+    "-m",
+    "pauli_transforms.application_accuracy",
+    "--output",
+    "applications_20260925",
+    "--dense-max",
+    "6",
+    "--ising-sizes",
+    "8",
+    "12",
+    "20",
+    "40",
+    "--points",
+    "241",
+    "--tmax",
+    "12.0",
+    "--seed",
+    "250926"
+  ],
+  "thread_environment": {}
+}

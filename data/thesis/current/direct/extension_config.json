@@ -1,0 +1,60 @@
+{
+  "comparison": "anschuetz",
+  "n_min": 2,
+  "n_max": 8,
+  "n_step": 2,
+  "n": [
+    24,
+    32,
+    40
+  ],
+  "repeats": 7,
+  "instances": 3,
+  "warmup": 1,
+  "seed": 20260917,
+  "threads": 1,
+  "schur_backend": "hahn",
+  "schur_dtype": "float64",
+  "timeout": 1200.0,
+  "max_memory_mb": 8192.0,
+  "max_pauli_terms": 2000,
+  "max_queries": 2000000,
+  "localities": [
+    1
+  ],
+  "cache_modes": [
+    "cold",
+    "cached"
+  ],
+  "output_contract": "compressed",
+  "anschuetz_implementations": [
+    "optimized"
+  ],
+  "anschuetz_public_max_n": null,
+  "fixed_locality_anschuetz": false,
+  "dense_reference_max_n": 5,
+  "delta": 0.05,
+  "tol": 1e-10,
+  "atol": 1e-09,
+  "rtol": 1e-08,
+  "n_values": [
+    24,
+    32,
+    40
+  ],
+  "methods": [
+    "separated",
+    "anschuetz_optimized"
+  ],
+  "schema": "thesis-comparison-v1",
+  "method_cache_modes": {
+    "separated": [
+      "cold",
+      "cached"
+    ],
+    "anschuetz_optimized": [
+      "cold",
+      "cached"
+    ]
+  }
+}

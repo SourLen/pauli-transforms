@@ -1,0 +1,89 @@
+{
+  "scope": "Small execution checks, not replacement timing campaigns",
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Linux"
+  },
+  "external_revisions": {
+    "symmetric_hamiltonians": "24ce1a5fe4f3234f5f9a2f1ad65c2909423d7dc8",
+    "permqit": "22af3cd245bd0e950df49f6ce16ccd422b6eb2c5"
+  },
+  "checks": [
+    {
+      "check": "direct_20260917",
+      "sizes": [
+        2
+      ],
+      "records": 4,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "fixed_20260914",
+      "sizes": [
+        2
+      ],
+      "records": 4,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "conversion_20260921",
+      "sizes": [
+        2
+      ],
+      "records": 6,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "cache_20260923",
+      "sizes": [
+        2
+      ],
+      "records": 6,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "spectral_20260917",
+      "sizes": [
+        2
+      ],
+      "records": 2,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "dynamics_20260918",
+      "sizes": [
+        2
+      ],
+      "records": 4,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "public_20260917",
+      "sizes": [
+        2
+      ],
+      "records": 5,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "matrix_units_20260919",
+      "sizes": [
+        2
+      ],
+      "records": 3,
+      "all_original_gates_passed": true
+    },
+    {
+      "check": "from_config",
+      "sizes": [
+        4
+      ],
+      "records": 12,
+      "all_original_gates_passed": true
+    }
+  ],
+  "records": 46,
+  "all_passed": true
+}

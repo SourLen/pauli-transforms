@@ -1,0 +1,11 @@
+{
+  "pauli_transforms/application_accuracy.py": "8a0637f1f643ccf38ca2585523f1f3fdb3faae0a74f69396fe8a590e581d425f",
+  "pauli_transforms/physical_models.py": "e229aa4ad681f2f05c14ce0c9172f5433bdecda83a5ab9ddb0508207b9f5a819",
+  "pauli_transforms/transforms.py": "9b3b51a5814abc5a49c6d0c3a1b52243931c5cf0b7c97f5a055a9e73fdbacc98",
+  "pauli_transforms/common.py": "928e731ef3e466e4fe7c815fe82c20e3228a85f1e3fe9468d8cbfa69be019682",
+  "pauli_transforms/krawtchouk.py": "c65759a66da4b0f6a60303eebfdbf435910d20d91b629ce59f92e9557ee4242d",
+  "pauli_transforms/schur_hahn.py": "a66786cd5b7fd4fee54fe33ca13150811683c5e75dedc45c2f6011b7f726aa1c",
+  "pauli_transforms/schur_factorial.py": "68e12c01b0ed435c03bee314a31a4e03cc27d1b5b59d3ae51b99025f726ebeea",
+  "pauli_transforms/benchmark_helpers.py": "fd3636a723fe10fef12af85292d38f2b3109f620b150ac68953fc81be55d058e",
+  "pauli_transforms/__init__.py": "65952f7c026360c5195c417879b922988da1cb85c0072eb1f9046cb503060316"
+}

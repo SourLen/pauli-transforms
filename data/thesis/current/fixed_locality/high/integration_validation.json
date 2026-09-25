@@ -1,0 +1,26 @@
+{
+  "source": "<historical local path omitted>",
+  "benchmark_rerun": false,
+  "checked_recorded_validation": true,
+  "records": 1764,
+  "groups": 84,
+  "shared_inputs": 42,
+  "observations_per_group": 21,
+  "complete_grid_no_duplicates": true,
+  "all_status_ok_and_valid": true,
+  "same_inputs_across_methods_and_cache_modes": true,
+  "timed_phase_sums_match_elapsed": true,
+  "summary_medians_and_quartiles_match_raw": true,
+  "manifest_data_code_and_figure_hashes_match": true,
+  "validation_kind": "independent_collective_pauli_recurrence",
+  "max_relative_error_by_method": {
+    "separated": 4.5008297612209416e-15,
+    "chang": 4.484524183060304e-15,
+    "anschuetz_optimized": 4.476410215055454e-15
+  },
+  "lowest_median_at_all_tested_sizes": {
+    "cold": "separated",
+    "cached": "anschuetz_optimized"
+  },
+  "pdf_visually_inspected": true
+}
