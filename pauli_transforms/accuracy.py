@@ -221,8 +221,7 @@ def dense_campaign(max_n=3):
                         ("schur_to_pauli", coefficient_metrics(n, transforms.schur_to_pauli(n, h, tables, backend=backend), p, "pauli")),
                         ("orbit_roundtrip", coefficient_metrics(n, module.schur_to_orbit(n, forward, kernels), a, "orbit")))
                     for direction, metrics in calculations:
-                        input_family = "central_random_schur_"+family if direction == "schur_to_orbit" else family
-                        observations.append(dict(n=n, family=input_family, direction=direction, backend=backend,
+                        observations.append(dict(n=n, family=family, direction=direction, backend=backend,
                                                  cache="cached" if cached else "uncached",
                                                  reference="literal tensors, traces, singlets and Dicke vectors",
                                                  precision="binary64", **metrics))
@@ -306,11 +305,49 @@ def larger_campaign(sizes):
                             ("orbit_to_schur", block_metrics(n, forward, h)),
                             ("schur_to_orbit", coefficient_metrics(n, module.schur_to_orbit(n, inverse_h, prepared), inverse_a, "orbit")),
                             ("orbit_roundtrip", coefficient_metrics(n, module.schur_to_orbit(n, forward, prepared), a, "orbit"))):
-                        observations.append(dict(n=n, family=family, direction=direction, backend=backend,
+                        input_family = "central_random_schur_"+family if direction == "schur_to_orbit" else family
+                        observations.append(dict(n=n, family=input_family, direction=direction, backend=backend,
                                                  dtype=np.dtype(dtype).name, cache="cached",
                                                  reference="exact integer Gijswijt sum and Decimal accumulation",
                                                  precision="80 decimal digits; inputs and final comparison binary64",
                                                  **metrics))
+    return observations
+
+
+def product_campaign(sizes):
+    """All six full maps on |+><+|^tensor(n), with analytic input/output.
+
+    Common entry values are 2^-n, and only I/X Pauli words have that same
+    coefficient. Only the symmetric Schur sector is occupied. Binomial square
+    roots are evaluated at 80 decimal digits before rounding to binary64.
+    """
+    observations = []
+    for n in sizes:
+        a = {key: 2.0**(-n) for key in orbit_keys(n)}
+        p = {key: 2.0**(-n) if key[1:] == (0, 0) else 0j for key in pauli_keys(n)}
+        h = [np.zeros((n-2*k+1, n-2*k+1), dtype=complex) for k in range(n//2+1)]
+        with localcontext() as ctx:
+            ctx.prec = 80
+            for r in range(n+1):
+                for s in range(n+1):
+                    h[0][r, s] = float(Decimal(comb(n, r)*comb(n, s)).sqrt()/Decimal(2**n))
+        q = krawtchouk.prepare(n)
+        cases = [("krawtchouk", "orbit_to_pauli", coefficient_metrics(n, transforms.orbit_to_pauli(n, a, q), p, "pauli")),
+                 ("krawtchouk", "pauli_to_orbit", coefficient_metrics(n, transforms.pauli_to_orbit(n, p, q), a, "orbit"))]
+        for backend, module in (("hahn", schur_hahn), ("factorial", schur_factorial)):
+            kernels = module.prepare(n)
+            tables = q, kernels
+            cases.extend([
+                (backend, "orbit_to_schur", block_metrics(n, module.orbit_to_schur(n, a, kernels), h)),
+                (backend, "schur_to_orbit", coefficient_metrics(n, module.schur_to_orbit(n, h, kernels), a, "orbit")),
+                (backend, "pauli_to_schur", block_metrics(n, transforms.pauli_to_schur(n, p, tables), h)),
+                (backend, "schur_to_pauli", coefficient_metrics(n, transforms.schur_to_pauli(n, h, tables), p, "pauli"))])
+        for backend, direction, metrics in cases:
+            observations.append(dict(n=n, family="plus_product_projector", direction=direction,
+                                     backend=backend, dtype="float64", cache="cached",
+                                     reference="analytic product state in all three bases",
+                                     precision="exact dyadics and 80-digit square roots, rounded to binary64",
+                                     **metrics))
     return observations
 
 
@@ -338,6 +375,8 @@ def write_summary(document, output):
         for dtype in ("float64", np.dtype(np.longdouble).name):
             groups.append((f"Selected full / {backend} / {dtype}",
                            lambda r, b=backend, d=dtype: r["campaign"] == "larger" and r["backend"] == b and r["dtype"] == d and r["direction"] != "orbit_roundtrip"))
+    for backend in ("krawtchouk", "hahn", "factorial"):
+        groups.append((f"Product projector / {backend}", lambda r, b=backend: r["campaign"] == "product" and r["backend"] == b))
     lines = ["| Cases | Sizes | Maximum relative HS error | Maximum block spectral error | Failed / total |",
              "|---|---|---:|---:|---:|"]
     for label, choose in groups:
@@ -367,11 +406,16 @@ def write_tex_table(document, output):
             groups.append((f"{title} ({suffix})", "$M\\leftrightarrow H$", "$8,12,20,30,40$",
                            [r for r in rows if r["campaign"] == "larger" and r["backend"] == backend
                             and r["dtype"] == dtype and r["direction"] != "orbit_roundtrip"]))
+    for backend, title in (("krawtchouk", "Krawtchouk"), ("hahn", "Hahn"), ("factorial", "Shared-factor")):
+        groups.append((title+" (product)", "$M\\leftrightarrow P$" if backend == "krawtchouk" else "$M,P\\leftrightarrow H$",
+                       "$8,12,20,30,40$", [r for r in rows if r["campaign"] == "product" and r["backend"] == backend]))
     lines = ["% Generated by python -m pauli_transforms.accuracy. Do not edit values.",
              "\\begin{tabular}{lllll}", "\\hline", "Backend & Direction & $n$ & Relative HS & Block absolute \\\\", "\\hline"]
     for title, direction, sizes, selected in groups:
         if not selected:
             continue
+        if selected[0]["campaign"] == "dense":
+            sizes = f"${min(r['n'] for r in selected)}$--${max(r['n'] for r in selected)}$"
         rel = max(r.get("relative_hs_error") or 0 for r in selected)
         spectral = max((r.get("maximum_block_spectral_error") or 0 for r in selected))
         block = scientific(spectral) if any("maximum_block_spectral_error" in r for r in selected) else "--"
@@ -380,7 +424,8 @@ def write_tex_table(document, output):
     for dtype, title in (("float64", "64"), (np.dtype(np.longdouble).name, "ext.")):
         selected = [r for r in rows if r["campaign"] == "kernel" and r["dtype"] == dtype]
         if selected:
-            lines.append("Hahn & "+title+" & $0$--$40$ (selected) & "+scientific(max(r["kernel_spectral_error"] for r in selected))
+            sizes = f"${min(r['n'] for r in selected)}$--${max(r['n'] for r in selected)}$ (selected)"
+            lines.append("Hahn & "+title+" & "+sizes+" & "+scientific(max(r["kernel_spectral_error"] for r in selected))
                          +" & "+scientific(max(r["orthogonality_residual"] for r in selected))+" \\\\")
     lines.extend(["\\hline", "\\end{tabular}"])
     output.write_text("\n".join(lines)+"\n")
@@ -399,6 +444,7 @@ def main():
                      ("kernel", kernel_campaign([0, 1, 2, 6, 12, 20, 30, 40] if args.sweep else [0, 1, 2, 3]))]
         if args.sweep:
             campaigns.append(("larger", larger_campaign([8, 12, 20, 30, 40])))
+            campaigns.append(("product", product_campaign([8, 12, 20, 30, 40])))
         for name, rows in campaigns:
             for row in rows:
                 row.update(campaign=name, seed=SEED+row["n"], absolute_tolerance=ATOL, relative_tolerance=RTOL)

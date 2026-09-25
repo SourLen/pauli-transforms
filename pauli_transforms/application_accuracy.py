@@ -19,7 +19,7 @@ from scipy.linalg import expm
 from threadpoolctl import threadpool_limits
 
 from . import common, physical_models as pm, transforms
-from .benchmark_helpers import environment_record, source_snapshot, write_json
+from .benchmark_helpers import environment_record, sha256, write_json
 
 
 # Fixed before the campaign. The relative term retains the existing application's
@@ -28,6 +28,8 @@ ATOL = 1e-10
 RTOL = 1e-8
 PAULIS = (np.eye(2, dtype=complex), np.array([[0, 1], [1, 0]], complex),
           np.array([[0, -1j], [1j, 0]], complex), np.diag([1, -1]).astype(complex))
+MEASURED_MODULES = ("application_accuracy.py", "physical_models.py", "transforms.py", "common.py",
+                    "krawtchouk.py", "schur_hahn.py", "schur_factorial.py", "benchmark_helpers.py", "__init__.py")
 
 
 def tensor(factors):
@@ -113,10 +115,10 @@ def block_diagnostics(n, actual, reference):
     sectors, weighted_error, weighted_reference = [], 0., 0.
     for k, (mu, block, expected) in enumerate(zip(common.specht_multiplicities(n), actual, reference)):
         error, scale = norm(block-expected), norm(expected)
-        resolved = scale > ATOL / RTOL
+        nonzero = scale != 0
         sectors.append(dict(k=k, absolute_spectral_error=error, reference_spectral_norm=scale,
-                            relative_spectral_error=error/scale if resolved else None,
-                            relative_error_reported=resolved,
+                            relative_spectral_error=error/scale if nonzero else None,
+                            absolute_tolerance_dominates=RTOL*scale <= ATOL,
                             tolerance=ATOL+RTOL*scale, passed=error <= ATOL+RTOL*scale))
         weighted_error += mu * float(np.vdot(block-expected, block-expected).real)
         weighted_reference += mu * float(np.vdot(expected, expected).real)
@@ -245,17 +247,27 @@ def main(argv=None):
     out.mkdir(parents=True, exist_ok=True)
     repo = Path(__file__).resolve().parents[1]
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
-    dirty = subprocess.check_output(["git", "status", "--porcelain"], cwd=repo, text=True).splitlines()
-    write_json(out / "config.json", dict(vars(args), output=str(out), atol=ATOL, rtol=RTOL,
-               relative_block_threshold=ATOL/RTOL, dtype="complex128", reference_precision="float64",
-               source_revision=revision, source_worktree_changes=dirty, source_sha256=source_snapshot(out)))
+    paths = [f"pauli_transforms/{name}" for name in MEASURED_MODULES]
+    dirty = subprocess.check_output(["git", "status", "--porcelain", "--", *paths], cwd=repo, text=True).splitlines()
+    hashes = {path: sha256(repo/path) for path in paths}
+    write_json(out / "source_hashes.json", hashes)
+    write_json(out / "config.json", dict(vars(args), output=args.output.name, atol=ATOL, rtol=RTOL,
+               relative_error_rule="absolute only for zero reference; flag when absolute tolerance dominates",
+               dtype="complex128", reference_precision="float64",
+               source_revision=revision, source_worktree_changes=dirty, source_sha256=hashes))
     rows = []
     times = np.linspace(0, args.tmax, args.points)
     cases = [(n, family) for n in range(2, args.dense_max+1)
              for family in ("ising_product_x", "random_hermitian_product_state")]
     cases += [(n, "ising_collective_reference") for n in args.ising_sizes]
     with threadpool_limits(limits=1):
-        write_json(out / "environment.json", environment_record())
+        environment = environment_record()
+        environment["command"] = ["python", "-m", "pauli_transforms.application_accuracy", "--output", args.output.name,
+                                  "--dense-max", str(args.dense_max), "--ising-sizes", *map(str, args.ising_sizes),
+                                  "--points", str(args.points), "--tmax", str(args.tmax), "--seed", str(args.seed)]
+        for pool in environment["threadpools"]:
+            pool["filepath"] = Path(pool["filepath"]).name
+        write_json(out / "environment.json", environment)
         for n, family in cases:
             seed = args.seed+n
             if family == "ising_collective_reference":
