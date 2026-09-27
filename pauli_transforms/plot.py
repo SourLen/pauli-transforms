@@ -180,6 +180,10 @@ def fixed_weight_figure(path, *, common_cache=False):
             if common_cache and index == 0:
                 title += ": preparation + one use" if mode == "cold" else ": cached use"
             label_runtime(ax, title)
+            if common_cache and weight == 6 and mode == "cached":
+                # This panel spans less than a decade, so decade ticks are absent.
+                ax.set_yticks([2e-4, 4e-4],
+                             labels=[r"$2\times10^{-4}$", r"$4\times10^{-4}$"])
             ax.set_xlim(0, max(sizes) * 1.04)
     shared_legend(fig)
     return "fixed_weight_cache" if common_cache else "fixed_locality", fig, stats
