@@ -41,14 +41,26 @@ class PlotTests(unittest.TestCase):
     def test_current_figures_and_recorded_medians(self):
         expected_names = {"general_conversion_public", "matrix_unit_schur",
                           "fixed_locality", "fixed_weight_cache", "spectral_comparison", "random_dynamics_comparison",
-                          "ising_example"}
+                          "ising_example", "ising_runtime_comparison"}
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)
             summaries = plot.export(DATA, output, formats=("pdf",))
             self.assertEqual(set(summaries), expected_names)
             self.assertEqual({p.stem for p in output.glob("*.pdf")}, expected_names)
-            self.assertAlmostEqual(summaries["spectral_comparison"]["thesis"][-1]["median"],
-                                   0.017852479999419302, places=15)
+            recorded = json.loads((DATA / "current/application_baselines/plotted_statistics.json").read_text())
+            for name, methods in recorded.items():
+                for method, fields in methods.items():
+                    if name == "spectral_comparison":
+                        fields = {"total_seconds": fields}
+                    for field, points in fields.items():
+                        actual = (summaries[name][method] if name == "spectral_comparison"
+                                  else summaries[name][method][field])
+                        self.assertEqual(len(actual), len(points))
+                        for result, point in zip(actual, points):
+                            self.assertEqual(result["x"], point["n"])
+                            self.assertEqual(result["samples"], point["samples"])
+                            for statistic in ("q25", "median", "q75"):
+                                self.assertAlmostEqual(result[statistic], point[statistic], places=15)
             self.assertAlmostEqual(summaries["random_dynamics_comparison"]["size/thesis"][-1]["median"],
                                    0.049764150000555674, places=15)
             general = summaries["general_conversion_public"]["separated/ell0/cold"]
@@ -74,6 +86,53 @@ class PlotTests(unittest.TestCase):
         for row in json.loads((current / "selection_manifest.json").read_text()):
             self.assertEqual(hashlib.sha256((current / row["destination"]).read_bytes()).hexdigest(),
                              row["included_sha256"], row["destination"])
+
+    def test_application_baseline_archive(self):
+        root = DATA / "current/application_baselines"
+        manifest = json.loads((root / "manifest.json").read_text())
+        for row in manifest["files"]:
+            base = root if "included_sha256" in row else DATA.parents[1]
+            self.assertEqual(hashlib.sha256((base / row["destination"]).read_bytes()).hexdigest(),
+                             row.get("included_sha256", row.get("sha256")), row["destination"])
+        for campaign, count in (("spectral", 405), ("ising", 140)):
+            _, rows = plot.read_application_baselines(root / campaign)
+            self.assertEqual(len(rows), count)
+
+    def test_corrupt_application_baseline_trials_rejected(self):
+        for campaign in ("spectral", "ising"):
+            source = DATA / "current/application_baselines" / campaign
+            for change in ("missing", "duplicate", "failed", "nonfinite", "accuracy",
+                           "missing_check", "timing_sum", "summary", "input_bytes"):
+                if campaign == "ising" and change == "input_bytes":
+                    continue
+                with self.subTest(campaign=campaign, change=change), tempfile.TemporaryDirectory() as directory:
+                    path = Path(directory) / campaign
+                    shutil.copytree(source, path)
+                    rows = [json.loads(line) for line in (path / "runs.jsonl").read_text().splitlines()]
+                    if change == "missing":
+                        rows.pop()
+                    elif change == "duplicate":
+                        rows[-1] = rows[0]
+                    elif change == "failed":
+                        rows[0]["status"] = "failed"
+                    elif change == "nonfinite":
+                        rows[0]["total_seconds"] = float("nan")
+                    elif change == "accuracy":
+                        rows[0]["checks"]["residual"] = 1.
+                    elif change == "missing_check":
+                        rows[0]["checks"].pop("residual")
+                    elif change == "timing_sum":
+                        rows[0]["total_seconds"] += 1.
+                    elif change == "summary":
+                        receipt = json.loads((path / "validation.json").read_text())
+                        receipt["maxima"]["residual"] = 0.
+                        (path / "validation.json").write_text(json.dumps(receipt))
+                    elif change == "input_bytes":
+                        file = next((path / "inputs").glob("*.json"))
+                        file.write_bytes(file.read_bytes() + b"\n")
+                    (path / "runs.jsonl").write_text("\n".join(json.dumps(row) for row in rows))
+                    with self.assertRaises(ValueError):
+                        plot.read_application_baselines(path)
 
     def test_small_grid_without_public_measurements(self):
         cfg, rows = plot.read_campaign(DATA / "direct")

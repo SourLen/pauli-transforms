@@ -1,0 +1,2918 @@
+[
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 2,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 3,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 4,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 5,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 6,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 8,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 1,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": -1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 0,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 1,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 2,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 3,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 4,
+    "method": "full_space"
+  },
+  {
+    "n": 10,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 12,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 16,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 0,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 1,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": -1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": -1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 0,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 0,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 1,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 1,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 2,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 2,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 3,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 3,
+    "method": "anschuetz_optimized"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 4,
+    "method": "thesis"
+  },
+  {
+    "n": 20,
+    "instance": 2,
+    "repeat": 4,
+    "method": "anschuetz_optimized"
+  }
+]

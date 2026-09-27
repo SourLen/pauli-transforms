@@ -8,10 +8,11 @@ Run these commands from the repository root after installing `.[benchmarks]`.
 python -m pauli_transforms.plot --data data/thesis --output figures
 ```
 
-This exports the seven benchmark figures currently included in the thesis as
+This exports the eight benchmark figures currently included in the thesis as
 PDF, SVG and PNG. The input data and their provenance are described in
 [`data/thesis/README.md`](data/thesis/README.md). Plotting does not run benchmarks.
-The default selection matches the revised manuscript on 25 September 2026. Figure labels, datasets and source provenance are recorded in `FIGURE_MANIFEST.json`:
+The default selection matches the manuscript PDF dated 27 September 2026.
+Figure labels, datasets and source provenance are recorded in `FIGURE_MANIFEST.json`:
 
 | Export | Manuscript location |
 | --- | --- |
@@ -19,9 +20,10 @@ The default selection matches the revised manuscript on 25 September 2026. Figur
 | `matrix_unit_schur` | `fig:permqit-matrix-unit-conversion` |
 | `fixed_locality` | `fig:comparison-fixed-locality`, first use, weights 2,4,6,8 |
 | `fixed_weight_cache` | `fig:comparison-fixed-weight-cache`, common orbit-image preparation |
-| `spectral_comparison` | `fig:spectral_comparison`, complete eigensystems |
+| `spectral_comparison` | `fig:spectral_comparison`, complete eigensystems including full-space baseline |
 | `random_dynamics_comparison` | `fig:random_dynamics_comparison` |
 | `ising_example` | `fig:ising_example` |
+| `ising_runtime_comparison` | `fig:ising_runtime_comparison`, general conversion versus PIQS construction |
 
 Add `--supplementary` to also export `general_conversion` (without the public
 Anschuetz curve) and `conversion_accuracy`, as well as `random_dynamics_diagnostics`. These plots are no longer
@@ -49,35 +51,33 @@ under `data/thesis/current`, with per-file original and included hashes.
 python -m pauli_transforms.benchmark --comparison anschuetz --output results/new/direct
 python -m pauli_transforms.benchmark --comparison chang --output results/new/fixed_locality
 python -m pauli_transforms.run_permqit_comparison --methods factorial_float64 hahn_float64 --output results/new/matrix_units
-python -m pauli_transforms.run_spectral_comparison --output results/new/spectral
+python -m pauli_transforms.run_application_baselines spectral --output results/new/spectral
 python -m pauli_transforms.run_random_dynamics_comparison --output results/new/dynamics
 python -m pauli_transforms.ising_example --output results/new/ising
+python -m pip install '.[benchmarks,piqs]'
+python -m pauli_transforms.run_application_baselines ising --output results/new/ising_runtime
 python -m pauli_transforms.plot --data results/new --output figures/new
 ```
 
 Run the commands sequentially, on an otherwise idle machine. Each runner fixes
 numerical libraries to one thread. Output directories must be empty, so new
-measurements cannot overwrite previous ones. Add `--smoke` to each of the six
-experiment commands for a small functional check. Smoke timings are not thesis
+measurements cannot overwrite previous ones. Add `--smoke` to each
+experiment command for a small functional check. Smoke timings are not thesis
 measurements.
 
-The commands above run the two local conversion methods. To include the original
-public Anschuetz routine in the general and spectral comparisons, obtain its
-pinned source once:
+To include the original public Anschuetz routine in the general conversion
+comparison, obtain its pinned source once:
 
 ```bash
 git clone https://github.com/bkiani/symmetric_hamiltonians.git _external/symmetric_hamiltonians
 git -C _external/symmetric_hamiltonians checkout 24ce1a5fe4f3234f5f9a2f1ad65c2909423d7dc8
 ```
 
-Then replace the general and spectral commands with:
+Then replace the general-conversion command with:
 
 ```bash
 python -m pauli_transforms.benchmark --comparison anschuetz \
   --anschuetz-source _external/symmetric_hamiltonians --output results/new/direct
-python -m pauli_transforms.run_spectral_comparison \
-  --methods thesis anschuetz_optimized anschuetz_public_original \
-  --anschuetz-source _external/symmetric_hamiltonians --output results/new/spectral
 ```
 
 The adapter verifies the SHA-256 of `utils.py`. It applies two import-compatibility
@@ -138,8 +138,9 @@ To reuse exact saved random inputs, add `--input-directory` to a runner:
 ```bash
 python -m pauli_transforms.benchmark --comparison anschuetz \
   --input-directory data/thesis/direct/inputs --output results/replayed/direct
-python -m pauli_transforms.run_spectral_comparison \
-  --input-directory data/thesis/spectral/inputs --output results/replayed/spectral
+python -m pauli_transforms.run_application_baselines spectral \
+  --input-directory data/thesis/current/application_baselines/spectral/inputs \
+  --output results/replayed/spectral
 python -m pauli_transforms.run_random_dynamics_comparison \
   --input-directory data/thesis/dynamics/inputs --output results/replayed/dynamics
 python -m pauli_transforms.run_permqit_comparison \
@@ -159,8 +160,9 @@ on the machine and software versions.
 | Fixed locality and common cache, weight 2 or 4 | 4, 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
 | Fixed locality and common cache, weight 6 or 8 | 8, 12, 16, 20, 24, 32, 40 | 3 × 7 | 20260914 |
 | Matrix-unit conversion | 2, 4, 6, 8, 10, 12, 16, 20 | 5 fresh-process trials; 7 cached applications each | 20260919 |
-| Complete eigensystems | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260917 |
+| Complete eigensystems | 2, 3, 4, 5, 6, 8, 10, 12, 16, 20; full space through 10 | 3 × 5 | 20260917 inputs; 20260926 method order |
 | Random dynamics | 2, 3, 4, 5, 8, 12, 16, 20 | 3 × 5 | 20260918 |
+| Ising construction and dynamics | 2, 3, 4, 5, 8, 12, 16, 20, 30, 40 | 1 × 7 | 20260926 method order |
 
 Except for the matrix-unit protocol above, each method/input has one warmup.
 Plots show medians and interquartile ranges.
@@ -175,8 +177,12 @@ and record their preparation separately. Both include input formatting and
 output construction. General conversion returns all dense Schur blocks;
 fixed-locality conversion returns all blocks as CSR matrices.
 
-Spectral trials include fresh tables, conversion and all eigenvectors and
-eigenvalues using `scipy.linalg.eigh(driver="evr")`. Dynamics trials share fresh
+Spectral trials include fresh construction and all eigenvectors and eigenvalues
+using `scipy.linalg.eigh(driver="evr")`. The full-space baseline builds the
+computational-basis matrix with Walsh transforms; the Schur routes prepare
+tables and convert orbit coefficients. Full space returns explicit eigenvectors,
+while Schur routes return representative block vectors and multiplicities.
+All three curves use the same 26 September campaign. Dynamics trials share fresh
 tables across the conversions of `H`, `rho` and `M`, then use
 `numpy.linalg.eigh` and evaluate the complete expectation curve. The curve stage
 includes changes to the energy basis. Random states have blocks
@@ -188,13 +194,23 @@ Dynamics uses 241 times in `[0,12]`, plus a sweep at `n=12` over
 The Ising example uses `g=1`, `h=0.5`, `p=0.6`, spectrum size 12 and curve sizes
 8, 20 and 40. Its Hamiltonian is
 `H = -(g sum_{i<j} Zi Zj + h sum_i Xi)/n`.
+The Ising timing comparison uses the same model and time grid at every listed
+size. Both routes include fresh construction of the Hamiltonian, state and
+observable blocks, followed by the same eigensolver and phase-sum routine.
+The PIQS route uses native collective-spin operators in all sectors and the
+explicit product-state formula, with no time integrator. Its construction and
+total times are plotted separately. The full protocol and reference checks
+are in [the application baseline record](data/thesis/current/application_baselines/README.md).
 
 Input generation, reference calculations, validation and file writing are
 outside timers. Small cases use full Pauli matrices and singlet/Dicke
 projections; larger cases use the documented round-trip or independent
 conversion checks. Fixed-locality and Ising checks also use collective-spin
-constructions. Applications check state normalization, positivity, eigenpair
-residuals and expectation curves at tolerance `1e-8`. Direct conversion uses
+constructions. Timing trials check state normalization, positivity, eigenpair
+residuals and expectation curves at tolerance `1e-8`, as applicable. These gates are chosen
+for the comparisons and are not application-independent accuracy guarantees.
+The separate conversion accuracy sweep uses `atol=1e-11`, `rtol=1e-10`;
+see [the accuracy protocol](data/accuracy/PROTOCOL.md). Direct conversion uses
 absolute tolerance `1e-9` and relative tolerance `1e-8`.
 
 Each run saves its inputs, raw trials, configuration, environment and source
@@ -202,3 +218,10 @@ hashes. Invalid trials are retained and cause failure; plots reject incomplete
 groups. Direct-conversion worker timeouts are recorded with the interrupted
 phase. Fresh timings from this simplified runner form a new campaign; they
 are never pooled with the historical observations.
+
+The table describes the retained thesis campaigns. Current runner defaults can
+use smaller grids. To repeat the exact historical conversion grids and common
+orbit-image preparation policy, use the dataset-specific replay commands in
+[HISTORICAL_SOURCES.md](HISTORICAL_SOURCES.md). The older
+`run_spectral_comparison` command is retained for earlier campaigns; the
+current thesis spectral comparison uses `run_application_baselines spectral`.

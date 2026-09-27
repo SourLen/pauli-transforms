@@ -1,4 +1,15 @@
-# Version 0.2.0 — thesis revision
+# Changes after v0.2.0 — current thesis companion
+
+The figure selection now follows the thesis PDF dated 27 September 2026.
+The spectral figure includes the full-space baseline, and the eighth data
+figure compares general Ising conversion with direct PIQS block construction.
+Their 405 and 140 saved trials, accuracy diagnostics and measured-source records
+are included. The standard plot command redraws them, and
+`run_application_baselines` provides separate commands for new measurements.
+
+The original v0.2.0 release and its source identity remain unchanged.
+
+## Version 0.2.0 — thesis revision
 
 This release supplies the numerical evidence and reproduction records used in
 the revised thesis *Efficient Coordinate Transformations for

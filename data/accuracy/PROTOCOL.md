@@ -3,7 +3,9 @@
 This document contains the accuracy details accompanying the concise summaries
 in Appendix C of the thesis. The [accuracy report](README.md) gives reproduction
 commands and campaign provenance. The observations below are the existing
-25 September 2026 campaign, not new measurements.
+25 September 2026 campaign. The later checks on 405 spectral and 140 Ising
+timing trials are documented in the
+[application baseline protocol](../thesis/current/application_baselines/README.md).
 
 ## Error norms
 

@@ -1,7 +1,8 @@
-# Independent accuracy checks, 25 September 2026
+# Accuracy checks accompanying Appendix C
 
-These are accuracy observations, not new runtime measurements. The conversion
-and application sweeps were run from a clean checkout of
+The independent accuracy campaigns below were measured on 25 September 2026.
+The additional 26 September timing-validation results are listed separately.
+The conversion and application sweeps were run from a clean checkout of
 `3829b72425ab20ae0e3fa3790e0bc77f441dd503`, using Python 3.14.7, NumPy 2.4.6
 and SciPy 1.17.1, with one numerical-library thread. Each file records its
 references, generating rules, seeds, precision, source hashes and tolerances.
@@ -28,7 +29,19 @@ sweep saves failures as observations and reports their count; a zero process
 exit alone does not mean every numerical case passed. The application sweep
 returns a nonzero status if a case fails. No tolerance was raised after a failure.
 
-## Results and scope
+## Checks on the current application benchmarks
+
+The 26 September comparisons in thesis Section C.3.1 retain all
+[405 spectral trials](../thesis/current/application_baselines/spectral/validation.json)
+and [140 Ising trials](../thesis/current/application_baselines/ising/validation.json).
+All pass the `1e-8` gates. The largest relative spectrum error is `8.83e-15`;
+the largest absolute magnetization error is `3.74e-15` on 241 times in `[0,12]`.
+These are validations of timed runs, distinct from the 48-configuration
+independent application campaign below. The
+[baseline protocol](../thesis/current/application_baselines/README.md) describes
+reference constructions, input generation and reproduction commands.
+
+## Independent accuracy results and scope
 
 - `conversions_20260925.json` contains 1,764 observations, including 13 failures
   of the float64 shared-factor backend on selected inputs at `n=30,40`.

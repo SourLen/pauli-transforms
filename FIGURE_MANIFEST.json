@@ -1,7 +1,6 @@
 {
-  "schema": "thesis-figures-20260925",
-  "release_version": "0.2.0",
-  "description": "Nine manuscript figures (two native diagrams and seven data figures), plus two supplementary accuracy tables. LaTeX labels, not printed numbers, identify them.",
+  "schema": "thesis-figures-20260927",
+  "description": "Ten manuscript figures (two native diagrams and eight data figures), plus two supplementary accuracy tables. Matches the thesis PDF dated 27 September 2026; LaTeX labels identify figures.",
   "supplementary": [
     "general_conversion",
     "conversion_accuracy",
@@ -25,10 +24,10 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/general_conversion_public.pdf",
       "manuscript_file": "figures/revision_20260925/general_conversion_public.pdf",
-      "release_artifact_sha256": "19f6783ed7716e04759604b66dabcdd701f7cec5a4bc33d1171c1a1f87c14ee9"
+      "manuscript_artifact_sha256": "19f6783ed7716e04759604b66dabcdd701f7cec5a4bc33d1171c1a1f87c14ee9"
     },
     {
       "kind": "historical_measurement_figure",
@@ -44,10 +43,10 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/matrix_unit_schur.pdf",
       "manuscript_file": "figures/revision_20260925/matrix_unit_schur.pdf",
-      "release_artifact_sha256": "69eb1e2dccf6d26561d2817df207088386b9b394c4e11217230f125e6a10f5b9"
+      "manuscript_artifact_sha256": "69eb1e2dccf6d26561d2817df207088386b9b394c4e11217230f125e6a10f5b9"
     },
     {
       "kind": "historical_measurement_figure",
@@ -65,10 +64,10 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/fixed_locality.pdf",
       "manuscript_file": "figures/revision_20260925/fixed_locality.pdf",
-      "release_artifact_sha256": "aa97d1845587202f5c8cdc002d1b501365b3486ad7128766379f22ba90ebe17c"
+      "manuscript_artifact_sha256": "aa97d1845587202f5c8cdc002d1b501365b3486ad7128766379f22ba90ebe17c"
     },
     {
       "kind": "historical_measurement_figure",
@@ -86,10 +85,10 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/fixed_weight_cache.pdf",
       "manuscript_file": "figures/revision_20260925/fixed_weight_cache.pdf",
-      "release_artifact_sha256": "bfc2b3d1516f26b2292da562fd4b65a48431f8c62966cc9954c9c59e7f796463"
+      "manuscript_artifact_sha256": "bfc2b3d1516f26b2292da562fd4b65a48431f8c62966cc9954c9c59e7f796463"
     },
     {
       "kind": "historical_measurement_figure",
@@ -98,17 +97,17 @@
       ],
       "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
       "datasets": [
-        "data/thesis/spectral"
+        "data/thesis/current/application_baselines/spectral"
       ],
       "configuration": [
-        "data/thesis/spectral/config.json"
+        "data/thesis/current/application_baselines/spectral/config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "data/historical_sources/application_baselines_20260926/run_comparisons.py with package revision 29fd29769c62fccda90a1ac3031adbe462510cd5",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/spectral_comparison.pdf",
-      "manuscript_file": "figures/revision_20260925/spectral_comparison.pdf",
-      "release_artifact_sha256": "c0d569f0bbd5d20962ff537e9423bc170cd1d49c89e7c0b8709db1ea92d9fe85"
+      "manuscript_file": "figures/application_baselines_20260926/spectral_comparison.pdf",
+      "manuscript_artifact_sha256": "fff8d84757b390fd479b3e3857f4f8170e1f8fa5bfd95711857abb761251b3d5"
     },
     {
       "kind": "historical_measurement_figure",
@@ -124,10 +123,10 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/random_dynamics_comparison.pdf",
       "manuscript_file": "figures/revision_20260925/random_dynamics_comparison.pdf",
-      "release_artifact_sha256": "bb869f699ee18d221546f0fc70d9aa20adbe78f99a36947d222ea7d60113bc3a"
+      "manuscript_artifact_sha256": "bb869f699ee18d221546f0fc70d9aa20adbe78f99a36947d222ea7d60113bc3a"
     },
     {
       "kind": "historical_measurement_figure",
@@ -143,10 +142,29 @@
       ],
       "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
-      "generator_sha256": "71674470d0c3791e53115654830c7eec37a6caa94cd757e9ee77b742577167e1",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/ising_example.pdf",
       "manuscript_file": "figures/revision_20260925/ising_example.pdf",
-      "release_artifact_sha256": "e2be2c370b75729e870d82d2e5f70c880c7a4bdd592a4594755a906ac8efc0c3"
+      "manuscript_artifact_sha256": "e2be2c370b75729e870d82d2e5f70c880c7a4bdd592a4594755a906ac8efc0c3"
+    },
+    {
+      "kind": "historical_measurement_figure",
+      "latex_labels": [
+        "fig:ising_runtime_comparison"
+      ],
+      "generating_command": "python -m pauli_transforms.plot --data data/thesis --output figures",
+      "datasets": [
+        "data/thesis/current/application_baselines/ising"
+      ],
+      "configuration": [
+        "data/thesis/current/application_baselines/ising/config.json"
+      ],
+      "measured_source": "data/historical_sources/application_baselines_20260926/run_comparisons.py with package revision 29fd29769c62fccda90a1ac3031adbe462510cd5",
+      "generator": "pauli_transforms/plot.py",
+      "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
+      "output_file": "figures/ising_runtime_comparison.pdf",
+      "manuscript_file": "figures/application_baselines_20260926/ising_runtime_comparison.pdf",
+      "manuscript_artifact_sha256": "8ce31fabde72af355ffd73c5bad00a1d1a51c553cd0d722b9786b3ceb941157c"
     },
     {
       "kind": "native_latex_diagram",
@@ -204,8 +222,10 @@
     }
   ],
   "notes": [
-    "Historical observations are not measurements of release source.",
-    "PDF metadata may differ on redraw. Unrounded statistics and raw trial groups determine the curves.",
-    "After the v0.2.0 release, detailed accuracy protocols and tables were moved out of the manuscript text. The release artifacts, raw observations and measured-source revisions are unchanged."
-  ]
+    "Historical observations retain their measured-source identities; current runner timings form separate campaigns.",
+    "The v0.2.0 release and its figure archive remain unchanged. Main includes the subsequent September 26 application comparisons.",
+    "Manuscript artifact hashes identify the figures embedded in the September 27 thesis PDF. PDF metadata may differ on redraw; unrounded statistics and complete raw trial groups determine the curves.",
+    "Detailed accuracy protocols and tables are supplementary repository material accompanying the concise Appendix C summaries."
+  ],
+  "base_release_version": "0.2.0"
 }

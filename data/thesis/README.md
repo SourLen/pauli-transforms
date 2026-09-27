@@ -1,7 +1,7 @@
 # Data used in the thesis
 
 These are the original observations, not timings of this cleaned-up repository.
-From the repository root, recreate the seven current thesis benchmark figures with:
+From the repository root, recreate the eight current thesis benchmark figures with:
 
 ```sh
 python -m pauli_transforms.plot --data data/thesis --output figures
@@ -13,11 +13,15 @@ duplicate or nonfinite trials cause an error. The public implementation has no
 cached curve and was measured only through n=5. Errors below 1e-17 are clipped
 only for display. Fresh measurements will have different timings.
 
-The current selection follows the revised manuscript on 25 September 2026.
+The current selection follows the manuscript PDF dated 27 September 2026.
 The original folders below remain unchanged. `current/` adds the later
 general-conversion extension through n=40, fixed-locality weights 2,4,6,8 and
-the common orbit-image comparison. Its selection manifest records original
-and included hashes. The plotter uses those datasets when present.
+the common orbit-image comparison.
+`current/application_baselines/` supplies the updated spectral comparison
+and the PIQS Ising timing comparison from 26 September; its
+[README](current/application_baselines/README.md) gives their protocol and
+provenance. The selection manifests record original and included hashes.
+The plotter uses these datasets when present.
 Add `--supplementary` for the older general-conversion, accuracy and dynamics
 diagnostics figures. See the root figure manifest for exact LaTeX labels.
 
@@ -26,7 +30,7 @@ diagnostics figures. See the root figure manifest for exact LaTeX labels.
 | `direct` | `general_conversion_public` | 924 |
 | `fixed_locality` | `fixed_locality` | 1,344 |
 | `matrix_units` | `matrix_unit_schur` | 120 |
-| `spectral` | `spectral_comparison` | 300 |
+| `spectral` | Superseded spectral timings; retained example spectrum and inputs | 300 |
 | `dynamics` | `random_dynamics_comparison` (diagnostics supplementary) | 420 |
 | `ising` | `ising_example` | No timings |
 
@@ -43,8 +47,9 @@ applications. Its plot checks complete groups, accuracy gates, timing sums,
 cached medians and the hashes of the saved inputs. Dynamics includes the original
 generated state blocks and reference curves. Direct conversion also retains 18 configured public-size-limit
 records. The Ising spectrum has n=12; its curves have n=8,20,40, g=1, h=0.5,
-p=0.6 and 241 times from 0 to 12. The old Ising timing campaign is unnecessary
-for these plotted values and is omitted.
+p=0.6 and 241 times from 0 to 12. The earlier Ising timing campaign is omitted;
+the current PIQS comparison uses the separate 26 September dataset with 140 accepted trials. The current
+spectral figure uses 405 trials from that same date, without pooling old timings.
 
 The source folders, relative to the original `Code/pauli_algorithm_comparison/results/`, are:
 

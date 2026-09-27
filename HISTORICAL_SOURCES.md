@@ -27,7 +27,8 @@ figure, retain the distinction between the initial campaign and its extension.
 | `fixed_locality` (older supplementary observations) | `fixed_locality_20260914` |
 | `current/fixed_locality/low`, `current/fixed_locality/high` | `conversion_20260921` |
 | `current/fixed_weight_cache/low`, `current/fixed_weight_cache/high` | `fixed_weight_cache_20260923` |
-| `spectral` | `spectral_20260917` |
+| `spectral` (superseded timings) | `spectral_20260917` |
+| `current/application_baselines/spectral`, `current/application_baselines/ising` | `application_baselines_20260926` plus package revision `29fd297` |
 | `dynamics` | `dynamics_20260918` |
 | `matrix_units` | `matrix_units_20260919` |
 | `ising` | `ising_20260918` |
@@ -183,3 +184,42 @@ gate. Details are in [`smoke_checks.json`](data/historical_sources/smoke_checks.
 The source archive preserves the measured code and executable rerun paths with
 the stated metadata gaps. It does not assert byte-identical timing reproduction
 or a clean installation test of every historical dependency environment.
+
+## Application baselines added on 26 September
+
+The measured `run_comparisons.py` and `plot_comparisons.py` are retained
+byte-for-byte in `data/historical_sources/application_baselines_20260926/`.
+Their package snapshot was verified against commit
+`29fd29769c62fccda90a1ac3031adbe462510cd5`; storing another copy of every package
+file is unnecessary. The original `source_hashes.json` files and the
+[data manifest](data/thesis/current/application_baselines/manifest.json)
+record the correspondence. These two sources are additional to the older
+100-file archive verified by `run.py --verify`.
+
+To reconstruct the original runner layout from this Git checkout, use a new
+directory (the example path must not already exist):
+
+```sh
+mkdir -p /tmp/pauli-baselines-replay/source_snapshot
+git archive 29fd29769c62fccda90a1ac3031adbe462510cd5 pauli_transforms LICENSE | tar -x -C /tmp/pauli-baselines-replay/source_snapshot
+cp data/historical_sources/application_baselines_20260926/*.py /tmp/pauli-baselines-replay/
+cp -r data/thesis/current/application_baselines/spectral/inputs /tmp/pauli-baselines-replay/archived_inputs
+cp data/thesis/current/application_baselines/spectral/spectrum_example.npz /tmp/pauli-baselines-replay/
+```
+
+With the recorded package versions from `requirements-validation.txt` and
+`qutip==5.3.1`, run the original drivers sequentially:
+
+```sh
+python /tmp/pauli-baselines-replay/run_comparisons.py spectral --output /tmp/pauli-baselines-replay/spectral
+python /tmp/pauli-baselines-replay/run_comparisons.py ising --output /tmp/pauli-baselines-replay/ising
+python /tmp/pauli-baselines-replay/plot_comparisons.py \
+  --spectral /tmp/pauli-baselines-replay/spectral \
+  --ising /tmp/pauli-baselines-replay/ising --output /tmp/pauli-baselines-replay
+```
+
+For a functional check, add `--sizes 2 3 --instances 1 --repeats 1` to the
+measurement commands. Fresh runtimes depend on the machine and environment.
+The current package exposes these experiments through
+`python -m pauli_transforms.run_application_baselines`; its CLI integration
+and optional dependency handling are separate from the original measured source.

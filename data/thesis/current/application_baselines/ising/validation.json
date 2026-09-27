@@ -1,0 +1,18 @@
+{
+  "samples": 140,
+  "all_valid": true,
+  "source_unchanged": true,
+  "maxima": {
+    "curve_max_abs_error": 3.7401347018626736e-15,
+    "h_relative_error": 1.2952136051892873e-15,
+    "hermiticity_error": 0.0,
+    "initial_expectation_error": 1.9984014443252818e-15,
+    "negative_state_mass": 4.0405327714397857e-16,
+    "observable_relative_error": 1.7616369037800484e-15,
+    "orthogonality": 7.202008096597443e-15,
+    "reconstruction_error": 2.487451335308443e-15,
+    "residual": 1.0931775288651907e-15,
+    "state_relative_error": 7.272118310621178e-15,
+    "trace_error": 8.659739592076221e-15
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "utc": "2026-09-26T15:21:07.282725+00:00",
+  "python": "3.14.7 (main, Aug 10 2026, 00:00:00) [GCC 16.1.1 20260515 (Red Hat 16.1.1-2)]",
+  "platform": "Linux-7.2.4-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "cpu": "AMD Ryzen 7 7735U with Radeon Graphics",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.9",
+    "threadpoolctl": "3.7.0"
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas64_-32a4b2a6.so",
+      "version": "0.3.31.188.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "command": [
+    "figures/application_baselines_20260926/run_comparisons.py",
+    "ising",
+    "--output",
+    "figures/application_baselines_20260926/ising"
+  ],
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "qutip": "5.3.1"
+}

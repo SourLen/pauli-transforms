@@ -1,0 +1,329 @@
+{
+  "source": "OverleafProject/figures/application_baselines_20260926",
+  "package_revision": "29fd29769c62fccda90a1ac3031adbe462510cd5",
+  "runner": "data/historical_sources/application_baselines_20260926/run_comparisons.py",
+  "files": [
+    {
+      "source": "spectral/config.json",
+      "destination": "spectral/config.json",
+      "original_sha256": "87b3877524c12e9a06f244cc43093c720f2d296647e4ef8a4160bd5823f0a7d0",
+      "included_sha256": "87b3877524c12e9a06f244cc43093c720f2d296647e4ef8a4160bd5823f0a7d0",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/runs.jsonl",
+      "destination": "spectral/runs.jsonl",
+      "original_sha256": "a1ae3f1f24a2ca9c6bd64d6d1294493033032109fc29ea420170311fcc1b15e6",
+      "included_sha256": "a1ae3f1f24a2ca9c6bd64d6d1294493033032109fc29ea420170311fcc1b15e6",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/validation.json",
+      "destination": "spectral/validation.json",
+      "original_sha256": "fbf4ceb11892e9cd23894a194400fd8fa71b5d7f0ef47dc8cd8dd927104b8b48",
+      "included_sha256": "fbf4ceb11892e9cd23894a194400fd8fa71b5d7f0ef47dc8cd8dd927104b8b48",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/environment.json",
+      "destination": "spectral/environment.json",
+      "original_sha256": "7c6fef1ac0ddc3688f1d899ec306d9738ce702c57d2b66c78d778b30d3386220",
+      "included_sha256": "c041a1c5c9a048cb3d7b73f6cfaccad87f49385163d4d876d7603c4740e08510",
+      "change": "BLAS library paths reduced to basenames; all other metadata unchanged"
+    },
+    {
+      "source": "spectral/job_order.json",
+      "destination": "spectral/job_order.json",
+      "original_sha256": "967323b38b8f813f7b4ba085e435e37868d3f50eb6944dd62a3bd941fee7af7d",
+      "included_sha256": "967323b38b8f813f7b4ba085e435e37868d3f50eb6944dd62a3bd941fee7af7d",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/source_hashes.json",
+      "destination": "spectral/source_hashes.json",
+      "original_sha256": "2e9e1b71bca41385566b42effcb5af6aef5a34054639f8778eec9366c7513943",
+      "included_sha256": "2e9e1b71bca41385566b42effcb5af6aef5a34054639f8778eec9366c7513943",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n10_i0.json",
+      "destination": "spectral/inputs/n10_i0.json",
+      "original_sha256": "4f8fec6cb3fee2eec606767f9ca5bf7b28adc5d3bc8d8462062069a66ecc83bb",
+      "included_sha256": "4f8fec6cb3fee2eec606767f9ca5bf7b28adc5d3bc8d8462062069a66ecc83bb",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n10_i1.json",
+      "destination": "spectral/inputs/n10_i1.json",
+      "original_sha256": "5a6743c8d10b1f0604b1e04a6ebe80153f26a600179fc52f47cac6e63047de78",
+      "included_sha256": "5a6743c8d10b1f0604b1e04a6ebe80153f26a600179fc52f47cac6e63047de78",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n10_i2.json",
+      "destination": "spectral/inputs/n10_i2.json",
+      "original_sha256": "ac730bb65a444853abea6956df3532c96788e681483ccbe22f6005f6cde16f7e",
+      "included_sha256": "ac730bb65a444853abea6956df3532c96788e681483ccbe22f6005f6cde16f7e",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n12_i0.json",
+      "destination": "spectral/inputs/n12_i0.json",
+      "original_sha256": "3fc184b0cd2935f996ffc5a3d185c57eadf88f2aaf054b66de4d63986cc22618",
+      "included_sha256": "3fc184b0cd2935f996ffc5a3d185c57eadf88f2aaf054b66de4d63986cc22618",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n12_i1.json",
+      "destination": "spectral/inputs/n12_i1.json",
+      "original_sha256": "16e12a67b759b5079f359d71c673f4f92cc0461b20a847c8ef6fbe5b62b55940",
+      "included_sha256": "16e12a67b759b5079f359d71c673f4f92cc0461b20a847c8ef6fbe5b62b55940",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n12_i2.json",
+      "destination": "spectral/inputs/n12_i2.json",
+      "original_sha256": "8bd8db12f73217b9a83281772bd87a5984964bcc65edf6b28365f4ba522c397f",
+      "included_sha256": "8bd8db12f73217b9a83281772bd87a5984964bcc65edf6b28365f4ba522c397f",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n16_i0.json",
+      "destination": "spectral/inputs/n16_i0.json",
+      "original_sha256": "5c8b42860378072dc7088fea12a0679c67877b8fac20c791bf2bd20f13dff182",
+      "included_sha256": "5c8b42860378072dc7088fea12a0679c67877b8fac20c791bf2bd20f13dff182",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n16_i1.json",
+      "destination": "spectral/inputs/n16_i1.json",
+      "original_sha256": "eb31d3b0225e68055a6f741d801e639f864e36736f991c8821ad714567c0da43",
+      "included_sha256": "eb31d3b0225e68055a6f741d801e639f864e36736f991c8821ad714567c0da43",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n16_i2.json",
+      "destination": "spectral/inputs/n16_i2.json",
+      "original_sha256": "094f76f2bd0a10b5c884bfe44dd2837f0ef6c844e519ca387a7c867799188bb3",
+      "included_sha256": "094f76f2bd0a10b5c884bfe44dd2837f0ef6c844e519ca387a7c867799188bb3",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n20_i0.json",
+      "destination": "spectral/inputs/n20_i0.json",
+      "original_sha256": "25807502635f2a3b1eed577a713649b6440a6ba0ff2913fd189266b6189d902a",
+      "included_sha256": "25807502635f2a3b1eed577a713649b6440a6ba0ff2913fd189266b6189d902a",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n20_i1.json",
+      "destination": "spectral/inputs/n20_i1.json",
+      "original_sha256": "9bfb303de716b4f93c460d66d4e1de1831a0df65837ab0158a05ee9ada665ecb",
+      "included_sha256": "9bfb303de716b4f93c460d66d4e1de1831a0df65837ab0158a05ee9ada665ecb",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n20_i2.json",
+      "destination": "spectral/inputs/n20_i2.json",
+      "original_sha256": "d6ddf86143338cbc0962dd4cdcb12f0827f6b71af70b94bb80c46b662a22fcff",
+      "included_sha256": "d6ddf86143338cbc0962dd4cdcb12f0827f6b71af70b94bb80c46b662a22fcff",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n2_i0.json",
+      "destination": "spectral/inputs/n2_i0.json",
+      "original_sha256": "b94a9b712610a199c8daf8ab0a48d6e4b309e002a7b268024ba743cae7ea12ce",
+      "included_sha256": "b94a9b712610a199c8daf8ab0a48d6e4b309e002a7b268024ba743cae7ea12ce",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n2_i1.json",
+      "destination": "spectral/inputs/n2_i1.json",
+      "original_sha256": "9ad75534aa35d7e387274955ab73e092d609a0c4d5375325ea304972ed7ebc0d",
+      "included_sha256": "9ad75534aa35d7e387274955ab73e092d609a0c4d5375325ea304972ed7ebc0d",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n2_i2.json",
+      "destination": "spectral/inputs/n2_i2.json",
+      "original_sha256": "3dd170a4a2e346afc7a3e5ffbf28db739de22a92b16f196576152ae5f0a23971",
+      "included_sha256": "3dd170a4a2e346afc7a3e5ffbf28db739de22a92b16f196576152ae5f0a23971",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n3_i0.json",
+      "destination": "spectral/inputs/n3_i0.json",
+      "original_sha256": "eb9511ab077be5f48425a303e1eb1a86cc5bf760ebcb64cb11619d83e9259c2d",
+      "included_sha256": "eb9511ab077be5f48425a303e1eb1a86cc5bf760ebcb64cb11619d83e9259c2d",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n3_i1.json",
+      "destination": "spectral/inputs/n3_i1.json",
+      "original_sha256": "315255db9e55d4c02afa26c793e740b98e727c3daa74467f6514ae1b1e1855cb",
+      "included_sha256": "315255db9e55d4c02afa26c793e740b98e727c3daa74467f6514ae1b1e1855cb",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n3_i2.json",
+      "destination": "spectral/inputs/n3_i2.json",
+      "original_sha256": "12d09de702df9c75c4cded3454d842a19e01dae9fb63ae8584e8084ba9ac732b",
+      "included_sha256": "12d09de702df9c75c4cded3454d842a19e01dae9fb63ae8584e8084ba9ac732b",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n4_i0.json",
+      "destination": "spectral/inputs/n4_i0.json",
+      "original_sha256": "fc76f14ba9957d6a3e128da958f233d9693ce02d629382ef76dc23b540afe5aa",
+      "included_sha256": "fc76f14ba9957d6a3e128da958f233d9693ce02d629382ef76dc23b540afe5aa",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n4_i1.json",
+      "destination": "spectral/inputs/n4_i1.json",
+      "original_sha256": "e8040ebf69dbc2b21b02944a7221a947d4fdffca5e4643ce136882437641db6c",
+      "included_sha256": "e8040ebf69dbc2b21b02944a7221a947d4fdffca5e4643ce136882437641db6c",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n4_i2.json",
+      "destination": "spectral/inputs/n4_i2.json",
+      "original_sha256": "1d563d69226d90470e3545600168b484015205d9af1d56bc1d3dc6966bcbffb4",
+      "included_sha256": "1d563d69226d90470e3545600168b484015205d9af1d56bc1d3dc6966bcbffb4",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n5_i0.json",
+      "destination": "spectral/inputs/n5_i0.json",
+      "original_sha256": "3f029f49d0f7f2777374525059eb726c2a457faa65abb60d5925d38084c6e6ab",
+      "included_sha256": "3f029f49d0f7f2777374525059eb726c2a457faa65abb60d5925d38084c6e6ab",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n5_i1.json",
+      "destination": "spectral/inputs/n5_i1.json",
+      "original_sha256": "821dec051259b7208940a7db9d6e3690a6e7827a741196b61b2958eec6a6044a",
+      "included_sha256": "821dec051259b7208940a7db9d6e3690a6e7827a741196b61b2958eec6a6044a",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n5_i2.json",
+      "destination": "spectral/inputs/n5_i2.json",
+      "original_sha256": "05b28eb6df7ac80825456004f51ddf34651cffa2364e2c05ccbb682a3f03e3b7",
+      "included_sha256": "05b28eb6df7ac80825456004f51ddf34651cffa2364e2c05ccbb682a3f03e3b7",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n6_i0.json",
+      "destination": "spectral/inputs/n6_i0.json",
+      "original_sha256": "2c3fe8f23b3df9e024b8315dd847829933674fe20404013f1646edf77bdcda4e",
+      "included_sha256": "2c3fe8f23b3df9e024b8315dd847829933674fe20404013f1646edf77bdcda4e",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n6_i1.json",
+      "destination": "spectral/inputs/n6_i1.json",
+      "original_sha256": "59a563589c5857e1160d629543bb8f61508758be241fa3940b261e9081af9ade",
+      "included_sha256": "59a563589c5857e1160d629543bb8f61508758be241fa3940b261e9081af9ade",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n6_i2.json",
+      "destination": "spectral/inputs/n6_i2.json",
+      "original_sha256": "b03a09a27bfcea5572922613bdc15d07affc4c18b4be637f24257654640253df",
+      "included_sha256": "b03a09a27bfcea5572922613bdc15d07affc4c18b4be637f24257654640253df",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n8_i0.json",
+      "destination": "spectral/inputs/n8_i0.json",
+      "original_sha256": "d5eb6b29d27127943409273c1da5a73f4f659981bc66406f0d8d0a8aeff88999",
+      "included_sha256": "d5eb6b29d27127943409273c1da5a73f4f659981bc66406f0d8d0a8aeff88999",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n8_i1.json",
+      "destination": "spectral/inputs/n8_i1.json",
+      "original_sha256": "eb2dc00a1ba87b4c54d7890e384ffc87b4bab0c8d144ac2b4f29c80e6cbed356",
+      "included_sha256": "eb2dc00a1ba87b4c54d7890e384ffc87b4bab0c8d144ac2b4f29c80e6cbed356",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectral/inputs/n8_i2.json",
+      "destination": "spectral/inputs/n8_i2.json",
+      "original_sha256": "cf1affaa4c5a92b27d970c05d0fbd9ccb13e26f3d29ad5f146b3cc760afa1ee0",
+      "included_sha256": "cf1affaa4c5a92b27d970c05d0fbd9ccb13e26f3d29ad5f146b3cc760afa1ee0",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/config.json",
+      "destination": "ising/config.json",
+      "original_sha256": "79f926763a047cca142b0933a5803f5b227ac0a41c21425655148842f5293752",
+      "included_sha256": "79f926763a047cca142b0933a5803f5b227ac0a41c21425655148842f5293752",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/runs.jsonl",
+      "destination": "ising/runs.jsonl",
+      "original_sha256": "f925a1cc96405fe6265a80d38a910b67d326b743c1b2ec0a17b4411b50a19f98",
+      "included_sha256": "f925a1cc96405fe6265a80d38a910b67d326b743c1b2ec0a17b4411b50a19f98",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/validation.json",
+      "destination": "ising/validation.json",
+      "original_sha256": "679c7dfef57e4497b171807c00f08b92e08939f85c31f2667c8675bc33f299f7",
+      "included_sha256": "679c7dfef57e4497b171807c00f08b92e08939f85c31f2667c8675bc33f299f7",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/environment.json",
+      "destination": "ising/environment.json",
+      "original_sha256": "094b8c4ef9c3bacfbd9f5246eb3ee317a6c5fb0c95689b2d0a88205c71c62da6",
+      "included_sha256": "3b7a373a7aeb211e916d2c47c8fd275fdeafa02e5923933ad705854b7f5dcdae",
+      "change": "BLAS library paths reduced to basenames; all other metadata unchanged"
+    },
+    {
+      "source": "ising/job_order.json",
+      "destination": "ising/job_order.json",
+      "original_sha256": "cda546aba8883ca3337ffb2183079d7a3d82c270dd16540c8037a058663539e7",
+      "included_sha256": "cda546aba8883ca3337ffb2183079d7a3d82c270dd16540c8037a058663539e7",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/source_hashes.json",
+      "destination": "ising/source_hashes.json",
+      "original_sha256": "2e9e1b71bca41385566b42effcb5af6aef5a34054639f8778eec9366c7513943",
+      "included_sha256": "2e9e1b71bca41385566b42effcb5af6aef5a34054639f8778eec9366c7513943",
+      "change": "unchanged"
+    },
+    {
+      "source": "ising/curves.csv",
+      "destination": "ising/curves.csv",
+      "original_sha256": "61e155420aa2ebb0826b87980e5a27c5407eb6ac05f679e457b4f4fc4bcb4781",
+      "included_sha256": "61e155420aa2ebb0826b87980e5a27c5407eb6ac05f679e457b4f4fc4bcb4781",
+      "change": "unchanged"
+    },
+    {
+      "source": "spectrum_example.npz",
+      "destination": "data/thesis/current/application_baselines/spectral/spectrum_example.npz",
+      "sha256": "48fd7de732cfb020b968564e7b83a59809c5513d4dd2046c575bf1f53208d379"
+    },
+    {
+      "source": "plotted_statistics.json",
+      "destination": "data/thesis/current/application_baselines/plotted_statistics.json",
+      "sha256": "dc524aa7a9f8b646431f18f90e3628478b116ee044e076c2e39c15f3da01a1c5"
+    },
+    {
+      "source": "run_comparisons.py",
+      "destination": "data/historical_sources/application_baselines_20260926/run_comparisons.py",
+      "sha256": "48e704ad78510cda1670f8006e2e1c6a213a64ac1da8003fff5ff8a3cab9951c"
+    },
+    {
+      "source": "plot_comparisons.py",
+      "destination": "data/historical_sources/application_baselines_20260926/plot_comparisons.py",
+      "sha256": "3673b00276fce65fa4f5a9abdad4a9c9bcbe427c220219e8552a0486a9546aa5"
+    }
+  ],
+  "omitted": "Duplicate CSV timing exports, repeated runner copies, package snapshot available at the recorded Git revision, pilot runs, editing backups, logs and generated figures."
+}

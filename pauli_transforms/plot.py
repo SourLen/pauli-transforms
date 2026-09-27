@@ -27,6 +27,8 @@ STYLES = {
     "factorial_float64": ("Shared factors", "#4477AA", "o", "-"),
     "hahn_float64": ("Hahn recurrence", "#228833", "^", "-."),
     "permqit": ("permqit", "#EE6677", "s", "--"),
+    "full_space": ("Full-space diagonalization", "#EE6677", "s", "--"),
+    "piqs_blocks": ("PIQS block construction", "#EE6677", "s", "--"),
 }
 PUBLIC = "anschuetz_public_original"
 ERROR_FLOOR = 1e-17
@@ -292,6 +294,104 @@ def spectral_figure(path):
     return "spectral_comparison", fig, stats
 
 
+def read_application_baselines(path):
+    """Validate the complete spectral/Ising campaign before plotting any rows."""
+    cfg = json.loads((path / "config.json").read_text())
+    rows = [json.loads(line) for line in (path / "runs.jsonl").read_text().splitlines()
+            if line.strip()]
+    receipt = json.loads((path / "validation.json").read_text())
+    if (cfg["kind"] not in ("spectral", "ising") or not cfg["sizes"]
+            or len(set(cfg["sizes"])) != len(cfg["sizes"])
+            or cfg["instances"] < 1 or cfg["repeats"] < 1
+            or not 0 < cfg["acceptance_tolerance"] <= 1e-8):
+        raise ValueError("Invalid application baseline configuration")
+    spectral = cfg["kind"] == "spectral"
+    methods = ("thesis", "anschuetz_optimized", "full_space") if spectral else ("thesis", "piqs_blocks")
+    expected = {(n, method, i, r) for n in cfg["sizes"] for method in methods
+                if method != "full_space" or n <= cfg["dense_max_n"]
+                for i in range(cfg["instances"]) for r in range(cfg["repeats"])}
+    identities = [(r["n"], r["method"], r["instance"], r["repeat"]) for r in rows]
+    if (len(identities) != len(expected) or set(identities) != expected
+            or receipt["samples"] != len(rows) or receipt["all_valid"] is not True
+            or receipt["source_unchanged"] is not True):
+        raise ValueError("Failed, incomplete or duplicate application baseline trials")
+    input_hashes = {}
+    if spectral:
+        for n in cfg["sizes"]:
+            for i in range(cfg["instances"]):
+                raw = (path / "inputs" / f"n{n}_i{i}.json").read_bytes()
+                payload = json.loads(raw)
+                if (payload["n"], payload["instance"]) != (n, i):
+                    raise ValueError("Saved spectral input identity disagrees with its filename")
+                input_hashes[n, i] = hashlib.sha256(raw).hexdigest()
+    for row in rows:
+        if row["valid"] is not True or row["status"] != "ok":
+            raise ValueError("Failed application baseline trial")
+        required = {"hermiticity_error", "orthogonality", "reconstruction_error", "residual"}
+        required |= ({"spectrum_relative_error"} if spectral else
+                     {"curve_max_abs_error", "h_relative_error", "state_relative_error",
+                      "observable_relative_error", "trace_error", "initial_expectation_error",
+                      "negative_state_mass"})
+        if spectral and row["method"] != "full_space":
+            required.add("block_relative_error")
+        if spectral and row["n"] <= 5:
+            required.add("literal_matrix_relative_error" if row["method"] == "full_space"
+                         else "literal_block_relative_error")
+        checks = np.asarray(list(row["checks"].values()), dtype=float)
+        if (not required <= row["checks"].keys() or not np.isfinite(checks).all()
+                or np.any(checks < 0) or np.any(checks > cfg["acceptance_tolerance"])):
+            raise ValueError("Failed application baseline accuracy checks")
+        stages = ["prepare_seconds", "eigensolve_seconds"]
+        if not spectral:
+            stages.append("curve_seconds")
+        times = np.asarray([row[key] for key in [*stages, "total_seconds"]])
+        if (not np.isfinite(times).all() or np.any(times <= 0)
+                or not np.isclose(sum(row[key] for key in stages), row["total_seconds"],
+                                  rtol=1e-12, atol=1e-15)):
+            raise ValueError("Inconsistent application baseline timing")
+        if spectral and row["input_sha256"] != input_hashes[row["n"], row["instance"]]:
+            raise ValueError("Spectral trial does not match its saved input")
+    maxima = {key: max(row["checks"].get(key, 0.) for row in rows)
+              for key in {key for row in rows for key in row["checks"]}}
+    if maxima != receipt["maxima"]:
+        raise ValueError("Application accuracy summary disagrees with trial diagnostics")
+    return cfg, rows
+
+
+def application_baseline_figure(path):
+    """September 26 comparisons: complete spectra or native PIQS Ising blocks."""
+    import matplotlib.pyplot as plt
+    cfg, rows = read_application_baselines(path)
+    fig, axes = plt.subplots(1, 2, figsize=(6.25, 3.0), layout="constrained")
+    stats = {}
+    if cfg["kind"] == "spectral":
+        for method in ("thesis", "anschuetz_optimized", "full_space"):
+            sizes = [n for n in cfg["sizes"] if method != "full_space" or n <= cfg["dense_max_n"]]
+            if sizes:
+                stats[method] = draw_runtime(axes[0], rows, cfg, "total_seconds", "n", sizes, method)
+        label_runtime(axes[0], "(a) Complete eigensystems")
+        axes[0].set_xticks([n for n in cfg["sizes"] if n not in (3, 4, 6, 10)])
+        axes[0].legend(frameon=False, fontsize=7.5, loc="lower right")
+        with np.load(path / "spectrum_example.npz") as example:
+            draw_spectrum(axes[1], example)
+        axes[1].set_title("(b) One representative spectrum")
+        name = "spectral_comparison"
+    else:
+        for method in ("thesis", "piqs_blocks"):
+            stats[method] = {}
+            for ax, field in zip(axes, ("prepare_seconds", "total_seconds")):
+                stats[method][field] = draw_runtime(ax, rows, cfg, field, "n", cfg["sizes"], method)
+        for ax, title in zip(axes, (r"(a) Construct $H$, $\rho(0)$ and $M$",
+                                   "(b) Complete magnetization curve")):
+            label_runtime(ax, title)
+            ax.set_xticks([2, 8, 16, 24, 32, 40])
+            ax.legend(frameon=False, fontsize=8, loc="upper left")
+        name = "ising_runtime_comparison"
+    for ax in axes[:1] if cfg["kind"] == "spectral" else axes:
+        ax.margins(x=.04, y=.12)
+    return name, fig, stats
+
+
 def dynamics_figures(path):
     import matplotlib.pyplot as plt
     cfg, rows = read_campaign(path)
@@ -408,11 +508,11 @@ def export(data, output, formats=("pdf", "svg", "png"), *, supplementary=False):
     with matplotlib.rc_context(rc):
         current = data / "current"
         for name in ("direct", "fixed_locality"):
-            if current.is_dir() and name == "fixed_locality":
+            if (current / name).is_dir() and name == "fixed_locality":
                 save(fixed_weight_figure(current / "fixed_locality"))
                 save(fixed_weight_figure(current / "fixed_weight_cache", common_cache=True))
                 continue
-            if current.is_dir() and name == "direct":
+            if (current / name).is_dir() and name == "direct":
                 for result in direct_figures(current / "direct", supplementary=supplementary):
                     save(result)
                 continue
@@ -422,8 +522,15 @@ def export(data, output, formats=("pdf", "svg", "png"), *, supplementary=False):
                     save(result)
         if (data / "matrix_units").is_dir():
             save(matrix_unit_figure(data / "matrix_units"))
-        if (data / "spectral").is_dir():
-            save(spectral_figure(data / "spectral"))
+        baselines = current / "application_baselines"
+        spectral_path = baselines / "spectral" if (baselines / "spectral").is_dir() else data / "spectral"
+        if spectral_path.is_dir():
+            cfg = json.loads((spectral_path / "config.json").read_text())
+            save(application_baseline_figure(spectral_path) if cfg.get("kind") == "spectral"
+                 else spectral_figure(spectral_path))
+        ising_runtime = baselines / "ising" if (baselines / "ising").is_dir() else data / "ising_runtime"
+        if ising_runtime.is_dir():
+            save(application_baseline_figure(ising_runtime))
         if (data / "dynamics").is_dir():
             for result in dynamics_figures(data / "dynamics"):
                 if current.is_dir() and result[0] == "random_dynamics_diagnostics" and not supplementary:

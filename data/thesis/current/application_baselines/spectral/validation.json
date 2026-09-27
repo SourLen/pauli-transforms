@@ -1,0 +1,15 @@
+{
+  "samples": 405,
+  "all_valid": true,
+  "source_unchanged": true,
+  "maxima": {
+    "block_relative_error": 7.745889817818491e-16,
+    "hermiticity_error": 8.482144758561933e-17,
+    "literal_block_relative_error": 2.883121329978883e-16,
+    "literal_matrix_relative_error": 2.1782548521379899e-16,
+    "orthogonality": 2.1909347048491938e-13,
+    "reconstruction_error": 7.799324596745953e-15,
+    "residual": 7.91431987796478e-15,
+    "spectrum_relative_error": 8.830540505058797e-15
+  }
+}

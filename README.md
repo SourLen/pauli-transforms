@@ -4,8 +4,8 @@ Python code accompanying the bachelor's thesis,
 *Efficient Coordinate Transformations for Permutation-Invariant Quantum Systems*.
 
 The library converts between matrix-entry orbits, Pauli orbits and Schur blocks.
-The accompanying experiments redraw the retained conversion, complete-spectrum,
-dynamics and Ising measurements and provide separate commands for new measurements.
+The accompanying experiments reproduce the conversion, complete-spectrum,
+dynamics and Ising comparisons in the thesis (27 September 2026 manuscript).
 
 ## Install and use
 
@@ -40,7 +40,7 @@ column ones among the differing bits. The Chapter 5 matrix-unit indices are
 `(r, s, t) = (w+h0-h1, h0+h1, h0)`.
 
 Blocks are ordered by `k = 0, ..., floor(n/2)`, with side `n-2*k+1` and
-multiplicity `binom(n,k)-binom(n,k-1)`. 
+multiplicity `binom(n,k)-binom(n,k-1)`.
 
 ## Code map
 
@@ -56,16 +56,10 @@ multiplicity `binom(n,k)-binom(n,k-1)`.
 | Spectra, invariant dynamics and the Ising model | `physical_models.py` |
 
 `prepare(n)` builds the Krawtchouk/Hahn tables. Pass the returned tables
-to reuse them, omitting tables includes preparation in the call.
+to reuse them; omitting tables includes preparation in the call.
 `prepare(n, backend="factorial")` selects the Chapter 5 factorization.
 Both backends are bidirectional. The factorial formula can suffer
-floating-point cancellation, in the thesis we use Hahn for most benchmarks.
-Independent tests of all six directions pass through `n=6`. Selected inputs
-through `n=40` pass with Hahn, while the float64 shared-factor backend fails the
-declared tolerances for some cancellation-sensitive inputs at `n=30,40`.
-These sizes describe the tested families, not a universal accuracy threshold.
-The [accuracy report](data/accuracy/README.md) includes the failures, independent
-references, weighted Hilbert–Schmidt errors and block spectral errors.
+floating-point cancellation; the thesis uses Hahn for most benchmarks.
 Hahn kernels use analytical normalization evaluated with binary64 logarithms,
 including when their recurrence uses an extended array dtype. The default
 cached Hahn implementation has `O(n^4)` preparation and storage; the
@@ -73,13 +67,34 @@ fast-matrix-multiplication theorem applies to the shared-factor construction.
 The code uses ordinary NumPy matrix products; we do not implement the fast
 polynomial transforms discussed in the outlook.
 
-The optional `permqit` comparison uses its native Gijswijt map and Gram-matrix
-normalization. It converts matrix-unit orbit coefficients `(r, s, t)` to Schur
-blocks and measures preprocessing, first use and cached conversion separately.
-Rerunning it requires Python 3.14 or newer and the pinned upstream dependency;
-the library and saved-data plots do not require permqit. We recommend checking out the features
-of permqit for further comparison and a more sophisticated package.
+## Thesis benchmarks and accuracy
 
+```bash
+python -m pauli_transforms.plot --data data/thesis --output figures
+```
+
+This redraws all eight data figures from saved observations, including the
+full-space spectral baseline and the PIQS Ising comparison. No new timings
+are collected. [BENCHMARKS.md](BENCHMARKS.md) gives the input families, timing
+boundaries and commands for new measurements; the
+[figure manifest](FIGURE_MANIFEST.json) maps outputs to thesis figures.
+
+| Check | Recorded result |
+| --- | --- |
+| All six conversion directions, dense references through `n=6` | All pass |
+| Selected larger conversions through `n=40` | Hahn passes; 13 shared-factor float64 cases fail at `n=30,40` |
+| Independent application accuracy | 48 configurations pass; maximum expectation error `1.87e-13` |
+| Spectral and Ising timing checks | All 405 spectral and 140 Ising trials pass their `1e-8` gates |
+
+The [accuracy report](data/accuracy/README.md) links the raw results, norms,
+references and tolerances. The timing gates are practical acceptance criteria;
+the separate conversion sweep uses stricter tolerances. These finite checks
+cover the stated inputs and time grids, without establishing uniform stability.
+
+The optional comparisons require `.[benchmarks,permqit]` (Python 3.14+) or
+`.[benchmarks,piqs]`. Saved-data plotting needs neither external package.
+The PIQS comparison constructs the Ising inputs from collective-spin matrices;
+it uses the same downstream block eigensolver and expectation routine.
 
 ## References and provenance
 
@@ -90,17 +105,15 @@ of [Anschuetz et al.](https://doi.org/10.22331/q-2023-11-28-1189)
 (Appendix E) and [Chang, Larocca and Cerezo](https://arxiv.org/abs/2603.13072).
 The optional native comparison uses Bergh and Parentin's
 [permqit](https://github.com/bbbergh/permqit/tree/22af3cd245bd0e950df49f6ce16ccd422b6eb2c5).
-
+The Ising baseline uses [PIQS (Shammah et al.)](https://doi.org/10.1103/PhysRevA.98.063815)
+through QuTiP.
 
 The implementation, tests and documentation were developed with OpenAI Codex
-assistance. This September 2026 release retains the thesis's numerical kernels
-and selected measurements from the private development repository.
-The new accuracy campaigns use immutable source revision
-`3829b72425ab20ae0e3fa3790e0bc77f441dd503`. Historical runtime observations keep
-their original identities. See [BENCHMARKS.md](BENCHMARKS.md), the
-[figure manifest](FIGURE_MANIFEST.json) and
-[historical source record](HISTORICAL_SOURCES.md) for the distinction between
-redrawing saved data and collecting new timings.
+assistance. The measured-source revisions and original runtime observations
+are preserved in the [data records](data/thesis/README.md) and
+[historical source record](HISTORICAL_SOURCES.md). The current figure selection
+includes the 26 September application comparisons added after release v0.2.0;
+the original release remains unchanged.
 
 Released under the [MIT license](LICENSE). NumPy, SciPy and the plotting
 dependencies are installed separately under their own licenses.
