@@ -65,26 +65,3 @@ The current runner is `python -m pauli_transforms.run_permqit_comparison
 permqit by default. Both adapters verify the external sources against their
 pinned revisions; external code retains its own license.
 
-## Spectral and Ising comparisons from 26 September
-
-These measured drivers use package revision
-`29fd29769c62fccda90a1ac3031adbe462510cd5`. Reconstruct their layout in a new
-directory, then run them with the recorded dependencies above and QuTiP:
-
-```bash
-python -m pip install qutip==5.3.1
-mkdir -p results/replay/application_baselines/source_snapshot
-git archive 29fd29769c62fccda90a1ac3031adbe462510cd5 pauli_transforms LICENSE | tar -x -C results/replay/application_baselines/source_snapshot
-cp data/historical_sources/application_baselines_20260926/*.py results/replay/application_baselines/
-cp -r data/thesis/current/application_baselines/spectral/inputs results/replay/application_baselines/archived_inputs
-cp data/thesis/current/application_baselines/spectral/spectrum_example.npz results/replay/application_baselines/
-python results/replay/application_baselines/run_comparisons.py spectral --output results/replay/application_baselines/spectral
-python results/replay/application_baselines/run_comparisons.py ising --output results/replay/application_baselines/ising
-python results/replay/application_baselines/plot_comparisons.py \
-  --spectral results/replay/application_baselines/spectral \
-  --ising results/replay/application_baselines/ising --output results/replay/application_baselines/figures
-```
-
-Add `--sizes 2 3 --instances 1 --repeats 1` to the measurement commands for
-a small check. Their source hashes are recorded in the
-[application data manifest](../thesis/current/application_baselines/manifest.json).
