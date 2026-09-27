@@ -22,7 +22,7 @@
         "data/thesis/current/direct/config.json",
         "data/thesis/current/direct/extension_config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/general_conversion_public.pdf",
@@ -41,7 +41,7 @@
       "configuration": [
         "data/thesis/matrix_units/manifest.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/matrix_unit_schur.pdf",
@@ -62,7 +62,7 @@
         "data/thesis/current/fixed_locality/low/config.json",
         "data/thesis/current/fixed_locality/high/config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/fixed_locality.pdf",
@@ -83,7 +83,7 @@
         "data/thesis/current/fixed_weight_cache/low/config.json",
         "data/thesis/current/fixed_weight_cache/high/config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/fixed_weight_cache.pdf",
@@ -121,7 +121,7 @@
       "configuration": [
         "data/thesis/dynamics/config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/random_dynamics_comparison.pdf",
@@ -140,7 +140,7 @@
       "configuration": [
         "data/thesis/ising/config.json"
       ],
-      "measured_source": "See HISTORICAL_SOURCES.md and data/historical_sources/ manifest, matched to original source hashes",
+      "measured_source": "See data/historical_sources/README.md and data/historical_sources/manifest.json, matched to original source hashes",
       "generator": "pauli_transforms/plot.py",
       "generator_sha256": "19bf84b55896fcd1f266d696787b953c1f0cb2e06506d4afb724b3619a9e1ab0",
       "output_file": "figures/ising_example.pdf",

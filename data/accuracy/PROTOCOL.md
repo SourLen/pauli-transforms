@@ -26,7 +26,7 @@ $$
 Here $v^t_{rs}$ is the matrix-unit orbit size, $\mathbf{k}$ gives the counts of
 the four Pauli letters, $\mu_k=\binom nk-\binom n{k-1}$ is the Schur multiplicity,
 and $F$ denotes the Frobenius norm of one representative block. Pauli coefficients
-multiply sums of distinct words, as described in the [library README](../../README.md).
+multiply sums of distinct Pauli strings.
 Zero references use absolute errors.
 
 Block errors use the spectral norm (largest singular value), denoted

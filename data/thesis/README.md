@@ -1,80 +1,42 @@
-# Data used in the thesis
+# Thesis data
 
-These are the original observations, not timings of this cleaned-up repository.
-From the repository root, recreate the eight current thesis benchmark figures with:
+Saved measurements for the thesis figures. From the repository root:
 
-```sh
+```bash
 python -m pauli_transforms.plot --data data/thesis --output figures
 ```
 
-The command writes PDF, SVG and PNG files, plus the unrounded plotted statistics.
-Medians and interquartile ranges use complete trial groups. Failed, missing,
-duplicate or nonfinite trials cause an error. The public implementation has no
-cached curve and was measured only through n=5. Errors below 1e-17 are clipped
-only for display. Fresh measurements will have different timings.
+The plotter selects the following datasets and exports PDF, SVG, PNG and
+unrounded plot statistics. Plots show medians and interquartile ranges of
+complete, validated trial groups.
 
-The current selection follows the manuscript PDF dated 27 September 2026.
-The original folders below remain unchanged. `current/` adds the later
-general-conversion extension through n=40, fixed-locality weights 2,4,6,8 and
-the common orbit-image comparison.
-`current/application_baselines/` supplies the updated spectral comparison
-and the PIQS Ising timing comparison from 26 September; its
-[README](current/application_baselines/README.md) gives their protocol and
-provenance. The selection manifests record original and included hashes.
-The plotter uses these datasets when present.
-Add `--supplementary` for the older general-conversion, accuracy and dynamics
-diagnostics figures. See the root figure manifest for exact LaTeX labels.
+| Figure | Data directory |
+| --- | --- |
+| General conversion | `current/direct` |
+| Fixed locality | `current/fixed_locality` |
+| Common orbit-image cache | `current/fixed_weight_cache` |
+| Matrix-unit conversion | `matrix_units` |
+| Complete spectra | `current/application_baselines/spectral` |
+| Random dynamics | `dynamics` |
+| Ising illustration | `ising` |
+| Ising timing comparison | `current/application_baselines/ising` |
 
-| Original folder | Retained legacy observations | Accepted trials |
-|---|---|---:|
-| `direct` | `general_conversion_public` | 924 |
-| `fixed_locality` | `fixed_locality` | 1,344 |
-| `matrix_units` | `matrix_unit_schur` | 120 |
-| `spectral` | Superseded spectral timings; retained example spectrum and inputs | 300 |
-| `dynamics` | `random_dynamics_comparison` (diagnostics supplementary) | 420 |
-| `ising` | `ising_example` | No timings |
+Each campaign contains its configuration, observations, inputs and environment
+records. Older campaigns remain available in `direct`, `fixed_locality` and
+`spectral`; the latter also supplies the example spectrum. Use `--supplementary`
+for the additional plots. The [figure index](../../manuscript/figures.json)
+maps outputs to thesis labels.
 
-The current general plot uses 1,176 accepted trials (plus 18 configured public
-size-limit records). The current fixed-locality and common-cache campaigns
-each retain 3,780 accepted trials. The first-use fixed-locality figure selects
-1,890 of them. Original raw timing rows are unchanged. Metadata-only path
-redactions are identified by `current/selection_manifest.json`.
+[manifest.json](manifest.json), [current/selection_manifest.json](current/selection_manifest.json)
+and the [application manifest](current/application_baselines/manifest.json)
+record source locations, file hashes and metadata redactions. Raw observations
+retain their original bytes. These are timings of the
+[archived implementations](../historical_sources/README.md); new runs produce
+separate measurements.
 
-Each campaign has its configuration, raw trials, exact inputs and recorded
-environment/checks. Matrix-unit conversion uses five inputs per size and method,
-each in a fresh process; a cached observation is the median of seven subsequent
-applications. Its plot checks complete groups, accuracy gates, timing sums,
-cached medians and the hashes of the saved inputs. Dynamics includes the original
-generated state blocks and reference curves. Direct conversion also retains 18 configured public-size-limit
-records. The Ising spectrum has n=12; its curves have n=8,20,40, g=1, h=0.5,
-p=0.6 and 241 times from 0 to 12. The earlier Ising timing campaign is omitted;
-the current PIQS comparison uses the separate 26 September dataset with 140 accepted trials. The current
-spectral figure uses 405 trials from that same date, without pooling old timings.
-
-The source folders, relative to the original `Code/pauli_algorithm_comparison/results/`, are:
-
-- `publication_comparisons_20260917/direct` and `.../fixed_locality`
-- `spectral_comparison_20260917`
-- `random_dynamics_20260918/final`
-- `ising_example_20260918`
-- `permqit_matrix_units_20260919`
-
-[manifest.json](manifest.json) records the original and included SHA-256 hashes
-for every data file. Trial rows, inputs, spectra and curves retain their original
-bytes, including recorded library paths in the matrix-unit trial metadata.
-Configuration/environment JSON omits machine-local paths and verbose
-NumPy build output and unused generic-runner options; the manifest identifies
-these changes. The small Ising
-configuration transcribes the recorded model parameters. The recovered historical sources and their hash checks are documented in
-[`HISTORICAL_SOURCES.md`](../../HISTORICAL_SOURCES.md). Source hashes in the
-environment records identify the original implementations, not the edited
-release source. Figure redrawing is independent of source recovery. Generated
-figures are supplied with the release rather than treated as fresh measurements.
-
-For `matrix_units`, `manifest.json` contains the protocol, environment and source
-hashes; `integrity_after.json` records the original source-integrity check.
-`requirements.lock` retains the historical package versions, replacing only the
-local permqit installation path with its verified upstream Git commit. The lock
-describes the original Python 3.14 environment; it is not the installation
-requirement for this library. Redrawing any of these figures needs no permqit
-installation. The optional rerun is documented in [BENCHMARKS.md](../../BENCHMARKS.md).
+The comparisons use [Anschuetz et al.](https://doi.org/10.22331/q-2023-11-28-1189),
+[Chang, Larocca and Cerezo](https://arxiv.org/abs/2603.13072),
+[permqit](https://github.com/bbbergh/permqit/tree/22af3cd245bd0e950df49f6ce16ccd422b6eb2c5)
+and [PIQS](https://doi.org/10.1103/PhysRevA.98.063815).
+The Schur constructions follow [Gijswijt](https://arxiv.org/abs/0910.4515)
+and [Vallentin](https://doi.org/10.1016/j.laa.2008.07.025), as developed in the thesis.

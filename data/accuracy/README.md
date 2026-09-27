@@ -1,85 +1,35 @@
-# Accuracy checks accompanying Appendix C
+# Accuracy checks
 
-The independent accuracy campaigns below were measured on 25 September 2026.
-The additional 26 September timing-validation results are listed separately.
-The conversion and application sweeps were run from a clean checkout of
-`3829b72425ab20ae0e3fa3790e0bc77f441dd503`, using Python 3.14.7, NumPy 2.4.6
-and SciPy 1.17.1, with one numerical-library thread. Each file records its
-references, generating rules, seeds, precision, source hashes and tolerances.
+Run from the repository root after installing `.[benchmarks]`:
 
-The [detailed protocols and results](PROTOCOL.md) give the coordinate norm
-formulas, input and reference constructions, acceptance tolerances, precision
-conventions and blockwise diagnostics. These details and the accuracy tables
-are retained here to accompany the shortened accuracy summaries in Appendix C.
-
-## Run the checks
-
-Install `.[benchmarks]`, then use a new output path for each campaign:
-
-```sh
-python -m unittest discover -s tests -v
+```bash
 python -m pauli_transforms.accuracy --output results/accuracy/quick.json
 python -m pauli_transforms.accuracy --sweep --output results/accuracy/conversions.json
 python -m pauli_transforms.application_accuracy --output results/accuracy/applications
 python scripts/check_munoz_dictionary.py --max-n 6 --output results/accuracy/munoz.json
 ```
 
-The quick regressions assert a small deterministic domain. The wide conversion
-sweep saves failures as observations and reports their count; a zero process
-exit alone does not mean every numerical case passed. The application sweep
-returns a nonzero status if a case fails. No tolerance was raised after a failure.
+Use new output paths. The wide conversion sweep records failures without a
+nonzero exit status; inspect its reported failure count.
 
-## Checks on the current application benchmarks
+## Saved results
 
-The 26 September comparisons in thesis Section C.3.1 retain all
-[405 spectral trials](../thesis/current/application_baselines/spectral/validation.json)
-and [140 Ising trials](../thesis/current/application_baselines/ising/validation.json).
-All pass the `1e-8` gates. The largest relative spectrum error is `8.83e-15`;
-the largest absolute magnetization error is `3.74e-15` on 241 times in `[0,12]`.
-These are validations of timed runs, distinct from the 48-configuration
-independent application campaign below. The
-[baseline protocol](../thesis/current/application_baselines/README.md) describes
-reference constructions, input generation and reproduction commands.
+| Check | Record | Result |
+| --- | --- | --- |
+| Conversions | [JSON](conversions_20260925.json) | 1,764 observations; 13 float64 shared-factor failures at selected inputs with `n=30,40`; all tested Hahn cases pass |
+| Applications | [JSON](applications_20260925/results.json) | 48 configurations pass; maximum expectation error `1.87e-13` |
+| Muñoz dictionary | [JSON](munoz_dictionary_20260925.json) | Exact agreement for all 209 Pauli orbits through `n=6` |
 
-## Independent accuracy results and scope
+These checks used revision `3829b72425ab20ae0e3fa3790e0bc77f441dd503`,
+Python 3.14.7, the versions in [requirements.txt](requirements.txt), and one
+numerical-library thread. [PROTOCOL.md](PROTOCOL.md) gives the input families,
+references, norms, tolerances and detailed tables. The results cover the tested
+inputs and time grids; they do not establish uniform numerical stability.
 
-- `conversions_20260925.json` contains 1,764 observations, including 13 failures
-  of the float64 shared-factor backend on selected inputs at `n=30,40`.
-  All six directions, both cached and uncached, pass for literal dense systems
-  at `n=0,...,6`. The largest relative forward Hilbert–Schmidt error is
-  `2.48e-15`. The `1e8` scaled input has an absolute block error around `2e-8`.
-- Larger full transformations at `n=8,12,20,30,40` use analytic product
-  projectors for all six directions and central-weight families for both
-  matrix-unit/Schur directions. The latter references evaluate exact integer
-  coefficient sums and 80-digit Decimal square roots and accumulation. Hahn's
-  largest relative error is `2.46e-15`; shared-factor float64 reaches `5.12e-8`.
-  Separate round-trip observations are labelled as such. These representative
-  families do not validate arbitrary large inputs.
-- Selected Hahn kernels through `n=40` agree with independent 80-digit
-  references to spectral error `1.09e-14`; the largest orthogonality residual
-  is `1.29e-14`. Kernel checks are distinct from full conversion checks.
-- `applications_20260925/` contains 48 passing configurations. Literal dense
-  tensor/exponential references cover `n=2,...,6`; independent collective-spin
-  Ising references cover `n=8,12,20,40`. The maximum expectation error over
-  241 times in `[0,12]` is `1.87e-13`. Conversion, eigensolver, state and
-  phase-sum diagnostics are saved separately. References are double precision,
-  not higher precision; this is not a uniform-in-time guarantee.
-- `munoz_dictionary_20260925.json` records exact agreement for all 209 Pauli
-  orbits through `n=6` (411,824 matrix entries and 2,057 binary-sum
-  representatives), including one and two Y factors and orbit-sum norms.
+The later application timing campaign separately retains
+[405 spectral](../thesis/current/application_baselines/spectral/validation.json)
+and [140 Ising](../thesis/current/application_baselines/ising/validation.json)
+trials, all passing their `1e-8` gates.
 
-Errors use the operator Hilbert–Schmidt norm, including orbit sizes and Schur
-multiplicities, and largest-singular-value block norms. Zero references use
-absolute errors. Small-block handling and tolerances are declared in the
-scripts and metadata. Global relative error does not bound relative error in
-every sector. Wider arrays are not full higher-precision computations: Hahn
-normalization still uses binary64 logarithms and outputs are complex128.
-
-The generated `.tex` summaries are retained as supplementary tables in this
-directory and linked from the [detailed report](PROTOCOL.md). No uniform stability
-or bit-complexity result is inferred from these finite checks. The repository
-does not implement the quantum-copy measurement protocol discussed in the thesis.
-
-For publication, one BLAS library path in the conversion metadata was reduced
-to its basename. `metadata_redactions.json` records the original and included
-hashes. No per-case observation or numerical result was changed.
+[metadata_redactions.json](metadata_redactions.json) records the removal of
+one machine-local library path. Numerical observations were preserved.
