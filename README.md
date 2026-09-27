@@ -5,7 +5,7 @@ Python code accompanying the bachelor's thesis,
 
 The library converts between matrix-entry orbits, Pauli orbits and Schur blocks.
 The accompanying experiments reproduce the conversion, complete-spectrum,
-dynamics and Ising comparisons in the thesis (27 September 2026 manuscript).
+dynamics and Ising comparisons in the thesis.
 
 ## Install and use
 
@@ -31,8 +31,7 @@ recovered = schur_to_pauli(n, blocks, tables)
 
 A Pauli key `(w, g0, g1)` means the counts
 `(nI, nX, nY, nZ) = (n-w-g0, w-g1, g1, g0)`.
-Its value is the coefficient of **each individual Pauli word** in that orbit.
-Equivalently it multiplies the sum of distinct words, not the orbit average.
+Its value is the coefficient of **each individual Pauli string** in that orbit.
 
 Entry keys `(w, h0, h1)` are used to describe matrix entries, `w` is the number
 of differing row/column bits, `h0` counts their common ones, and `h1` counts
@@ -81,7 +80,7 @@ boundaries and commands for new measurements; the
 
 | Check | Recorded result |
 | --- | --- |
-| All six conversion directions, dense references through `n=6` | All pass |
+| All six conversion directions, references through `n=6` | All pass |
 | Selected larger conversions through `n=40` | Hahn passes; 13 shared-factor float64 cases fail at `n=30,40` |
 | Independent application accuracy | 48 configurations pass; maximum expectation error `1.87e-13` |
 | Spectral and Ising timing checks | All 405 spectral and 140 Ising trials pass their `1e-8` gates |
