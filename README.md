@@ -1,6 +1,6 @@
 # Pauli transforms
 
-Code and data for reproducing the results in the bachelor's thesis
+Code and data for reproducing the results in my (Lennart Sauer) bachelor's thesis
 *Efficient Coordinate Transformations for Permutation-Invariant Quantum Systems*.
 
 ## Setup
